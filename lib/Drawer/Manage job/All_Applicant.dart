@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class All_Applicant extends StatelessWidget {
   const All_Applicant({super.key});
 
@@ -7,7 +9,7 @@ class All_Applicant extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 18, top: 31, right: 24),
+        padding: EdgeInsets.only(left: 18.w, top: 31.w, right: 24.w),
         child: Column(
           children: [
             Row(
@@ -18,40 +20,40 @@ class All_Applicant extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Image.asset('Assets/All_Applicant1.png'),
-                    const SizedBox(
-                      width: 18,
+                    SizedBox(
+                      width: 18.w,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Applicant 1',
                           style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.w600),
+                              fontSize: 15.sp, fontWeight: FontWeight.w600),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: 5.sp,
                         ),
                         Text(
                           'Company 1',
                           style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w500),
+                              fontSize: 12.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 7,
+                          height: 7.sp,
                         ),
                         Text(
                           'Web development',
                           style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w500),
+                              fontSize: 12.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: 5.h,
                         ),
                         Text(
                           'Apply on 02/01/2023',
                           style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w300),
+                              fontSize: 12.sp, fontWeight: FontWeight.w300),
                         ),
                       ],
                     )
@@ -60,8 +62,8 @@ class All_Applicant extends StatelessWidget {
                 Image.asset('Assets/All_Applicant2.png'),
               ],
             ),
-            const SizedBox(
-              height: 31,
+            SizedBox(
+              height: 31.h,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,40 +73,40 @@ class All_Applicant extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Image.asset('Assets/All_Applicant1.png'),
-                    const SizedBox(
-                      width: 18,
+                    SizedBox(
+                      width: 18.w,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Applicant 1',
                           style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.w600),
+                              fontSize: 15.sp, fontWeight: FontWeight.w600),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: 5.h,
                         ),
                         Text(
                           'Company 1',
                           style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w500),
+                              fontSize: 12.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 7,
+                          height: 7.h,
                         ),
                         Text(
                           'Web development',
                           style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w500),
+                              fontSize: 12.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: 5.h,
                         ),
                         Text(
                           'Apply on 02/01/2023',
                           style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w300),
+                              fontSize: 12.sp, fontWeight: FontWeight.w300),
                         ),
                       ],
                     )

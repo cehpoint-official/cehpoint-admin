@@ -1,5 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: camel_case_types
 class Client_waiting_list extends StatelessWidget {
@@ -9,11 +10,11 @@ class Client_waiting_list extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 40),
+        title: Padding(
+          padding: EdgeInsets.only(left: 40.h),
           child: Text(
             'Client waiting list',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -29,24 +30,24 @@ class Client_waiting_list extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 20),
+        padding: EdgeInsets.only(top: 50.h, left: 20.w),
         child: Column(
           children: [
-            Row(children: [
-              Container(
-                child: Image.asset(
-                  'Assets/Client_waiting_list.png',
-                ),
-              ),
-              const SizedBox(
-                width: 20,
-              ),
-              const Text(
-                'Client 1',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-              ),
-              const SizedBox(
-                width: 230,
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'Assets/Client_waiting_list.png',
+                  ),
+                  SizedBox(
+                    width: 20.w,
+                  ),
+                  Text(
+                    'Client 1',
+                    style:
+                        TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
+                  ),
+                ],
               ),
               IconButton(
                   onPressed: () {
@@ -54,92 +55,108 @@ class Client_waiting_list extends StatelessWidget {
                   },
                   icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
-            Row(children: [
-              Container(
-                child: Image.asset(
-                  'Assets/Client_waiting_list.png',
-                ),
-              ),
-              const SizedBox(
-                width: 20,
-              ),
-              const Text(
-                'Client 2',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-              ),
-              const SizedBox(
-                width: 230,
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'Assets/Client_waiting_list.png',
+                  ),
+                  SizedBox(
+                    width: 20.w,
+                  ),
+                  Text(
+                    'Client 2',
+                    style:
+                        TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
+                  ),
+                ],
               ),
               IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'Clientdetails');
+                  },
+                  icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
-            Row(children: [
-              Container(
-                child: Image.asset(
-                  'Assets/Client_waiting_list.png',
-                ),
-              ),
-              const SizedBox(
-                width: 20,
-              ),
-              const Text(
-                'Client 3',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-              ),
-              const SizedBox(
-                width: 230,
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'Assets/Client_waiting_list.png',
+                  ),
+                  SizedBox(
+                    width: 20.w,
+                  ),
+                  Text(
+                    'Client 3',
+                    style:
+                        TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
+                  ),
+                ],
               ),
               IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'Clientdetails');
+                  },
+                  icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
-            Row(children: [
-              Image.asset(
-                'Assets/Client_waiting_list.png',
-              ),
-              const SizedBox(
-                width: 20,
-              ),
-              const Text(
-                'Client 4',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-              ),
-              const SizedBox(
-                width: 230,
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'Assets/Client_waiting_list.png',
+                  ),
+                  SizedBox(
+                    width: 20.w,
+                  ),
+                  Text(
+                    'Client 4',
+                    style:
+                        TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
+                  ),
+                ],
               ),
               IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'Clientdetails');
+                  },
+                  icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
-            Row(children: [
-              Image.asset(
-                'Assets/Client_waiting_list.png',
-              ),
-              const SizedBox(
-                width: 20,
-              ),
-              const Text(
-                'Client 5',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-              ),
-              const SizedBox(
-                width: 230,
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'Assets/Client_waiting_list.png',
+                  ),
+                  SizedBox(
+                    width: 20.w,
+                  ),
+                  Text(
+                    'Client 5',
+                    style:
+                        TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
+                  ),
+                ],
               ),
               IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'Clientdetails');
+                  },
+                  icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
           ],
         ),

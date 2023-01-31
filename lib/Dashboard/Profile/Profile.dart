@@ -1,6 +1,6 @@
-import 'dart:ui';
-
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -15,14 +15,14 @@ class Profile extends StatelessWidget {
           Row(
             children: [
               Image.asset('Assets/camera.png'),
-              const Padding(
-                padding: EdgeInsets.only(right: 30, left: 3),
+              Padding(
+                padding: EdgeInsets.only(right: 30.w, left: 3.w),
                 child: Text(
                   'Edit',
                   style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xff000000)),
+                      color: const Color(0xff000000)),
                 ),
               )
             ],
@@ -39,19 +39,19 @@ class Profile extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 36, left: 35, right: 35),
+        padding: EdgeInsets.only(top: 36.h, left: 35.w, right: 35.w),
         child: Column(
           children: [
             Center(child: Image.asset('Assets/bigprofile.png')),
-            const SizedBox(
-              height: 13,
+            SizedBox(
+              height: 13.h,
             ),
-            const Text(
+            Text(
               'Hi Jit',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+              style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600),
             ),
-            const SizedBox(
-              height: 70,
+            SizedBox(
+              height: 70.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,200 +59,200 @@ class Profile extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                        width: 33,
-                        height: 33,
+                        width: 33.w,
+                        height: 33.h,
                         decoration: const BoxDecoration(
-                            color: Color(0xff0077B5), shape: BoxShape.circle),
+                            color: Color(0xffD4C00B), shape: BoxShape.circle),
                         child: Image.asset('Assets/profile1.png')),
-                    const SizedBox(
-                      width: 26,
+                    SizedBox(
+                      width: 26.w,
                     ),
-                    const Text(
+                    Text(
                       'Edit Profile',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400, fontSize: 16.sp),
                     )
                   ],
                 ),
                 Image.asset('Assets/profileall.png')
               ],
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
                     Container(
-                        width: 33,
-                        height: 33,
+                        width: 33.w,
+                        height: 33.h,
                         decoration: const BoxDecoration(
-                            color: Color(0xff0077B5), shape: BoxShape.circle),
+                            color: Color(0xffD4C00B), shape: BoxShape.circle),
                         child: Image.asset('Assets/profile2.png')),
-                    const SizedBox(
-                      width: 26,
+                    SizedBox(
+                      width: 26.w,
                     ),
-                    const Text(
+                    Text(
                       'Add gift',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400, fontSize: 16.sp),
                     )
                   ],
                 ),
                 Image.asset('Assets/profileall.png')
               ],
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
                     Container(
-                        width: 33,
-                        height: 33,
+                        width: 33.w,
+                        height: 33.h,
                         decoration: const BoxDecoration(
-                            color: Color(0xff0077B5), shape: BoxShape.circle),
+                            color: Color(0xffD4C00B), shape: BoxShape.circle),
                         child: Image.asset('Assets/profile3.png')),
-                    const SizedBox(
-                      width: 26,
+                    SizedBox(
+                      width: 26.w,
                     ),
-                    const Text(
+                    Text(
                       'Add free service',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400, fontSize: 16.sp),
                     )
                   ],
                 ),
                 Image.asset('Assets/profileall.png')
               ],
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
                     Container(
-                        width: 33,
-                        height: 33,
+                        width: 33.w,
+                        height: 33.h,
                         decoration: const BoxDecoration(
-                            color: Color(0xff0077B5), shape: BoxShape.circle),
+                            color: Color(0xffD4C00B), shape: BoxShape.circle),
                         child: Image.asset('Assets/profile4.png')),
-                    const SizedBox(
-                      width: 26,
+                    SizedBox(
+                      width: 26.w,
                     ),
-                    const Text(
+                    Text(
                       'Case studies',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400, fontSize: 16.sp),
                     )
                   ],
                 ),
                 Image.asset('Assets/profileall.png')
               ],
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
                     Container(
-                        width: 33,
-                        height: 33,
+                        width: 33.w,
+                        height: 33.h,
                         decoration: const BoxDecoration(
-                            color: Color(0xff0077B5), shape: BoxShape.circle),
+                            color: Color(0xffD4C00B), shape: BoxShape.circle),
                         child: Image.asset('Assets/profile5.png')),
-                    const SizedBox(
-                      width: 26,
+                    SizedBox(
+                      width: 26.w,
                     ),
-                    const Text(
+                    Text(
                       'Payments',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400, fontSize: 16.sp),
                     )
                   ],
                 ),
                 Image.asset('Assets/profileall.png')
               ],
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
                     Container(
-                        width: 33,
-                        height: 33,
+                        width: 33.w,
+                        height: 33.h,
                         decoration: const BoxDecoration(
-                            color: Color(0xff0077B5), shape: BoxShape.circle),
+                            color: Color(0xffD4C00B), shape: BoxShape.circle),
                         child: Image.asset('Assets/profile6.png')),
-                    const SizedBox(
-                      width: 26,
+                    SizedBox(
+                      width: 26.w,
                     ),
-                    const Text(
+                    Text(
                       'Settings',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400, fontSize: 16.sp),
                     )
                   ],
                 ),
                 Image.asset('Assets/profileall.png')
               ],
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
                     Container(
-                        width: 33,
-                        height: 33,
+                        width: 33.w,
+                        height: 33.h,
                         decoration: const BoxDecoration(
-                            color: Color(0xff0077B5), shape: BoxShape.circle),
+                            color: Color(0xffD4C00B), shape: BoxShape.circle),
                         child: Image.asset('Assets/profile7.png')),
-                    const SizedBox(
-                      width: 26,
+                    SizedBox(
+                      width: 26.w,
                     ),
-                    const Text(
+                    Text(
                       'Help',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400, fontSize: 16.sp),
                     )
                   ],
                 ),
                 Image.asset('Assets/profileall.png')
               ],
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
                     Container(
-                        width: 33,
-                        height: 33,
+                        width: 33.w,
+                        height: 33.h,
                         decoration: const BoxDecoration(
-                            color: Color(0xff0077B5), shape: BoxShape.circle),
+                            color: Color(0xffD4C00B), shape: BoxShape.circle),
                         child: Image.asset('Assets/profile8.png')),
-                    const SizedBox(
-                      width: 26,
+                    SizedBox(
+                      width: 26.w,
                     ),
-                    const Text(
+                    Text(
                       'Log-Out',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400, fontSize: 16.sp),
                     )
                   ],
                 ),
                 Image.asset('Assets/profileall.png')
               ],
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
           ],
         ),
       ),

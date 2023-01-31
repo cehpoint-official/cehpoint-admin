@@ -1,8 +1,10 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'All_Post.dart';
 
 //Job
+// ignore: camel_case_types
 class All_Posts extends StatelessWidget {
   const All_Posts({super.key});
 
@@ -10,11 +12,14 @@ class All_Posts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Padding(
-            padding: EdgeInsets.only(left: 60),
+          title: Padding(
+            padding: EdgeInsets.only(left: 60.w),
             child: Text(
               'All Posts',
-              style: TextStyle(color: Colors.black87),
+              style: TextStyle(
+                color: Colors.black87,
+                fontSize: 18.sp,
+              ),
             ),
           ),
           backgroundColor: Colors.transparent,
@@ -32,44 +37,50 @@ class All_Posts extends StatelessWidget {
             Center(
               child: Row(
                 children: [
-                  const Text(
+                  Text(
                     'Job',
                     style: TextStyle(
-                        color: Color(0xffD4C00B),
-                        fontSize: 14,
+                        color: const Color(0xffD4C00B),
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.w600),
                   ),
                   PopupMenuButton(
                     onSelected: (result) {
                       if (result == 0) {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const All_Posts()));
+                            builder: (context) => All_Posts()));
                       } else if (result == 1) {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const All_Post()));
+                            builder: (context) => All_Post()));
                       }
                     },
                     itemBuilder: (BuildContext context) => [
-                      const PopupMenuItem(
+                      PopupMenuItem(
                         value: 0,
                         child: Center(
                             child: Text(
                           'Job',
-                          style: TextStyle(fontWeight: FontWeight.w700),
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 14.sp,
+                          ),
                         )),
                       ),
-                      const PopupMenuItem(
-                          height: 1,
+                      PopupMenuItem(
+                          height: 1.h,
                           child: Divider(
-                            height: 1,
+                            height: 1.h,
                             thickness: 3,
                           )),
-                      const PopupMenuItem(
+                      PopupMenuItem(
                         value: 1,
                         child: Center(
                             child: Text(
                           'Internship',
-                          style: TextStyle(fontWeight: FontWeight.w700),
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 14.sp,
+                          ),
                         )),
                       ),
                     ],
@@ -80,7 +91,7 @@ class All_Posts extends StatelessWidget {
             ),
           ]),
       body: Padding(
-        padding: const EdgeInsets.only(left: 30, top: 60),
+        padding: EdgeInsets.only(left: 30.w, top: 60.h),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -89,45 +100,54 @@ class All_Posts extends StatelessWidget {
               children: [
                 Image.asset('Assets/allpost.png'),
                 Padding(
-                  padding: const EdgeInsets.only(left: 30),
+                  padding: EdgeInsets.only(left: 30.w),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         'Company 2',
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      const Text(
-                        'Web development',
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      const Text(
-                        'Remote , Minimum 5000K/month',
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 13.sp,
+                        ),
                       ),
                       SizedBox(
-                        height: 20,
-                        width: 90,
+                        height: 5.h,
+                      ),
+                      Text(
+                        'Web development',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 11.sp,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5.h,
+                      ),
+                      Text(
+                        'Remote , Minimum 5000K/month',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 10.sp,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10.h,
+                      ),
+                      SizedBox(
+                        height: 20.h,
+                        width: 90.w,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xffbacD4C00B),
+                            backgroundColor: const Color(0xffD4C00B),
                           ),
                           onPressed: () {
                             Navigator.pushNamed(context, 'PostDetails');
                           },
-                          child: const Text('View details',
+                          child: Text('View details',
                               style: TextStyle(
                                   color: Colors.black87,
-                                  fontSize: 10,
+                                  fontSize: 10.sp,
                                   fontWeight: FontWeight.w700)),
                         ),
                       ),
@@ -136,53 +156,60 @@ class All_Posts extends StatelessWidget {
                 )
               ],
             ),
-            const SizedBox(
-              height: 30,
-            ),
+            SizedBox(height: 30.h),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset('Assets/allpost.png'),
                 Padding(
-                  padding: const EdgeInsets.only(left: 30),
+                  padding: EdgeInsets.only(left: 30.w),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         'Company 2',
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      const Text(
-                        'Web development',
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      const Text(
-                        'Remote , Minimum 5000K/month',
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 13.sp,
+                        ),
                       ),
                       SizedBox(
-                        height: 20,
-                        width: 90,
+                        height: 5.h,
+                      ),
+                      Text(
+                        'Web development',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 11.sp,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5.h,
+                      ),
+                      Text(
+                        'Remote , Minimum 5000K/month',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 10.sp,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10.h,
+                      ),
+                      SizedBox(
+                        height: 20.h,
+                        width: 90.w,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xffbacD4C00B),
+                            backgroundColor: const Color(0xffD4C00B),
                           ),
                           onPressed: () {
                             Navigator.pushNamed(context, 'PostDetails');
                           },
-                          child: const Text('View details',
+                          child: Text('View details',
                               style: TextStyle(
                                   color: Colors.black87,
-                                  fontSize: 10,
+                                  fontSize: 10.sp,
                                   fontWeight: FontWeight.w700)),
                         ),
                       ),

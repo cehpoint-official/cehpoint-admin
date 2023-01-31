@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class Client_details extends StatelessWidget {
   const Client_details({super.key});
 
@@ -7,11 +9,11 @@ class Client_details extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 60),
-          child: const Text(
+        title: Padding(
+          padding: EdgeInsets.only(left: 60.w),
+          child: Text(
             'Client details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -27,215 +29,234 @@ class Client_details extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
+        padding: EdgeInsets.only(top: 50.h, left: 30.w, right: 30.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Name',
               style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.3),
+                color: const Color.fromRGBO(0, 0, 0, 0.3),
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'abcd mondal',
               style: TextStyle(
-                color: Color(0xff000000),
+                color: const Color(0xff000000),
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'Company Name',
               style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.3),
+                color: const Color.fromRGBO(0, 0, 0, 0.3),
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'xyz company',
               style: TextStyle(
-                color: Color(0xff000000),
+                color: const Color(0xff000000),
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'Phone Number',
               style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.3),
+                color: const Color.fromRGBO(0, 0, 0, 0.3),
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               '7028361855',
               style: TextStyle(
-                color: Color(0xff000000),
+                color: const Color(0xff000000),
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'Email ID',
               style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.3),
+                color: const Color.fromRGBO(0, 0, 0, 0.3),
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'abcd@gmail.com',
               style: TextStyle(
-                color: Color(0xff000000),
+                color: const Color(0xff000000),
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'Address',
               style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.3),
+                color: const Color.fromRGBO(0, 0, 0, 0.3),
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'Murshidabad',
               style: TextStyle(
-                color: Color(0xff000000),
+                color: const Color(0xff000000),
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'Explain your Requirement',
               style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.3),
+                color: const Color.fromRGBO(0, 0, 0, 0.3),
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'App development',
               style: TextStyle(
-                color: Color(0xff000000),
+                color: const Color(0xff000000),
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'What will be the project finishing deadline if we start working on your project next Monday ?',
               maxLines: 2,
               style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.3),
+                color: const Color.fromRGBO(0, 0, 0, 0.3),
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               '30th February',
               style: TextStyle(
-                color: Color(0xff000000),
+                color: const Color(0xff000000),
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               "What's your budget for this project ? (optional)",
               style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.3),
+                color: const Color.fromRGBO(0, 0, 0, 0.3),
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               '30,000',
               style: TextStyle(
-                color: Color(0xff000000),
+                color: const Color(0xff000000),
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'How did you hear about us',
               style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.3),
+                color: const Color.fromRGBO(0, 0, 0, 0.3),
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Text(
+            Text(
               'Google',
               style: TextStyle(
-                color: Color(0xff000000),
+                color: const Color(0xff000000),
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(
-                top: 155,
+              margin: EdgeInsets.only(
+                top: 155.h,
               ),
-              height: 47,
+              height: 47.h,
               width: 334,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xffbacD4C00B),
+                  backgroundColor: const Color(0xffD4C00B),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
                 ),
-                child: const Center(
+                child: Center(
                     child: Text(
                   'Approve',
                   style: TextStyle(
-                      color: Color(
+                      color: const Color(
                         0xffFFFFFF,
                       ),
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.w700),
                 )),
                 onPressed: () {
                   showModalBottomSheet(
-                    shape: const RoundedRectangleBorder(
+                    shape: RoundedRectangleBorder(
                       borderRadius:
-                          BorderRadius.vertical(top: Radius.circular(30)),
+                          BorderRadius.vertical(top: Radius.circular(30.r)),
                     ),
                     context: context,
                     builder: (BuildContext context) {
@@ -243,19 +264,19 @@ class Client_details extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(
-                                left: 16, right: 16, top: 24),
+                            padding: EdgeInsets.only(
+                                left: 16.w, right: 16.w, top: 24.h),
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Container(
-                                    height: 175,
+                                    height: 175.h,
                                     width: double.infinity,
                                     color: const Color(0xffD4C00B)
                                         .withOpacity(0.25),
                                     child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 24, bottom: 16),
+                                      padding: EdgeInsets.only(
+                                          top: 24.h, bottom: 16.h),
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
@@ -269,13 +290,13 @@ class Client_details extends StatelessWidget {
                                             children: [
                                               Image.asset(
                                                   'Assets/bottomsheet2.png'),
-                                              const SizedBox(
-                                                width: 10,
+                                              SizedBox(
+                                                width: 10.w,
                                               ),
-                                              const Text(
+                                              Text(
                                                 'Embedded Course brochure.pdf',
                                                 style: TextStyle(
-                                                    fontSize: 14,
+                                                    fontSize: 14.sp,
                                                     fontWeight:
                                                         FontWeight.w500),
                                               ),
@@ -285,20 +306,20 @@ class Client_details extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(
-                                    height: 16,
+                                  SizedBox(
+                                    height: 16.h,
                                   ),
-                                  const Text('Payment link:',
+                                  Text('Payment link:',
                                       style: TextStyle(
-                                          fontSize: 14,
+                                          fontSize: 14.sp,
                                           fontWeight: FontWeight.w500)),
-                                  const SizedBox(
-                                    height: 16,
+                                  SizedBox(
+                                    height: 16.h,
                                   ),
-                                  const Text('https://paymentlink.com',
+                                  Text('https://paymentlink.com',
                                       style: TextStyle(
-                                          color: Color(0xff2A55C3),
-                                          fontSize: 14,
+                                          color: const Color(0xff2A55C3),
+                                          fontSize: 14.sp,
                                           fontWeight: FontWeight.w500)),
                                 ]),
                           ),
@@ -306,38 +327,38 @@ class Client_details extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: SizedBox(
-                                  height: 55,
+                                  height: 55.h,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Color(0xffFFFFFF),
+                                      backgroundColor: const Color(0xffFFFFFF),
                                     ),
                                     onPressed: () {
                                       Navigator.pushNamed(
                                           context, 'Student_details');
                                     },
-                                    child: const Text('Update',
+                                    child: Text('Update',
                                         style: TextStyle(
                                             color: Colors.black87,
-                                            fontSize: 20,
+                                            fontSize: 20.sp,
                                             fontWeight: FontWeight.w700)),
                                   ),
                                 ),
                               ),
                               Expanded(
                                 child: SizedBox(
-                                  height: 55,
+                                  height: 55.h,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: Color(0xffbacD4C00B),
+                                      backgroundColor: const Color(0xffD4C00B),
                                     ),
                                     onPressed: () {
                                       Navigator.pushNamed(
                                           context, 'Student_details');
                                     },
-                                    child: const Text('Send',
+                                    child: Text('Send',
                                         style: TextStyle(
                                             color: Colors.black87,
-                                            fontSize: 20,
+                                            fontSize: 20.sp,
                                             fontWeight: FontWeight.w700)),
                                   ),
                                 ),

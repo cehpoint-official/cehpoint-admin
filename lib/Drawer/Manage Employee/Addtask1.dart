@@ -1,4 +1,6 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Addtask1 extends StatelessWidget {
   const Addtask1({super.key});
@@ -7,11 +9,11 @@ class Addtask1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 90),
+        title: Padding(
+          padding: EdgeInsets.only(left: 90.w),
           child: Text(
             'Add task',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -27,17 +29,17 @@ class Addtask1 extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 30, top: 48, right: 15),
+        padding: EdgeInsets.only(left: 30.w, top: 48.h, right: 15.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 55,
+              height: 55.h,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromRGBO(212, 192, 11, 0.33),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(15.r),
                   ),
                 ),
                 onPressed: () {},
@@ -53,41 +55,42 @@ class Addtask1 extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 32,
+            SizedBox(
+              height: 32.h,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   'Employee 1',
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                  style:
+                      TextStyle(fontWeight: FontWeight.w500, fontSize: 18.sp),
                 ),
                 SizedBox(
-                  height: 27,
-                  width: 103,
+                  height: 27.h,
+                  width: 103.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xffD4C00B),
+                      backgroundColor: const Color(0xffD4C00B),
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, 'Addtaskdetails');
                     },
-                    child: const Text('View details',
+                    child: Text('View details',
                         style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w500)),
                   ),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 63,
+            SizedBox(
+              height: 63.h,
             ),
             Container(
-              height: 55,
+              height: 55.h,
               decoration:
                   const BoxDecoration(color: Color(0xffFFFFFF), boxShadow: [
                 BoxShadow(
@@ -98,20 +101,20 @@ class Addtask1 extends StatelessWidget {
                 )
               ]),
               child: Padding(
-                padding: const EdgeInsets.only(top: 5, left: 15, right: 15),
+                padding: EdgeInsets.only(top: 5.h, left: 15.w, right: 15.w),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
                         Image.asset('Assets/Task1.png'),
-                        const SizedBox(
-                          width: 21,
+                        SizedBox(
+                          width: 21.w,
                         ),
-                        const Text(
+                        Text(
                           'Task 1',
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w500),
+                              fontSize: 18.sp, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
@@ -120,11 +123,11 @@ class Addtask1 extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 11,
+            SizedBox(
+              height: 11.h,
             ),
             Container(
-              height: 55,
+              height: 55.h,
               decoration:
                   const BoxDecoration(color: Color(0xffFFFFFF), boxShadow: [
                 BoxShadow(
@@ -135,20 +138,20 @@ class Addtask1 extends StatelessWidget {
                 )
               ]),
               child: Padding(
-                padding: const EdgeInsets.only(top: 5, left: 15, right: 15),
+                padding: EdgeInsets.only(top: 5.h, left: 15.w, right: 15.w),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
                         Image.asset('Assets/Task2.png'),
-                        const SizedBox(
-                          width: 21,
+                        SizedBox(
+                          width: 21.w,
                         ),
-                        const Text(
+                        Text(
                           'Task 2',
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w500),
+                              fontSize: 18.sp, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),

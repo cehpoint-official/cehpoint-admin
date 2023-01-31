@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class Carditem extends StatelessWidget {
-  // const Carditem({super.key});
+  //  Carditem({super.key});
   String text;
   String count;
   String image;
@@ -32,8 +33,8 @@ class Carditem extends StatelessWidget {
               children: [
                 Text(
                   text,
-                  style: const TextStyle(
-                      fontSize: 20,
+                  style: TextStyle(
+                      fontSize: 20.sp,
                       color: Colors.white70,
                       fontWeight: FontWeight.w600),
                 ),
@@ -43,19 +44,20 @@ class Carditem extends StatelessWidget {
                   children: [
                     Text(
                       count,
-                      style: const TextStyle(
-                          fontSize: 20,
+                      style: TextStyle(
+                          fontSize: 20.sp,
                           color: Colors.white70,
                           fontWeight: FontWeight.w500),
                     ),
-                    SizedBox(width: 40, height: 40, child: Image.asset(image)),
+                    SizedBox(
+                        width: 40.w, height: 40.h, child: Image.asset(image)),
                   ],
                 ),
               ],
             ),
           ),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(21),
+            borderRadius: BorderRadius.circular(21.r),
             color: color,
           )),
     );

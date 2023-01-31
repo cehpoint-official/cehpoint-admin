@@ -1,5 +1,7 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Addreport extends StatelessWidget {
   Addreport({super.key});
@@ -11,11 +13,11 @@ class Addreport extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 80),
+        title: Padding(
+          padding: EdgeInsets.only(left: 80.w),
           child: Text(
             'Add report',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -31,23 +33,23 @@ class Addreport extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 30, top: 48, right: 5),
+        padding: EdgeInsets.only(left: 30.w, top: 48.h, right: 5.w),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Container(
-            height: 55,
-            width: 334,
+          SizedBox(
+            height: 55.h,
+            width: 334.w,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromRGBO(212, 192, 11, 0.33),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(15.r),
                 ),
               ),
               onPressed: () {
                 showModalBottomSheet(
-                  shape: const RoundedRectangleBorder(
+                  shape: RoundedRectangleBorder(
                     borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(30)),
+                        BorderRadius.vertical(top: Radius.circular(30.r)),
                   ),
                   context: context,
                   builder: (BuildContext context) {
@@ -55,8 +57,8 @@ class Addreport extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(
-                              left: 16, right: 16, top: 89),
+                          padding: EdgeInsets.only(
+                              left: 16.w, right: 16.w, top: 89.h),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -64,8 +66,8 @@ class Addreport extends StatelessWidget {
                                   valueListenable: dropValue,
                                   builder: (context, value, child) {
                                     return Container(
-                                      padding: const EdgeInsets.only(
-                                          right: 22, left: 50),
+                                      padding: EdgeInsets.only(
+                                          right: 22.w, left: 50.w),
                                       decoration:
                                           BoxDecoration(border: Border.all()),
                                       child: DropdownButton2<String>(
@@ -75,12 +77,12 @@ class Addreport extends StatelessWidget {
                                           isExpanded: true,
                                           icon:
                                               const Icon(Icons.arrow_drop_down),
-                                          hint: const Text(
+                                          hint: Text(
                                             'Week 2',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w500,
-                                                fontSize: 18,
-                                                color: Color(0xff000000)),
+                                                fontSize: 18.sp,
+                                                color: const Color(0xff000000)),
                                           ),
                                           underline: Container(),
                                           value: (value.isEmpty) ? null : value,
@@ -90,8 +92,8 @@ class Addreport extends StatelessWidget {
                                     );
                                   },
                                 ),
-                                const SizedBox(
-                                  height: 15,
+                                SizedBox(
+                                  height: 15.h,
                                 ),
                                 const TextField(
                                   decoration: InputDecoration(
@@ -105,18 +107,18 @@ class Addreport extends StatelessWidget {
                           children: [
                             Expanded(
                               child: SizedBox(
-                                height: 55,
+                                height: 55.h,
                                 child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor: Color(0xffbacD4C00B),
+                                    backgroundColor: const Color(0xffD4C00B),
                                   ),
                                   onPressed: () {
                                     Navigator.pushNamed(context, 'Addreport');
                                   },
-                                  child: const Text('Save',
+                                  child: Text('Save',
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 20,
+                                          fontSize: 20.sp,
                                           fontWeight: FontWeight.w700)),
                                 ),
                               ),
@@ -128,74 +130,75 @@ class Addreport extends StatelessWidget {
                   },
                 );
               },
-              child: const Center(
+              child: Center(
                   child: Text(
                 '+Add a week',
                 style: TextStyle(
-                    color: Color(
+                    fontSize: 17.sp,
+                    color: const Color(
                       0xffFFFFFF,
                     ),
                     fontWeight: FontWeight.w700),
               )),
             ),
           ),
-          const SizedBox(
-            height: 35,
+          SizedBox(
+            height: 35.h,
           ),
-          const Text(
+          Text(
             'My Food Box Project',
             style: TextStyle(
                 fontWeight: FontWeight.w500,
-                fontSize: 16,
-                color: Color.fromRGBO(0, 0, 0, 0.6)),
+                fontSize: 16.sp,
+                color: const Color.fromRGBO(0, 0, 0, 0.6)),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'Week 1 report',
                 style: TextStyle(
                     color: Colors.black87,
                     fontWeight: FontWeight.w400,
-                    fontSize: 20),
+                    fontSize: 20.sp),
               ),
               Image.asset('Assets/pencil.png')
             ],
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
                 'Link:',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.sp),
               ),
               SizedBox(
-                height: 5,
+                height: 5.h,
               ),
               Text(
                 'https://report.id=769%3A157&t=XtbCKaCwQ',
                 // GZWheWo-0
                 style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 12.sp,
                     fontWeight: FontWeight.w500,
-                    color: Color(0xff2A55C3)),
+                    color: const Color(0xff2A55C3)),
               )
             ],
           ),
-          const Text(
+          Text(
             'GZWheWo-0',
             style: TextStyle(
-                fontSize: 12,
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
-                color: Color(0xff2A55C3)),
+                color: const Color(0xff2A55C3)),
           )
         ]),
       ),

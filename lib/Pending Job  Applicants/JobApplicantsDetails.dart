@@ -1,4 +1,6 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class JobApplicantsDetails extends StatelessWidget {
   const JobApplicantsDetails({super.key});
@@ -7,11 +9,11 @@ class JobApplicantsDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 35),
+        title: Padding(
+          padding: EdgeInsets.only(left: 35.w),
           child: Text(
             'Job Applicants Details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -27,142 +29,153 @@ class JobApplicantsDetails extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(
-          top: 50,
+        padding: EdgeInsets.only(
+          top: 50.h,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 30),
+              padding: EdgeInsets.only(left: 30.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     'Name',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Bijoy Basu',
                     style: TextStyle(
-                      color: Color(0xff000000),
+                      fontSize: 14.sp,
+                      color: const Color(0xff000000),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Address',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Kolkata',
                     style: TextStyle(
-                      color: Color(0xff000000),
+                      fontSize: 12.sp,
+                      color: const Color(0xff000000),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Phone Number',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     '+91 6789446754',
                     style: TextStyle(
-                      color: Color(0xff000000),
+                      fontSize: 12.sp,
+                      color: const Color(0xff000000),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Email',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'bijoy@gmail.com',
                     style: TextStyle(
-                      color: Color(0xff000000),
+                      fontSize: 12.sp,
+                      color: const Color(0xff000000),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'I completed three internships before',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Yes',
                     style: TextStyle(
-                      color: Color(0xff000000),
+                      fontSize: 13.sp,
+                      color: const Color(0xff000000),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Offer letter or payment receipt',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 30),
+              padding: EdgeInsets.only(left: 30.w),
               child: Row(
                 children: [
                   SizedBox(
-                    height: 30,
-                    width: 115,
+                    height: 30.h,
+                    width: 115.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xffD4C00B),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10.r),
                         ),
                       ),
                       onPressed: (() {}),
@@ -171,13 +184,14 @@ class JobApplicantsDetails extends StatelessWidget {
                           Image.asset(
                             'Assets/jobApplicantsDetailes.png',
                           ),
-                          const SizedBox(
-                            width: 5,
+                          SizedBox(
+                            width: 5.w,
                           ),
-                          const Text(
+                          Text(
                             'View file 1',
                             style: TextStyle(
-                              color: Colors.white70,
+                              fontSize: 11.sp,
+                              color: Colors.black,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -185,17 +199,17 @@ class JobApplicantsDetails extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 10,
+                  SizedBox(
+                    width: 10.w,
                   ),
                   SizedBox(
-                    height: 30,
-                    width: 115,
+                    height: 30.h,
+                    width: 115.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xffD4C00B),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10.r),
                         ),
                       ),
                       onPressed: (() {}),
@@ -204,13 +218,14 @@ class JobApplicantsDetails extends StatelessWidget {
                           Image.asset(
                             'Assets/jobApplicantsDetailes.png',
                           ),
-                          const SizedBox(
-                            width: 5,
+                          SizedBox(
+                            width: 5.w,
                           ),
-                          const Text(
+                          Text(
                             'View file 2',
                             style: TextStyle(
-                              color: Colors.white70,
+                              fontSize: 11.sp,
+                              color: Colors.black,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -218,17 +233,17 @@ class JobApplicantsDetails extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 10,
+                  SizedBox(
+                    width: 10.w,
                   ),
                   SizedBox(
-                    height: 30,
-                    width: 115,
+                    height: 30.h,
+                    width: 115.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xffD4C00B),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10.r),
                         ),
                       ),
                       onPressed: (() {}),
@@ -237,13 +252,14 @@ class JobApplicantsDetails extends StatelessWidget {
                           Image.asset(
                             'Assets/jobApplicantsDetailes.png',
                           ),
-                          const SizedBox(
-                            width: 5,
+                          SizedBox(
+                            width: 5.w,
                           ),
-                          const Text(
+                          Text(
                             'View file 3',
                             style: TextStyle(
-                              color: Colors.white70,
+                              fontSize: 11.sp,
+                              color: Colors.black,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -254,19 +270,19 @@ class JobApplicantsDetails extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Text(
                   ' Answers',
                   style: TextStyle(
                       decoration: TextDecoration.underline,
                       color: Colors.black87,
                       fontWeight: FontWeight.w600,
-                      fontSize: 16),
+                      fontSize: 16.sp),
                 ),
               ],
             ),
@@ -276,7 +292,7 @@ class JobApplicantsDetails extends StatelessWidget {
                   children: [
                     for (int i = 1; i < 11; i++)
                       Padding(
-                        padding: const EdgeInsets.only(left: 30),
+                        padding: EdgeInsets.only(left: 30.w),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -284,56 +300,59 @@ class JobApplicantsDetails extends StatelessWidget {
                               children: [
                                 Text(
                                   i.toString(),
-                                  style: const TextStyle(
-                                    color: Color.fromRGBO(0, 0, 0, 0.3),
+                                  style: TextStyle(
+                                    fontSize: 12.sp,
+                                    color: const Color.fromRGBO(0, 0, 0, 0.3),
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                const Text(
+                                Text(
                                   '.Question?',
                                   style: TextStyle(
-                                    color: Color.fromRGBO(0, 0, 0, 0.3),
+                                    fontSize: 12.sp,
+                                    color: const Color.fromRGBO(0, 0, 0, 0.3),
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              height: 8,
+                            SizedBox(
+                              height: 8.h,
                             ),
-                            const Text(
+                            Text(
                               '    Answer 1',
                               style: TextStyle(
-                                color: Color(0xff000000),
+                                fontSize: 14.sp,
+                                color: const Color(0xff000000),
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                            const SizedBox(
-                              height: 8,
+                            SizedBox(
+                              height: 8.h,
                             ),
                           ],
                         ),
                       ),
-                    const SizedBox(
-                      height: 30,
+                    SizedBox(
+                      height: 30.h,
                     ),
                     Row(
                       children: [
                         Expanded(
                           child: SizedBox(
-                            height: 55,
+                            height: 55.h,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xffbacD4C00B),
+                                backgroundColor: const Color(0xffD4C00B),
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(
                                     context, 'Updateapprovedetails');
                               },
-                              child: const Text('Approve',
+                              child: Text('Approve',
                                   style: TextStyle(
                                       color: Colors.white70,
-                                      fontSize: 20,
+                                      fontSize: 20.sp,
                                       fontWeight: FontWeight.w700)),
                             ),
                           ),

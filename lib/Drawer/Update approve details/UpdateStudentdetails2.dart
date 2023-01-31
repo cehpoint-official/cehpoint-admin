@@ -1,4 +1,6 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UpdateStudentdetails2 extends StatelessWidget {
   const UpdateStudentdetails2({super.key});
@@ -7,11 +9,11 @@ class UpdateStudentdetails2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 40),
+        title: Padding(
+          padding: EdgeInsets.only(left: 40.w),
           child: Text(
             'Update Student details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -28,24 +30,24 @@ class UpdateStudentdetails2 extends StatelessWidget {
       ),
       body: Padding(
         padding:
-            const EdgeInsets.only(top: 60, left: 30, right: 30, bottom: 50),
+            EdgeInsets.only(top: 60.h, left: 30.w, right: 30.w, bottom: 50.h),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text(
+          Text(
             'Embedded Course brochure',
             style: TextStyle(
                 fontWeight: FontWeight.w500,
-                fontSize: 12,
-                color: Color.fromRGBO(0, 0, 0, 0.3)),
+                fontSize: 12.sp,
+                color: const Color.fromRGBO(0, 0, 0, 0.3)),
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Container(
-            height: 250,
-            width: 500,
-            color: Color(0xffFAF8E4),
+            height: 250.h,
+            width: 500.w,
+            color: const Color(0xffFAF8E4),
             child: Padding(
-              padding: const EdgeInsets.only(top: 52, bottom: 24),
+              padding: EdgeInsets.only(top: 52.h, bottom: 24.h),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,13 +57,13 @@ class UpdateStudentdetails2 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset('Assets/bottomsheet2.png'),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
-                      const Text(
+                      Text(
                         'Embedded Course brochure.pdf',
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w500),
+                            fontSize: 14.sp, fontWeight: FontWeight.w500),
                       ),
                     ],
                   )
@@ -69,56 +71,57 @@ class UpdateStudentdetails2 extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
-          const Text(
+          Text(
             'Payment link:',
             style: TextStyle(
                 fontWeight: FontWeight.w500,
-                fontSize: 12,
-                color: Color.fromRGBO(0, 0, 0, 0.3)),
+                fontSize: 12.sp,
+                color: const Color.fromRGBO(0, 0, 0, 0.3)),
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'https://paymentlink.com',
                 style: TextStyle(
                     color: Color(0xff2A55C3),
                     fontWeight: FontWeight.w500,
-                    fontSize: 14),
+                    fontSize: 14.sp),
               ),
               Image.asset('Assets/pencil.png')
             ],
           ),
-          const SizedBox(
-            height: 47,
+          SizedBox(
+            height: 47.h,
           ),
           Container(
-              margin: const EdgeInsets.only(
-                top: 195,
+              margin: EdgeInsets.only(
+                top: 195.h,
               ),
-              height: 57,
-              width: 450,
+              height: 57.h,
+              width: 450.w,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xffbacD4C00B),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(15.r),
                   ),
                 ),
-                child: const Center(
+                child: Center(
                     child: Text(
                   'Update',
                   style: TextStyle(
-                      color: Color(
+                      color: const Color(
                         0xffFFFFFF,
                       ),
+                      fontSize: 18.sp,
                       fontWeight: FontWeight.w700),
                 )),
                 onPressed: () {

@@ -2,11 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:zefyrka/zefyrka.dart';
 
 class Addtaskdetails extends StatelessWidget {
   Addtaskdetails({super.key});
-  ZefyrController _controller = ZefyrController();
+  final ZefyrController _controller = ZefyrController();
 
   final dropValue = ValueNotifier('');
 
@@ -35,42 +36,44 @@ class Addtaskdetails extends StatelessWidget {
               Navigator.pushNamed(context, 'Addtask1');
             },
           ),
-          title: const Padding(
-            padding: EdgeInsets.only(left: 70),
+          title: Padding(
+            padding: EdgeInsets.only(left: 70.w),
             child: Text(
               'Add task details',
               style: TextStyle(
-                  fontWeight: FontWeight.w700, color: Color(0xff000000)),
+                  fontWeight: FontWeight.w700,
+                  color: const Color(0xff000000),
+                  fontSize: 18.sp),
             ),
           ),
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
         body: Padding(
-          padding: const EdgeInsets.only(left: 24, right: 20, top: 55),
+          padding: EdgeInsets.only(left: 24.w, right: 20.w, top: 55.h),
           child: Column(children: [
-            const Center(
+            Center(
               child: Text(
                 'Task Details',
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
-                    color: Color(0xffD4C00B),
-                    fontSize: 16),
+                    color: const Color(0xffD4C00B),
+                    fontSize: 16.sp),
               ),
             ),
-            const SizedBox(height: 50),
+            SizedBox(height: 50.h),
             const TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(), hintText: 'TASK TITLE'),
             ),
-            const SizedBox(height: 30),
+            SizedBox(height: 30.h),
             ValueListenableBuilder(
               valueListenable: dropValue,
               builder: (context, value, child) {
                 return Container(
                   decoration: BoxDecoration(border: Border.all()),
                   child: DropdownButton2<String>(
-                    dropdownWidth: 100,
+                    dropdownWidth: 100.w,
                     dropdownDirection: DropdownDirection.left,
                     isExpanded: true,
                     icon: const Icon(Icons.arrow_drop_down),
@@ -89,7 +92,7 @@ class Addtaskdetails extends StatelessWidget {
                 );
               },
             ),
-            const SizedBox(height: 30),
+            SizedBox(height: 30.h),
             const SizedBox(
               child: TextField(
                 keyboardType: TextInputType.number,
@@ -98,13 +101,13 @@ class Addtaskdetails extends StatelessWidget {
                     hintText: 'TASK COMPLETE DATE '),
               ),
             ),
-            const SizedBox(height: 30),
+            SizedBox(height: 30.h),
             Container(
               decoration: BoxDecoration(border: Border.all()),
               child: Column(
                 children: [
                   SizedBox(
-                    height: 100,
+                    height: 100.h,
                     child: ZefyrEditor(
                       controller: _controller,
                     ),
@@ -113,28 +116,28 @@ class Addtaskdetails extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 120,
+            SizedBox(
+              height: 120.h,
             ),
             SizedBox(
-              height: 59,
-              width: 201,
+              height: 59.h,
+              width: 201.w,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xffbacD4C00B),
+                  backgroundColor: const Color(0xffD4C00B),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50),
+                    borderRadius: BorderRadius.circular(50.r),
                   ),
                 ),
                 onPressed: () {},
-                child: const Center(
+                child: Center(
                     child: Text(
                   'SAVE',
                   style: TextStyle(
-                      color: Color(
+                      color: const Color(
                         0xffFFFFFF,
                       ),
-                      fontSize: 22,
+                      fontSize: 22.sp,
                       fontWeight: FontWeight.w700),
                 )),
               ),

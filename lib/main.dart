@@ -52,59 +52,54 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      minTextAdapt: true,
-      splitScreenMode: true,
-      designSize: const Size(411.428, 843.428),
-      builder: (context, child) {
-        return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            initialRoute: 'SplashScreen',
-            routes: {
-              'SplashScreen': ((context) => MySplash_Screen()),
-              'Dashboard': ((context) => MyDashborad()),
-              'Drawer': ((context) => MyDrawer()),
-              'Studentwaitinglist': ((context) => Student_waiting_list()),
-              'Student_details': ((context) => Student_details()),
-              'Clientwaitinglist': ((context) => Client_waiting_list()),
-              'Clientdetails': ((context) => Client_details()),
-              'All_Students': ((context) => All_Students()),
-              'All_clients': ((context) => All_clients()),
-              'Premium_Projects': ((context) => Premium_Projects()),
-              'PendingJobApplicants': ((context) => Pending_Job_Applicants()),
-              'JobApplicantsDetails': ((context) => JobApplicantsDetails()),
-              'InternshipApplicants': ((context) => Internship_Applicants()),
-              'InternshipApplicantsDetails': ((context) =>
-                  InternshipApplicantsDetails()),
-              'Updateapprovedetails': ((context) => Updateapprovedetails()),
-              'Updateapprovedetails2': ((context) => Updateapprovedetails2()),
-              'total_empolyees': ((context) => total_employees()),
-              'All_Posts': ((context) => All_Posts()),
-              'All_Post': ((context) => All_Post()),
-              'PostDetails': ((context) => PostDetails()),
-              'PostDetail': ((context) => PostDetail()),
-              'On_going_Projects': ((context) => On_going_Projects()),
-              'On_going_Projects_details': ((context) =>
-                  On_going_Projects_details()),
-              'Pending_Projects': ((context) => Pending_Projects()),
-              'Pending_Projects_details': ((context) =>
-                  Pending_Projects_details()),
-              'Completed_projects': ((context) => Completed_projects()),
-              'Completedprojectsdetails': ((context) =>
-                  Completedprojectsdetails()),
-              'UpdateStudentdetails': ((context) => UpdateStudentdetails()),
-              'UpdateStudentdetails2': ((context) => UpdateStudentdetails2()),
-              'UpdateClassdetails2': ((context) => UpdateClassdetails2()),
-              'UpdateClassdetails': ((context) => UpdateClassdetails()),
-              'Addreport': ((context) => Addreport()),
-              'Clientsweeklyreport': ((context) => Clientsweeklyreport()),
-              'AllEmployee': ((context) => AllEmployee()),
-              'Addtask1': ((context) => Addtask1()),
-              'Addtaskdetails': ((context) => Addtaskdetails()),
-              'Upload_videos': ((context) => Upload_videos()),
-              'UploadDemoclasses': ((context) => Upload_Demo_classes()),
-              'Addtask1': ((context) => Addtask1())
-            });
-      },
+      builder: (context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: 'SplashScreen',
+        routes: {
+          'SplashScreen': ((context) => MySplash_Screen()),
+          'Dashboard': ((context) => MyDashborad()),
+          'Drawer': ((context) => MyDrawer()),
+          'Studentwaitinglist': ((context) => Student_waiting_list()),
+          'Student_details': ((context) => Student_details()),
+          'Clientwaitinglist': ((context) => Client_waiting_list()),
+          'Clientdetails': ((context) => Client_details()),
+          'All_Students': ((context) => All_Students()),
+          'All_clients': ((context) => All_clients()),
+          'Premium_Projects': ((context) => Premium_Projects()),
+          'PendingJobApplicants': ((context) => Pending_Job_Applicants()),
+          'JobApplicantsDetails': ((context) => JobApplicantsDetails()),
+          'InternshipApplicants': ((context) => Internship_Applicants()),
+          'InternshipApplicantsDetails': ((context) =>
+              InternshipApplicantsDetails()),
+          'Updateapprovedetails': ((context) => Updateapprovedetails()),
+          'Updateapprovedetails2': ((context) => Updateapprovedetails2()),
+          'total_empolyees': ((context) => total_employees()),
+          'All_Posts': ((context) => All_Posts()),
+          'All_Post': ((context) => All_Post()),
+          'PostDetails': ((context) => PostDetails()),
+          'PostDetail': ((context) => PostDetail()),
+          'On_going_Projects': ((context) => On_going_Projects()),
+          'On_going_Projects_details': ((context) =>
+              On_going_Projects_details()),
+          'Pending_Projects': ((context) => Pending_Projects()),
+          'Pending_Projects_details': ((context) => Pending_Projects_details()),
+          'Completed_projects': ((context) => Completed_projects()),
+          'Completedprojectsdetails': ((context) => Completedprojectsdetails()),
+          'UpdateStudentdetails': ((context) => UpdateStudentdetails()),
+          'UpdateStudentdetails2': ((context) => UpdateStudentdetails2()),
+          'UpdateClassdetails2': ((context) => UpdateClassdetails2()),
+          'UpdateClassdetails': ((context) => UpdateClassdetails()),
+          'Addreport': ((context) => Addreport()),
+          'Clientsweeklyreport': ((context) => Clientsweeklyreport()),
+          'AllEmployee': ((context) => AllEmployee()),
+          'Addtask1': ((context) => Addtask1()),
+          'Addtaskdetails': ((context) => Addtaskdetails()),
+          'Upload_videos': ((context) => Upload_videos()),
+          'UploadDemoclasses': ((context) => Upload_Demo_classes()),
+          'Addtask1': ((context) => Addtask1())
+        },
+      ),
+      designSize: const Size(411, 843),
     );
   }
 }

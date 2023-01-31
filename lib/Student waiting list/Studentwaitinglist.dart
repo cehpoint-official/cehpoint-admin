@@ -1,5 +1,8 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class Student_waiting_list extends StatelessWidget {
   const Student_waiting_list({super.key});
 
@@ -7,11 +10,11 @@ class Student_waiting_list extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 40),
+        title: Padding(
+          padding: EdgeInsets.only(left: 40.w),
           child: Text(
             'Student waiting list',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -27,26 +30,26 @@ class Student_waiting_list extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 20),
+        padding: EdgeInsets.only(top: 50.h, left: 20.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(children: [
               Container(
-                margin: const EdgeInsets.only(left: 10),
+                margin: EdgeInsets.only(left: 10.w),
                 child: Image.asset(
                   'Assets/Student_waiting_list.png',
                 ),
               ),
-              const SizedBox(
-                width: 20,
+              SizedBox(
+                width: 20.w,
               ),
-              const Text(
+              Text(
                 'Asit Jana',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
               ),
-              const SizedBox(
-                width: 200,
+              SizedBox(
+                width: 200.w,
               ),
               IconButton(
                   onPressed: () {
@@ -54,25 +57,25 @@ class Student_waiting_list extends StatelessWidget {
                   },
                   icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             Row(children: [
               Container(
-                margin: const EdgeInsets.only(left: 10),
+                margin: EdgeInsets.only(left: 10.w),
                 child: Image.asset(
                   'Assets/Student_waiting_list.png',
                 ),
               ),
-              const SizedBox(
-                width: 20,
+              SizedBox(
+                width: 20.w,
               ),
-              const Text(
+              Text(
                 'Nigar Sultana',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
               ),
-              const SizedBox(
-                width: 170,
+              SizedBox(
+                width: 170.w,
               ),
               IconButton(
                   onPressed: () {
@@ -80,25 +83,25 @@ class Student_waiting_list extends StatelessWidget {
                   },
                   icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             Row(children: [
               Container(
-                margin: const EdgeInsets.only(left: 10),
+                margin: EdgeInsets.only(left: 10.w),
                 child: Image.asset(
                   'Assets/Student_waiting_list.png',
                 ),
               ),
-              const SizedBox(
-                width: 20,
+              SizedBox(
+                width: 20.w,
               ),
-              const Text(
+              Text(
                 'Dibiyajoti Pal',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
               ),
-              const SizedBox(
-                width: 174,
+              SizedBox(
+                width: 174.w,
               ),
               IconButton(
                   onPressed: () {
@@ -106,8 +109,8 @@ class Student_waiting_list extends StatelessWidget {
                   },
                   icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
           ],
         ),

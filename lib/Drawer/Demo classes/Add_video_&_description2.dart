@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Addvideo121 extends StatelessWidget {
   const Addvideo121({super.key});
@@ -8,11 +9,11 @@ class Addvideo121 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 40),
+        title: Padding(
+          padding: EdgeInsets.only(left: 40.w),
           child: Text(
             'Add video & description',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -29,7 +30,7 @@ class Addvideo121 extends StatelessWidget {
       ),
       body: Padding(
         padding:
-            const EdgeInsets.only(top: 54, left: 21, right: 21, bottom: 39),
+            EdgeInsets.only(top: 54.h, left: 21.w, right: 21.w, bottom: 39.h),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -37,29 +38,29 @@ class Addvideo121 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  height: 167,
+                  height: 16.7.h,
                   color: const Color.fromRGBO(212, 192, 11, 0.11),
                   child: Center(child: Image.asset('Assets/updatedetails.png')),
                 ),
-                const SizedBox(
-                  height: 12,
+                SizedBox(
+                  height: 12.h,
                 ),
                 Center(
                   child: Container(
-                    height: 31,
-                    width: 130,
+                    height: 31.h,
+                    width: 130.w,
                     color: const Color(0xffD4C00B),
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         'Select file',
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w400),
+                            fontSize: 14.sp, fontWeight: FontWeight.w400),
                       ),
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 17,
+                SizedBox(
+                  height: 17.h,
                 ),
                 const TextField(
                   maxLines: 6,
@@ -70,15 +71,15 @@ class Addvideo121 extends StatelessWidget {
               ],
             ),
             Container(
-              height: 49,
+              height: 49.h,
               color: const Color(0xffD4C00B),
-              child: const Center(
+              child: Center(
                   child: Text(
                 'Upload',
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.w700,
-                    color: Color(0xffffffff)),
+                    color: const Color(0xffffffff)),
               )),
             )
           ],

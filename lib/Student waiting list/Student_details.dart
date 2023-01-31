@@ -1,5 +1,8 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class Student_details extends StatelessWidget {
   const Student_details({super.key});
 
@@ -7,11 +10,11 @@ class Student_details extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 60),
+        title: Padding(
+          padding: EdgeInsets.only(left: 60.w),
           child: Text(
             'Student details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -27,188 +30,188 @@ class Student_details extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 30, bottom: 36),
+        padding: EdgeInsets.only(top: 30.h, bottom: 36.h),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: EdgeInsets.only(left: 20.w),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       children: [
                         Image.asset('Assets/bigdot.png'),
-                        const Text(
+                        Text(
                           'Are you interested in Cyber Future Course?',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     Row(
                       children: [
                         Image.asset('Assets/answer_arrow.png'),
-                        const Text(
+                        Text(
                           'Yes',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     Row(
                       children: [
                         Image.asset('Assets/bigdot.png'),
-                        const Text(
+                        Text(
                           'Do your parents support you?',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     Row(
                       children: [
                         Image.asset('Assets/answer_arrow.png'),
-                        const Text(
+                        Text(
                           'Yes',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     Row(
                       children: [
                         Image.asset('Assets/bigdot.png'),
-                        const Text(
+                        Text(
                           'Are you comfortable with online classes?',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     Row(
                       children: [
                         Image.asset('Assets/answer_arrow.png'),
-                        const Text(
+                        Text(
                           'Yes',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 40,
+                    SizedBox(
+                      height: 40.h,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Name - Asit Jana',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 20.h,
                         ),
                         Text(
                           'Guardian Name  - Papa Jana',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 20.h,
                         ),
                         Text(
                           'Phone Number - 9155965403',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 20.h,
                         ),
                         Text(
                           'Email ID - asit@gmail.com',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 20.h,
                         ),
                         Text(
                           ' Address - Jautia ,South 24 pargona',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 20.h,
                         ),
                         Text(
                           'Your Learning Interest - Cyber Security ',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 20.h,
                         ),
                         Text(
                           'Your Future Goals - Get a good job',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 20.h,
                         ),
                         Text(
                           'How did you hear about us - Friend',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
+                              fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
                       ],
                     ),
                   ]),
             ),
             Center(
-              child: Container(
-                margin: const EdgeInsets.only(),
-                height: 47,
-                width: 334,
+              child: SizedBox(
+                height: 47.h,
+                width: 334.w,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xffbacD4C00B),
+                    backgroundColor: const Color(0xffD4C00B),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(15.r),
                     ),
                   ),
-                  child: const Center(
+                  child: Center(
                       child: Text(
                     'Approve',
                     style: TextStyle(
-                        color: Color(
+                        color: const Color(
                           0xffFFFFFF,
                         ),
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.w700),
                   )),
                   onPressed: () {
                     showModalBottomSheet(
-                      shape: const RoundedRectangleBorder(
+                      shape: RoundedRectangleBorder(
                         borderRadius:
-                            BorderRadius.vertical(top: Radius.circular(30)),
+                            BorderRadius.vertical(top: Radius.circular(30.r)),
                       ),
                       context: context,
                       builder: (BuildContext context) {
@@ -216,19 +219,19 @@ class Student_details extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 16, right: 16, top: 24),
+                              padding: EdgeInsets.only(
+                                  left: 16.w, right: 16.w, top: 24.h),
                               child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
-                                      height: 175,
+                                      height: 175.h,
                                       width: double.infinity,
                                       color: const Color(0xffD4C00B)
                                           .withOpacity(0.25),
                                       child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 24, bottom: 16),
+                                        padding: EdgeInsets.only(
+                                            top: 24.h, bottom: 16.h),
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
@@ -243,13 +246,13 @@ class Student_details extends StatelessWidget {
                                               children: [
                                                 Image.asset(
                                                     'Assets/bottomsheet2.png'),
-                                                const SizedBox(
-                                                  width: 10,
+                                                SizedBox(
+                                                  width: 10.w,
                                                 ),
-                                                const Text(
+                                                Text(
                                                   'Embedded Course brochure.pdf',
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 14.sp,
                                                       fontWeight:
                                                           FontWeight.w500),
                                                 ),
@@ -259,20 +262,20 @@ class Student_details extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(
-                                      height: 16,
+                                    SizedBox(
+                                      height: 16.h,
                                     ),
-                                    const Text('Payment link:',
+                                    Text('Payment link:',
                                         style: TextStyle(
-                                            fontSize: 14,
+                                            fontSize: 14.sp,
                                             fontWeight: FontWeight.w500)),
-                                    const SizedBox(
-                                      height: 16,
+                                    SizedBox(
+                                      height: 16.h,
                                     ),
-                                    const Text('https://paymentlink.com',
+                                    Text('https://paymentlink.com',
                                         style: TextStyle(
-                                            color: Color(0xff2A55C3),
-                                            fontSize: 14,
+                                            color: const Color(0xff2A55C3),
+                                            fontSize: 14.sp,
                                             fontWeight: FontWeight.w500)),
                                   ]),
                             ),
@@ -280,38 +283,40 @@ class Student_details extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: SizedBox(
-                                    height: 55,
+                                    height: 55.h,
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        backgroundColor: Color(0xffFFFFFF),
+                                        backgroundColor:
+                                            const Color(0xffFFFFFF),
                                       ),
                                       onPressed: () {
                                         Navigator.pushNamed(
                                             context, 'Student_details');
                                       },
-                                      child: const Text('Update',
+                                      child: Text('Update',
                                           style: TextStyle(
                                               color: Colors.black87,
-                                              fontSize: 20,
+                                              fontSize: 20.sp,
                                               fontWeight: FontWeight.w700)),
                                     ),
                                   ),
                                 ),
                                 Expanded(
                                   child: SizedBox(
-                                    height: 55,
+                                    height: 55.h,
                                     child: ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        backgroundColor: Color(0xffbacD4C00B),
+                                        backgroundColor:
+                                            const Color(0xffD4C00B),
                                       ),
                                       onPressed: () {
                                         Navigator.pushNamed(
                                             context, 'Student_details');
                                       },
-                                      child: const Text('Send',
+                                      child: Text('Send',
                                           style: TextStyle(
                                               color: Colors.black87,
-                                              fontSize: 20,
+                                              fontSize: 20.sp,
                                               fontWeight: FontWeight.w700)),
                                     ),
                                   ),

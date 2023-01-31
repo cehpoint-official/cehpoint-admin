@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Dashboard/Dashboard.dart';
 
 class MySplash_Screen extends StatefulWidget {
@@ -25,14 +25,14 @@ class _MySplash_ScreenState extends State<MySplash_Screen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 150, top: 250),
+        padding: EdgeInsets.only(left: 150.w, top: 250.h),
         child: Column(
           children: [
             Image.asset(
               'Assets/logo.png',
             ),
-            const SizedBox(
-              height: 72,
+            SizedBox(
+              height: 72.h,
             ),
             Image.asset('Assets/splashScreen2.png'),
           ],

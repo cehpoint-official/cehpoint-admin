@@ -1,7 +1,7 @@
 // ignore: file_names
 import 'package:cehpoint_admin/Drawer/Manage%20posts/Viewallpost.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../Completed projects/Completed_projects.dart';
 import '../Dashboard/Dashboard.dart';
 import 'Demo classes/UploadDemoclasses.dart';
@@ -24,7 +24,7 @@ class MyDrawer extends StatelessWidget {
       child: ListView(
         children: [
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             horizontalTitleGap: 200,
             leading: const CircleAvatar(
               backgroundImage: AssetImage("Assets/logo.png"),
@@ -43,13 +43,13 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Home.png",
             ),
-            title: const Text(
+            title: Text(
               'Dashboard',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -61,24 +61,25 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ExpansionTile(
-            tilePadding: const EdgeInsets.only(left: 25),
+            tilePadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/approvedetails.png",
             ),
-            title: const Text(
+            title: Text(
               'approve details',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             children: [
               ListTile(
                 horizontalTitleGap: 0,
-                contentPadding: const EdgeInsets.only(left: 50),
+                contentPadding: EdgeInsets.only(left: 50.w),
                 leading: Image.asset(
                   "Assets/Drawer/Update_Approve_details.png",
                 ),
-                title: const Text(
+                title: Text(
                   'Update client details',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style:
+                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
                 ),
                 onTap: () {
                   Navigator.push(
@@ -91,13 +92,14 @@ class MyDrawer extends StatelessWidget {
               ),
               ListTile(
                 horizontalTitleGap: 0,
-                contentPadding: const EdgeInsets.only(left: 50),
+                contentPadding: EdgeInsets.only(left: 50.w),
                 leading: Image.asset(
                   "Assets/Drawer/Update_Approve_details.png",
                 ),
-                title: const Text(
+                title: Text(
                   'Update Student details',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style:
+                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
                 ),
                 onTap: () {
                   Navigator.push(
@@ -111,13 +113,13 @@ class MyDrawer extends StatelessWidget {
             ],
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Manage_Classes.png",
             ),
-            title: const Text(
+            title: Text(
               'Manage Classes',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -129,13 +131,13 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Manage_reports.png",
             ),
-            title: const Text(
+            title: Text(
               'Manage reports',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -147,13 +149,13 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Manage_Clients.png",
             ),
-            title: const Text(
+            title: Text(
               'Manage Clients',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -165,13 +167,13 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Manage_Internship.png",
             ),
-            title: const Text(
+            title: Text(
               'Manage Internship',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -183,13 +185,13 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Manage_job.png",
             ),
-            title: const Text(
+            title: Text(
               'Manage job',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -201,24 +203,25 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ExpansionTile(
-            tilePadding: const EdgeInsets.only(left: 25),
+            tilePadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Manage_posts.png",
             ),
-            title: const Text(
+            title: Text(
               'Manage posts',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             children: [
               ListTile(
                 horizontalTitleGap: 0,
-                contentPadding: const EdgeInsets.only(left: 50),
+                contentPadding: EdgeInsets.only(left: 50.w),
                 leading: Image.asset(
                   "Assets/Drawer/Update_Approve_details.png",
                 ),
-                title: const Text(
+                title: Text(
                   'upload post',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style:
+                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
                 ),
                 onTap: () {
                   Navigator.push(
@@ -231,13 +234,14 @@ class MyDrawer extends StatelessWidget {
               ),
               ListTile(
                 horizontalTitleGap: 0,
-                contentPadding: const EdgeInsets.only(left: 50),
+                contentPadding: EdgeInsets.only(left: 50.w),
                 leading: Image.asset(
                   "Assets/Drawer/Update_Approve_details.png",
                 ),
-                title: const Text(
+                title: Text(
                   'view all posts',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style:
+                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
                 ),
                 onTap: () {
                   Navigator.push(
@@ -251,13 +255,13 @@ class MyDrawer extends StatelessWidget {
             ],
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Upload_videos.png",
             ),
-            title: const Text(
+            title: Text(
               'Upload videos',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -269,13 +273,13 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Demo_classes.png",
             ),
-            title: const Text(
+            title: Text(
               'Demo classes',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -287,13 +291,13 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Manage_Employee.png",
             ),
-            title: const Text(
+            title: Text(
               'Manage Employee',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -305,13 +309,13 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Completed_Projects.png",
             ),
-            title: const Text(
+            title: Text(
               'Completed Projects',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -323,13 +327,13 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Payment.png",
             ),
-            title: const Text(
+            title: Text(
               'Payment',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(
@@ -341,13 +345,13 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 25),
+            contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Log_out.png",
             ),
-            title: const Text(
+            title: Text(
               'Log out',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
             onTap: () {
               Navigator.push(

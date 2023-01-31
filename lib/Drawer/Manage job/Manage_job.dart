@@ -1,7 +1,9 @@
 import 'package:cehpoint_admin/Drawer/Manage%20job/All_Applicant.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20job/Approve_details.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class Manage_job extends StatefulWidget {
   const Manage_job({super.key});
 
@@ -9,6 +11,7 @@ class Manage_job extends StatefulWidget {
   State<Manage_job> createState() => _Manage_jobState();
 }
 
+// ignore: camel_case_types
 class _Manage_jobState extends State<Manage_job>
     with SingleTickerProviderStateMixin {
   var appBarHeight = AppBar().preferredSize.height;
@@ -35,11 +38,11 @@ class _Manage_jobState extends State<Manage_job>
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Padding(
-            padding: EdgeInsets.only(left: 90),
+          title: Padding(
+            padding: EdgeInsets.only(left: 90.w),
             child: Text(
               'Manage job',
-              style: TextStyle(color: Colors.black87),
+              style: TextStyle(color: Colors.black87, fontSize: 18.sp),
             ),
           ),
           backgroundColor: Colors.transparent,
@@ -55,7 +58,7 @@ class _Manage_jobState extends State<Manage_job>
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top: 40),
+          padding: EdgeInsets.only(top: 40.h),
           child: Column(
             children: const [
               TabBar(
@@ -86,84 +89,3 @@ class _Manage_jobState extends State<Manage_job>
     );
   }
 }
-
-
-
-
-// import 'package:flutter/material.dart';
-
-// class Manage_job extends StatefulWidget {
-//   const Manage_job({super.key});
-
-//   @override
-//   State<Manage_job> createState() => _Manage_jobState();
-// }
-
-// class _Manage_jobState extends State<Manage_job>
-//     with SingleTickerProviderStateMixin {
-//   late TabController tabController;
-
-//   @override
-//   void initState() {
-//     tabController = TabController(length: 2, vsync: this);
-//     super.initState();
-//   }
-
-//   @override
-//   void dispose() {
-//     tabController.dispose();
-//     super.dispose();
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         leading: IconButton(
-//           icon: const Icon(Icons.arrow_back_sharp),
-//           color: const Color(0xff000000),
-//           onPressed: () {
-//             Navigator.pushNamed(context, 'Dashboard');
-//           },
-//         ),
-//         title: const Padding(
-//           padding: EdgeInsets.only(left: 90),
-//           child: Text(
-//             'Manage job',
-//             style: TextStyle(
-//                 fontWeight: FontWeight.w700, color: Color(0xff000000)),
-//           ),
-//         ),
-//         backgroundColor: Colors.transparent,
-//         elevation: 0,
-//       ),
-//       body: Column(
-//         children: [
-//           Row(
-//             children: [
-//               TabBar(
-//                 labelColor: Color(0xff000000),
-//                 controller: tabController,
-//                 tabs: const [
-//                   Tab(
-//                     text: ' Approve details ',
-//                   ),
-//                   Tab(text: 'All Applicant'),
-//                 ],
-//               ),
-//               const SizedBox(height: 25),
-//               Expanded(
-//                   child: TabBarView(
-//                 controller: tabController,
-//                 children: const [
-//                   // MyEmployees(),
-//                   // MyTask(),
-//                 ],
-//               ))
-//             ],
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }

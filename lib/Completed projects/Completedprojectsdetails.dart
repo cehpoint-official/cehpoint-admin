@@ -1,17 +1,19 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Completedprojectsdetails extends StatelessWidget {
-  const Completedprojectsdetails({super.key});
+  Completedprojectsdetails({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 40),
+        title: Padding(
+          padding: EdgeInsets.only(left: 40.w),
           child: Text(
             'Completed projects details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -28,7 +30,7 @@ class Completedprojectsdetails extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
+          padding: EdgeInsets.only(top: 50.h, left: 30.w, right: 30.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -37,332 +39,332 @@ class Completedprojectsdetails extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Project Name',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: Color.fromRGBO(0, 0, 0, 0.4)),
+                            fontSize: 12.sp,
+                            color: const Color.fromRGBO(0, 0, 0, 0.4)),
                       ),
                       Text(
                         'Project 1',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Colors.black87),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Project budget',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: Color.fromRGBO(0, 0, 0, 0.4)),
+                            fontSize: 12.sp,
+                            color: const Color.fromRGBO(0, 0, 0, 0.4)),
                       ),
                       Text(
                         '40,000',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Colors.black87),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Project deadline',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: Color.fromRGBO(0, 0, 0, 0.4)),
+                            fontSize: 12.sp,
+                            color: const Color.fromRGBO(0, 0, 0, 0.4)),
                       ),
                       Text(
                         '10 January',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Colors.black87),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Project details',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: Color.fromRGBO(0, 0, 0, 0.4)),
+                            fontSize: 12.sp,
+                            color: const Color.fromRGBO(0, 0, 0, 0.4)),
                       ),
                       Text(
                         'App Devolopment',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Colors.black87),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Company name',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: Color.fromRGBO(0, 0, 0, 0.4)),
+                            fontSize: 12.sp,
+                            color: const Color.fromRGBO(0, 0, 0, 0.4)),
                       ),
                       Text(
                         'Xyz company',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Colors.black87),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Representative name',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: Color.fromRGBO(0, 0, 0, 0.4)),
+                            fontSize: 12.sp,
+                            color: const Color.fromRGBO(0, 0, 0, 0.4)),
                       ),
                       Text(
                         'abcd mondal',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Colors.black87),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Domain name',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: Color.fromRGBO(0, 0, 0, 0.4)),
+                            fontSize: 12.sp,
+                            color: const Color.fromRGBO(0, 0, 0, 0.4)),
                       ),
                       Text(
                         'xyz.com',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Colors.black87),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Email',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: Color.fromRGBO(0, 0, 0, 0.4)),
+                            fontSize: 12.sp,
+                            color: const Color.fromRGBO(0, 0, 0, 0.4)),
                       ),
                       Text(
                         'xyz@gmail.com',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Colors.black87),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 16,
+                  SizedBox(
+                    height: 16.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Phone number',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: Color.fromRGBO(0, 0, 0, 0.4)),
+                            fontSize: 12.sp,
+                            color: const Color.fromRGBO(0, 0, 0, 0.4)),
                       ),
                       Text(
                         '+91 2345667767',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Colors.black87),
                       ),
                     ],
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 50,
+              SizedBox(
+                height: 50.h,
               ),
-              const Text(
+              Text(
                 'All reports',
                 style: TextStyle(
                     decoration: TextDecoration.underline,
                     fontWeight: FontWeight.w600,
-                    fontSize: 18,
+                    fontSize: 18.sp,
                     color: Colors.black87),
               ),
-              const SizedBox(
-                height: 40,
+              SizedBox(
+                height: 40.h,
               ),
-              const Text(
+              Text(
                 'Week 1 report',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     color: Colors.black87),
               ),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               ),
-              const Text(
+              Text(
                 '''Link: https://report.id=769%3A157&t=XtbCKaCwQ
 GZWheWo-0''',
                 style: TextStyle(
-                  color: Color(0xff2A55C3),
+                  color: const Color(0xff2A55C3),
                   fontWeight: FontWeight.w500,
-                  fontSize: 12,
+                  fontSize: 12.sp,
                 ),
               ),
-              const SizedBox(
-                height: 16,
+              SizedBox(
+                height: 16.h,
               ),
-              const Text(
+              Text(
                 'Week 2 report',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     color: Colors.black87),
               ),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               ),
-              const Text(
+              Text(
                 '''Link: https://report.id=769%3A157&t=XtbCKaCwQ
 GZWheWo-0''',
                 style: TextStyle(
-                  color: Color(0xff2A55C3),
+                  color: const Color(0xff2A55C3),
                   fontWeight: FontWeight.w500,
-                  fontSize: 12,
+                  fontSize: 12.sp,
                 ),
               ),
-              const SizedBox(
-                height: 16,
+              SizedBox(
+                height: 16.h,
               ),
-              const Text(
+              Text(
                 'Week 3 report',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     color: Colors.black87),
               ),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               ),
-              const Text(
+              Text(
                 '''Link: https://report.id=769%3A157&t=XtbCKaCwQ
 GZWheWo-0''',
                 style: TextStyle(
-                  color: Color(0xff2A55C3),
+                  color: const Color(0xff2A55C3),
                   fontWeight: FontWeight.w500,
-                  fontSize: 12,
+                  fontSize: 12.sp,
                 ),
               ),
-              const SizedBox(
-                height: 16,
+              SizedBox(
+                height: 16.h,
               ),
-              const Text(
+              Text(
                 'Week 4 report',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     color: Colors.black87),
               ),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               ),
-              const Text(
+              Text(
                 '''Link: https://report.id=769%3A157&t=XtbCKaCwQ
 GZWheWo-0''',
                 style: TextStyle(
-                  color: Color(0xff2A55C3),
+                  color: const Color(0xff2A55C3),
                   fontWeight: FontWeight.w500,
-                  fontSize: 12,
+                  fontSize: 12.sp,
                 ),
               ),
-              const SizedBox(
-                height: 16,
+              SizedBox(
+                height: 16.h,
               ),
-              const Text(
+              Text(
                 'Week 5 report',
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     color: Colors.black87),
               ),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               ),
-              const Text(
+              Text(
                 '''Link: https://report.id=769%3A157&t=XtbCKaCwQ
 GZWheWo-0''',
                 style: TextStyle(
-                  color: Color(0xff2A55C3),
+                  color: const Color(0xff2A55C3),
                   fontWeight: FontWeight.w500,
-                  fontSize: 12,
+                  fontSize: 12.sp,
                 ),
               ),
-              const SizedBox(
-                height: 92,
+              SizedBox(
+                height: 92.h,
               )
             ],
           ),

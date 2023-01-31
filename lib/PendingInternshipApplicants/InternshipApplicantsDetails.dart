@@ -1,4 +1,6 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class InternshipApplicantsDetails extends StatelessWidget {
   const InternshipApplicantsDetails({super.key});
@@ -7,11 +9,11 @@ class InternshipApplicantsDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 20),
+        title: Padding(
+          padding: EdgeInsets.only(left: 20.w),
           child: Text(
             'Internship Applicants Details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -27,122 +29,122 @@ class InternshipApplicantsDetails extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(
-          top: 50,
+        padding: EdgeInsets.only(
+          top: 50.h,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 30),
+              padding: EdgeInsets.only(left: 30.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     'Name',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color.fromRGBO(0, 0, 0, 0.3),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Bijoy Basu',
                     style: TextStyle(
-                      color: Color(0xff000000),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color(0xff000000),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Address',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color.fromRGBO(0, 0, 0, 0.3),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Kolkata',
                     style: TextStyle(
-                      color: Color(0xff000000),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color(0xff000000),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Phone Number',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color.fromRGBO(0, 0, 0, 0.3),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     '+91 6789446754',
                     style: TextStyle(
-                      color: Color(0xff000000),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color(0xff000000),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Email',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color.fromRGBO(0, 0, 0, 0.3),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'bijoy@gmail.com',
                     style: TextStyle(
-                      color: Color(0xff000000),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color(0xff000000),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 30,
+                    height: 30.h,
                   ),
                   Text(
                     'Student  College ID card',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color.fromRGBO(0, 0, 0, 0.3),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 30),
+              padding: EdgeInsets.only(left: 30.w),
               child: Row(
                 children: [
                   SizedBox(
-                    height: 30,
-                    width: 115,
+                    height: 30.h,
+                    width: 115.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xffD4C00B),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10.r),
                         ),
                       ),
                       onPressed: (() {}),
@@ -151,13 +153,14 @@ class InternshipApplicantsDetails extends StatelessWidget {
                           Image.asset(
                             'Assets/jobApplicantsDetailes.png',
                           ),
-                          const SizedBox(
-                            width: 5,
+                          SizedBox(
+                            width: 5.w,
                           ),
-                          const Text(
+                          Text(
                             'View file 1',
                             style: TextStyle(
-                              color: Colors.white70,
+                              color: Colors.black87,
+                              fontSize: 11.sp,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -168,84 +171,85 @@ class InternshipApplicantsDetails extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Text(
                   ' Answers',
                   style: TextStyle(
                       decoration: TextDecoration.underline,
                       color: Colors.black87,
                       fontWeight: FontWeight.w600,
-                      fontSize: 16),
+                      fontSize: 16.sp),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 40,
+            SizedBox(
+              height: 40.h,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 30),
+              padding: EdgeInsets.only(left: 30.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     '1. Are you serious for this Internship?',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color.fromRGBO(0, 0, 0, 0.3),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Yes',
                     style: TextStyle(
-                      color: Color(0xff000000),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color(0xff000000),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     '2. Are you ready for short assessment?',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color.fromRGBO(0, 0, 0, 0.3),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     'Yes',
                     style: TextStyle(
-                      color: Color(0xff000000),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color(0xff000000),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     '3. Let us know your expectation? (Stipend)',
                     style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
-                      fontWeight: FontWeight.w500,
-                    ),
+                        color: const Color.fromRGBO(0, 0, 0, 0.3),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.sp),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Text(
                     '5000/month',
                     style: TextStyle(
-                      color: Color(0xff000000),
+                      color: const Color(0xff000000),
+                      fontSize: 12.sp,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -253,23 +257,23 @@ class InternshipApplicantsDetails extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 122),
+              padding: EdgeInsets.only(top: 122.h),
               child: Row(
                 children: [
                   Expanded(
                     child: SizedBox(
-                      height: 55,
+                      height: 55.h,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xffbacD4C00B),
+                          backgroundColor: const Color(0xffD4C00B),
                         ),
                         onPressed: () {
                           Navigator.pushNamed(context, 'Updateapprovedetails2');
                         },
-                        child: const Text('Approve',
+                        child: Text('Approve',
                             style: TextStyle(
                                 color: Colors.white70,
-                                fontSize: 20,
+                                fontSize: 20.sp,
                                 fontWeight: FontWeight.w700)),
                       ),
                     ),

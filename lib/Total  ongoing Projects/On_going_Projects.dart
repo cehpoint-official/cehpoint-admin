@@ -1,5 +1,8 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class On_going_Projects extends StatelessWidget {
   const On_going_Projects({super.key});
 
@@ -7,11 +10,11 @@ class On_going_Projects extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 50),
+        title: Padding(
+          padding: EdgeInsets.only(left: 50.w),
           child: Text(
             'On going Projects',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -27,120 +30,123 @@ class On_going_Projects extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 90, left: 10),
+        padding: EdgeInsets.only(top: 90.h, left: 10.w),
         child: Column(
           children: [
             Row(
               children: [
                 Image.asset('Assets/On_going_Projects.png'),
-                const SizedBox(
-                  width: 15,
+                SizedBox(
+                  width: 15.w,
                 ),
-                const Text(
+                Text(
                   'My Food Box Project',
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17),
-                ),
-                const SizedBox(
-                  width: 77,
+                  style:
+                      TextStyle(fontWeight: FontWeight.w700, fontSize: 17.sp),
                 ),
                 SizedBox(
-                  height: 25,
-                  width: 110,
+                  width: 77.w,
+                ),
+                SizedBox(
+                  height: 25.h,
+                  width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, 'On_going_Projects_details');
                     },
-                    child: const Text('View details',
+                    child: Text('View details',
                         style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w700)),
                   ),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Divider(
-              height: 30,
+            Divider(
+              height: 30.h,
               thickness: 1,
             ),
             Row(
               children: [
                 Image.asset('Assets/On_going_Projects.png'),
-                const SizedBox(
-                  width: 15,
+                SizedBox(
+                  width: 15.w,
                 ),
-                const Text(
+                Text(
                   'Discord Project',
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17),
-                ),
-                const SizedBox(
-                  width: 115,
+                  style:
+                      TextStyle(fontWeight: FontWeight.w700, fontSize: 17.sp),
                 ),
                 SizedBox(
-                  height: 25,
-                  width: 110,
+                  width: 115.w,
+                ),
+                SizedBox(
+                  height: 25.h,
+                  width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
                     ),
                     onPressed: () {},
-                    child: const Text('View details',
+                    child: Text('View details',
                         style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w700)),
                   ),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Divider(
-              height: 30,
+            Divider(
+              height: 30.h,
               thickness: 1,
             ),
             Row(
               children: [
                 Image.asset('Assets/On_going_Projects.png'),
-                const SizedBox(
-                  width: 15,
+                SizedBox(
+                  width: 15.w,
                 ),
-                const Text(
+                Text(
                   'Telegram Project',
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17),
-                ),
-                const SizedBox(
-                  width: 100,
+                  style:
+                      TextStyle(fontWeight: FontWeight.w700, fontSize: 17.sp),
                 ),
                 SizedBox(
-                  height: 25,
-                  width: 110,
+                  width: 100.w,
+                ),
+                SizedBox(
+                  height: 25.h,
+                  width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
                     ),
                     onPressed: () {},
-                    child: const Text('View details',
+                    child: Text('View details',
                         style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w700)),
                   ),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
-            const Divider(
-              height: 30,
+            Divider(
+              height: 30.h,
               thickness: 1,
             ),
           ],

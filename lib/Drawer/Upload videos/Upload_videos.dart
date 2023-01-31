@@ -1,6 +1,9 @@
+// ignore: file_names
 import 'package:cehpoint_admin/Drawer/Upload%20videos/Add_video_&_description.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class Upload_videos extends StatelessWidget {
   const Upload_videos({super.key});
 
@@ -8,11 +11,11 @@ class Upload_videos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 80),
+        title: Padding(
+          padding: EdgeInsets.only(left: 80.w),
           child: Text(
             'Upload videos',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -29,16 +32,16 @@ class Upload_videos extends StatelessWidget {
       ),
       body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
-          padding: const EdgeInsets.only(top: 28, left: 26, right: 26),
+          padding: EdgeInsets.only(top: 28.h, left: 26.w, right: 26.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'Upload a new video',
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500),
               ),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               ),
               InkWell(
                 onTap: () {
@@ -50,7 +53,7 @@ class Upload_videos extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  height: 167,
+                  height: 167.h,
                   color: const Color.fromRGBO(212, 192, 11, 0.11),
                   child: Center(child: Image.asset('Assets/updatedetails.png')),
                 ),
@@ -58,89 +61,95 @@ class Upload_videos extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(
-          height: 25,
+        SizedBox(
+          height: 25.h,
         ),
         const Divider(
           thickness: 3,
         ),
-        const SizedBox(
-          height: 20,
+        SizedBox(
+          height: 20.h,
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 26, right: 26),
+          padding: EdgeInsets.only(left: 26.w, right: 26.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 10),
+              Padding(
+                padding: EdgeInsets.only(left: 10.w),
                 child: Text(
                   'Uploaded videos',
                   style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       fontWeight: FontWeight.w500,
-                      color: Color.fromRGBO(0, 0, 0, 0.5)),
+                      color: const Color.fromRGBO(0, 0, 0, 0.5)),
                 ),
               ),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               ),
               Center(child: Image.asset('Assets/Upload_videos1.png')),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               ),
               Row(
-                children: const [
+                children: [
                   SizedBox(
-                    width: 30,
+                    width: 30.w,
                   ),
                   Text(
                     'Video description',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    style:
+                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500),
                   ),
                   SizedBox(
-                    width: 4,
+                    width: 4.w,
                   ),
                   Text(
                     'Video description',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    style:
+                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500),
                   ),
                   SizedBox(
-                    width: 4,
+                    width: 4.w,
                   ),
                   Text(
                     'Video description',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    style:
+                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
               Row(
-                children: const [
+                children: [
                   SizedBox(
-                    width: 30,
+                    width: 30.w,
                   ),
                   Text(
                     'Video description',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    style:
+                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500),
                   ),
                   SizedBox(
-                    width: 4,
+                    width: 4.w,
                   ),
                   Text(
                     'Video description',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    style:
+                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500),
                   ),
                   SizedBox(
-                    width: 4,
+                    width: 4.w,
                   ),
                   Text(
                     'Video description',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    style:
+                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 45,
+              SizedBox(
+                height: 45.h,
               ),
               Center(child: Image.asset('Assets/Upload_videos2.png'))
             ],

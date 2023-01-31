@@ -1,5 +1,8 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class Pending_Projects_details extends StatelessWidget {
   const Pending_Projects_details({super.key});
 
@@ -7,11 +10,11 @@ class Pending_Projects_details extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 40),
+        title: Padding(
+          padding: EdgeInsets.only(left: 40.w),
           child: Text(
             'Pending Projects details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -27,96 +30,99 @@ class Pending_Projects_details extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 30, top: 60, right: 30),
+        padding: EdgeInsets.only(left: 30.w, top: 60.h, right: 30.w),
         child: Column(children: [
           Row(
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     'Project Name',
                     style: TextStyle(
-                      fontSize: 12,
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Text(
                     'Project budget',
                     style: TextStyle(
-                      fontSize: 12,
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Text(
                     'Project deadline',
                     style: TextStyle(
-                      fontSize: 12,
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Text(
                     'Project details',
                     style: TextStyle(
-                      fontSize: 12,
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                width: 115,
+              SizedBox(
+                width: 115.w,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     'Coursera project',
                     style: TextStyle(
+                      fontSize: 16.sp,
                       color: Colors.black87,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Text(
                     '40,000',
                     style: TextStyle(
                       color: Colors.black87,
+                      fontSize: 15.sp,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 16,
+                    height: 16.h,
                   ),
                   Text(
                     '10 January',
                     style: TextStyle(
+                      fontSize: 15.sp,
                       color: Colors.black87,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 18,
+                    height: 18.h,
                   ),
                   Text(
                     'App Devolopment',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       color: Colors.black87,
                       fontWeight: FontWeight.w500,
                     ),
@@ -125,120 +131,123 @@ class Pending_Projects_details extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-            height: 65,
+          SizedBox(
+            height: 65.h,
           ),
           Row(
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     'Company name',
                     style: TextStyle(
-                      fontSize: 12,
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Text(
                     'Representative name ',
                     style: TextStyle(
-                      fontSize: 12,
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Text(
                     'Domain name',
                     style: TextStyle(
-                      fontSize: 12,
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Text(
                     'Email',
                     style: TextStyle(
-                      fontSize: 12,
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Text(
                     'Phone number',
                     style: TextStyle(
-                      fontSize: 12,
-                      color: Color.fromRGBO(0, 0, 0, 0.3),
+                      fontSize: 12.sp,
+                      color: const Color.fromRGBO(0, 0, 0, 0.3),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                width: 90,
+              SizedBox(
+                width: 90.w,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     'Xyz company',
                     style: TextStyle(
+                      fontSize: 16.sp,
                       color: Colors.black87,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Text(
                     'abcd mondal',
                     style: TextStyle(
+                      fontSize: 16.sp,
                       color: Colors.black87,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 16,
+                    height: 16.h,
                   ),
                   Text(
                     'xyz.com',
                     style: TextStyle(
+                      fontSize: 16.sp,
                       color: Colors.black87,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 18,
+                    height: 18.h,
                   ),
                   Text(
                     'xyz@gmail.com',
                     style: TextStyle(
                       decoration: TextDecoration.underline,
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       color: Colors.black87,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   SizedBox(
-                    height: 18,
+                    height: 18.h,
                   ),
                   Text(
                     '+91 2345667767',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       color: Colors.black87,
                       fontWeight: FontWeight.w500,
                     ),
@@ -247,27 +256,27 @@ class Pending_Projects_details extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-            height: 250,
+          SizedBox(
+            height: 250.h,
           ),
           SizedBox(
-              height: 57,
-              width: 400,
+              height: 57.h,
+              width: 400.w,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xffbacD4C00B),
+                    backgroundColor: const Color(0xffD4C00B),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
                   ),
-                  child: const Center(
+                  child: Center(
                       child: Text(
                     'Approve',
                     style: TextStyle(
-                        color: Color(
+                        color: const Color(
                           0xffFFFFFF,
                         ),
-                        fontSize: 20,
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.w700),
                   )),
                   onPressed: () {}))

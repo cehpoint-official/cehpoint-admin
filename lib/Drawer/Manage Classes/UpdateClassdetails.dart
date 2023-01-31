@@ -1,4 +1,6 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UpdateClassdetails extends StatelessWidget {
   const UpdateClassdetails({super.key});
@@ -7,11 +9,11 @@ class UpdateClassdetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 40),
+        title: Padding(
+          padding: EdgeInsets.only(left: 40.w),
           child: Text(
             'Update Class details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -28,30 +30,30 @@ class UpdateClassdetails extends StatelessWidget {
       ),
       body: Padding(
         padding:
-            const EdgeInsets.only(top: 30, left: 30, right: 30, bottom: 50),
+            EdgeInsets.only(top: 30.h, left: 30.w, right: 30.w, bottom: 50.h),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text(
+          Text(
             'Add syllabus',
             style: TextStyle(
                 fontWeight: FontWeight.w500,
-                fontSize: 12,
-                color: Color.fromRGBO(0, 0, 0, 0.3)),
+                fontSize: 12.sp,
+                color: const Color.fromRGBO(0, 0, 0, 0.3)),
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Container(
-            height: 200,
-            width: 500,
-            color: Color(0xffFAF8E4),
+            height: 200.h,
+            width: 500.w,
+            color: const Color(0xffFAF8E4),
             child: Center(
               child: Image.asset(
                 "Assets/updatedetails.png",
               ),
             ),
           ),
-          const SizedBox(
-            height: 30,
+          SizedBox(
+            height: 30.h,
           ),
           const TextField(
             decoration: InputDecoration(
@@ -59,8 +61,8 @@ class UpdateClassdetails extends StatelessWidget {
               hintText: 'Add class title',
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           const TextField(
             decoration: InputDecoration(
@@ -68,8 +70,8 @@ class UpdateClassdetails extends StatelessWidget {
               hintText: 'Add class link',
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           const TextField(
             decoration: InputDecoration(
@@ -77,25 +79,26 @@ class UpdateClassdetails extends StatelessWidget {
               hintText: 'Assignment link',
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           Container(
-              margin: const EdgeInsets.only(
-                top: 128,
+              margin: EdgeInsets.only(
+                top: 128.h,
               ),
-              height: 57,
+              height: 57.h,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xffbacD4C00B),
+                    backgroundColor: const Color(0xffD4C00B),
                   ),
-                  child: const Center(
+                  child: Center(
                       child: Text(
                     'SAVE',
                     style: TextStyle(
-                        color: Color(
+                        color: const Color(
                           0xffFFFFFF,
                         ),
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.w700),
                   )),
                   onPressed: () {

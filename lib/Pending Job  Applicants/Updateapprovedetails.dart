@@ -1,4 +1,6 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Updateapprovedetails extends StatelessWidget {
   const Updateapprovedetails({super.key});
@@ -8,11 +10,11 @@ class Updateapprovedetails extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 35),
+        title: Padding(
+          padding: EdgeInsets.only(left: 35.w),
           child: Text(
             'Update approve details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -29,22 +31,22 @@ class Updateapprovedetails extends StatelessWidget {
       ),
       body: Padding(
         padding:
-            const EdgeInsets.only(top: 75, left: 30, right: 30, bottom: 50),
+            EdgeInsets.only(top: 75.h, left: 30.w, right: 30.w, bottom: 50.h),
         child: Column(
           children: [
-            const Center(
+            Center(
               child: Text(
                 'Job approve details',
                 style: TextStyle(
-                    color: Color(
+                    color: const Color(
                       0xffD4C00B,
                     ),
-                    fontSize: 15,
+                    fontSize: 15.sp,
                     fontWeight: FontWeight.w500),
               ),
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.h,
             ),
             TextField(
               onTap: () {
@@ -55,12 +57,12 @@ class Updateapprovedetails extends StatelessWidget {
                     lastDate: DateTime(2030));
               },
               decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   hintText: 'Add date',
                   suffixIcon: Image.asset('Assets/calender.png')),
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             const TextField(
               decoration: InputDecoration(
@@ -68,32 +70,32 @@ class Updateapprovedetails extends StatelessWidget {
                 hintText: 'Add time',
               ),
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             const TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(), hintText: 'Add meeting link'),
             ),
-            const SizedBox(
-              height: 310,
+            SizedBox(
+              height: 310.h,
             ),
             Row(
               children: [
                 Expanded(
                   child: SizedBox(
-                    height: 55,
+                    height: 55.h,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xffbacD4C00B),
+                        backgroundColor: const Color(0xffD4C00B),
                       ),
                       onPressed: () {
                         // Navigator.pushNamed(context, 'Updateapprovedetails');
                       },
-                      child: const Text('Approve',
+                      child: Text('Approve',
                           style: TextStyle(
                               color: Colors.white70,
-                              fontSize: 20,
+                              fontSize: 20.sp,
                               fontWeight: FontWeight.w700)),
                     ),
                   ),

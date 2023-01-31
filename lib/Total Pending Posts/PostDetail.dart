@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PostDetail extends StatelessWidget {
   const PostDetail({super.key});
@@ -7,11 +8,14 @@ class PostDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 60),
+        title: Padding(
+          padding: EdgeInsets.only(left: 60.w),
           child: Text(
             'Post Details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(
+              color: Colors.black87,
+              fontSize: 18.sp,
+            ),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -30,79 +34,79 @@ class PostDetail extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
-            padding: const EdgeInsets.only(
-              top: 60,
-              left: 30,
+            padding: EdgeInsets.only(
+              top: 60.h,
+              left: 30.w,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text(
                   'Add Company Name',
                   style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       fontWeight: FontWeight.w600,
-                      color: Color.fromRGBO(0, 0, 0, 0.3)),
+                      color: const Color.fromRGBO(0, 0, 0, 0.3)),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 10.h,
                 ),
                 Text(
                   'XYZ company',
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 15.sp,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xff000000)),
+                      color: const Color(0xff000000)),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 15.h,
                 ),
                 Text(
                   'Company Details',
                   style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       fontWeight: FontWeight.w600,
-                      color: Color.fromRGBO(0, 0, 0, 0.3)),
+                      color: const Color.fromRGBO(0, 0, 0, 0.3)),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 10.h,
                 ),
                 Text(
                   "It is a development service providing ",
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 15.sp,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xff000000)),
+                      color: const Color(0xff000000)),
                 ),
                 Text(
                   "company. etc.",
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 15.sp,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xff000000)),
+                      color: const Color(0xff000000)),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 10.h,
                 ),
                 Text(
                   'Minimum Stipend in Month',
                   style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       fontWeight: FontWeight.w600,
-                      color: Color.fromRGBO(0, 0, 0, 0.3)),
+                      color: const Color.fromRGBO(0, 0, 0, 0.3)),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 15.h,
                 ),
                 Text(
                   "  5000K/month",
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 15.sp,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xff000000)),
+                      color: const Color(0xff000000)),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 20.h,
                 ),
                 Text(
                   '''   Roles and Responsibilities-
@@ -124,9 +128,9 @@ class PostDetail extends StatelessWidget {
 
 ''',
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 15.sp,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xff000000)),
+                      color: const Color(0xff000000)),
                 ),
               ],
             ),
@@ -136,16 +140,16 @@ class PostDetail extends StatelessWidget {
             children: [
               Expanded(
                 child: SizedBox(
-                  height: 55,
+                  height: 55.h,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xffbacD4C00B),
+                      backgroundColor: const Color(0xffD4C00B),
                     ),
                     onPressed: () {},
-                    child: const Text('Approve',
+                    child: Text('Approve',
                         style: TextStyle(
                             color: Colors.white70,
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w700)),
                   ),
                 ),

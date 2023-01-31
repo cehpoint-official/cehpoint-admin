@@ -1,4 +1,6 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AllEmployee extends StatelessWidget {
   const AllEmployee({super.key});
@@ -7,11 +9,11 @@ class AllEmployee extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Padding(
-            padding: EdgeInsets.only(left: 80),
+          title: Padding(
+            padding: EdgeInsets.only(left: 80.w),
             child: Text(
               'All Employee',
-              style: TextStyle(color: Colors.black87),
+              style: TextStyle(color: Colors.black87, fontSize: 18.sp),
             ),
           ),
           backgroundColor: Colors.transparent,
@@ -27,7 +29,7 @@ class AllEmployee extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top: 90, left: 10, right: 10),
+          padding: EdgeInsets.only(top: 90.h, left: 10.w, right: 10.w),
           child: Column(
             children: [
               Row(
@@ -37,42 +39,43 @@ class AllEmployee extends StatelessWidget {
                   Row(
                     children: [
                       Image.asset('Assets/total_employees.png'),
-                      const SizedBox(
-                        width: 15,
+                      SizedBox(
+                        width: 15.w,
                       ),
-                      const Text(
+                      Text(
                         'Employee 1',
                         style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 17),
+                            fontWeight: FontWeight.w700, fontSize: 17.sp),
                       ),
                     ],
                   ),
                   SizedBox(
                     height: 25,
-                    width: 100,
+                    width: 100.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(212, 192, 11, 0.28),
+                        backgroundColor:
+                            const Color.fromRGBO(212, 192, 11, 0.28),
                       ),
                       onPressed: () {
                         Navigator.pushNamed(context, 'Addtask1');
                       },
-                      child: const Text(
+                      child: Text(
                         'Add Task',
                         style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 5,
+              SizedBox(
+                height: 5.h,
               ),
-              const Divider(
-                height: 30,
+              Divider(
+                height: 30.h,
                 thickness: 1,
               ),
               Row(
@@ -82,40 +85,41 @@ class AllEmployee extends StatelessWidget {
                   Row(
                     children: [
                       Image.asset('Assets/total_employees.png'),
-                      const SizedBox(
-                        width: 15,
+                      SizedBox(
+                        width: 15.w,
                       ),
-                      const Text(
+                      Text(
                         'Employee 2',
                         style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 17),
+                            fontWeight: FontWeight.w700, fontSize: 17.sp),
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 25,
-                    width: 100,
+                    height: 25.h,
+                    width: 100.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(212, 192, 11, 0.28),
+                        backgroundColor:
+                            const Color.fromRGBO(212, 192, 11, 0.28),
                       ),
                       onPressed: () {},
-                      child: const Text(
+                      child: Text(
                         'Add Task',
                         style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 5,
+              SizedBox(
+                height: 5.h,
               ),
-              const Divider(
-                height: 30,
+              Divider(
+                height: 30.h,
                 thickness: 1,
               ),
               Row(
@@ -125,40 +129,41 @@ class AllEmployee extends StatelessWidget {
                   Row(
                     children: [
                       Image.asset('Assets/total_employees.png'),
-                      const SizedBox(
-                        width: 15,
+                      SizedBox(
+                        width: 15.w,
                       ),
-                      const Text(
+                      Text(
                         'Employee 3',
                         style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 17),
+                            fontWeight: FontWeight.w700, fontSize: 17.sp),
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 25,
-                    width: 100,
+                    height: 25.h,
+                    width: 100.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(212, 192, 11, 0.28),
+                        backgroundColor:
+                            const Color.fromRGBO(212, 192, 11, 0.28),
                       ),
                       onPressed: () {},
-                      child: const Text(
+                      child: Text(
                         'Add Task',
                         style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 5,
+              SizedBox(
+                height: 5.h,
               ),
-              const Divider(
-                height: 30,
+              Divider(
+                height: 30.h,
                 thickness: 1,
               ),
               Row(
@@ -168,40 +173,41 @@ class AllEmployee extends StatelessWidget {
                   Row(
                     children: [
                       Image.asset('Assets/total_employees.png'),
-                      const SizedBox(
-                        width: 15,
+                      SizedBox(
+                        width: 15.w,
                       ),
-                      const Text(
+                      Text(
                         'Employee 4',
                         style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 17),
+                            fontWeight: FontWeight.w700, fontSize: 17.sp),
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 25,
-                    width: 100,
+                    height: 25.h,
+                    width: 100.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(212, 192, 11, 0.28),
+                        backgroundColor:
+                            const Color.fromRGBO(212, 192, 11, 0.28),
                       ),
                       onPressed: () {},
-                      child: const Text(
+                      child: Text(
                         'Add Task',
                         style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 5,
+              SizedBox(
+                height: 5.h,
               ),
-              const Divider(
-                height: 30,
+              Divider(
+                height: 30.h,
                 thickness: 1,
               ),
               Row(
@@ -211,40 +217,41 @@ class AllEmployee extends StatelessWidget {
                   Row(
                     children: [
                       Image.asset('Assets/total_employees.png'),
-                      const SizedBox(
-                        width: 15,
+                      SizedBox(
+                        width: 15.w,
                       ),
-                      const Text(
+                      Text(
                         'Employee 5',
                         style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 17),
+                            fontWeight: FontWeight.w700, fontSize: 17.sp),
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 25,
-                    width: 100,
+                    height: 25.h,
+                    width: 100.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(212, 192, 11, 0.28),
+                        backgroundColor:
+                            const Color.fromRGBO(212, 192, 11, 0.28),
                       ),
                       onPressed: () {},
-                      child: const Text(
+                      child: Text(
                         'Add Task',
                         style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 5,
+              SizedBox(
+                height: 5.h,
               ),
-              const Divider(
-                height: 30,
+              Divider(
+                height: 30.h,
                 thickness: 1,
               ),
             ],

@@ -1,17 +1,22 @@
+// ignore_for_file: camel_case_types, must_be_immutable
+
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Completed_projects extends StatelessWidget {
   var appBarHeight = AppBar().preferredSize.height;
+
+  Completed_projects({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 40),
+        title: Padding(
+          padding: EdgeInsets.only(left: 40.w),
           child: Text(
             'Completed projects',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -28,38 +33,42 @@ class Completed_projects extends StatelessWidget {
         actions: [
           PopupMenuButton(
               offset: Offset(0.0, appBarHeight),
-              shape: const RoundedRectangleBorder(
+              shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(8.0),
-                  bottomRight: Radius.circular(8.0),
-                  topLeft: Radius.circular(8.0),
-                  topRight: Radius.circular(8.0),
+                  bottomLeft: Radius.circular(8.0.r),
+                  bottomRight: Radius.circular(8.0.r),
+                  topLeft: Radius.circular(8.0.r),
+                  topRight: Radius.circular(8.0.r),
                 ),
               ),
               padding: const EdgeInsets.all(15),
               itemBuilder: (BuildContext context) => [
-                    const PopupMenuItem(
+                    PopupMenuItem(
                       child: Text(
                         'All',
-                        style: TextStyle(fontWeight: FontWeight.w700),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 8.sp),
                       ),
                     ),
-                    const PopupMenuItem(
+                    PopupMenuItem(
                       child: Text(
                         'This week',
-                        style: TextStyle(fontWeight: FontWeight.w700),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 8.sp),
                       ),
                     ),
-                    const PopupMenuItem(
+                    PopupMenuItem(
                       child: Text(
                         'This month',
-                        style: TextStyle(fontWeight: FontWeight.w700),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 8.sp),
                       ),
                     ),
-                    const PopupMenuItem(
+                    PopupMenuItem(
                       child: Text(
                         'This year',
-                        style: TextStyle(fontWeight: FontWeight.w700),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, fontSize: 8.sp),
                       ),
                     ),
                   ],
@@ -69,18 +78,18 @@ class Completed_projects extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 30, right: 30, top: 80),
+        padding: EdgeInsets.only(left: 30.w, right: 30.w, top: 80.h),
         child: Column(
           children: [
             Row(
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       'Project 1',
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         color: Colors.black87,
                         fontWeight: FontWeight.w500,
                       ),
@@ -88,32 +97,33 @@ class Completed_projects extends StatelessWidget {
                     Text(
                       'completed on 10.01.2023',
                       style: TextStyle(
-                        fontSize: 10,
+                        fontSize: 10.sp,
                         color: Colors.black87,
                         fontWeight: FontWeight.w300,
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  width: 129,
+                SizedBox(
+                  width: 129.w,
                 ),
                 SizedBox(
-                    height: 20,
-                    width: 110,
+                    height: 20.h,
+                    width: 110.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xffbacD4C00B),
+                        backgroundColor: const Color(0xffD4C00B),
                       ),
                       onPressed: () {
                         Navigator.pushNamed(
                             context, 'Completedprojectsdetails');
                       },
-                      child: const Center(
+                      child: Center(
                           child: Text(
                         'View details',
                         style: TextStyle(
-                            color: Color(
+                            fontSize: 10.sp,
+                            color: const Color(
                               0xffFFFFFF,
                             ),
                             fontWeight: FontWeight.w700),
@@ -122,17 +132,17 @@ class Completed_projects extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 25,
+              height: 25.h,
             ),
             Row(
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       'Project 2',
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         color: Colors.black87,
                         fontWeight: FontWeight.w500,
                       ),
@@ -140,29 +150,30 @@ class Completed_projects extends StatelessWidget {
                     Text(
                       'completed on 15.01.2023',
                       style: TextStyle(
-                        fontSize: 10,
+                        fontSize: 10.sp,
                         color: Colors.black87,
                         fontWeight: FontWeight.w300,
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  width: 129,
+                SizedBox(
+                  width: 129.w,
                 ),
                 SizedBox(
-                    height: 20,
-                    width: 110,
+                    height: 20.h,
+                    width: 110.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xffbacD4C00B),
+                        backgroundColor: const Color(0xffD4C00B),
                       ),
                       onPressed: () {},
-                      child: const Center(
+                      child: Center(
                           child: Text(
                         'View details',
                         style: TextStyle(
-                            color: Color(
+                            fontSize: 10.sp,
+                            color: const Color(
                               0xffFFFFFF,
                             ),
                             fontWeight: FontWeight.w700),

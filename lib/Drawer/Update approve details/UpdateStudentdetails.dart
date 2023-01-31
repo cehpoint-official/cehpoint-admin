@@ -1,4 +1,6 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UpdateStudentdetails extends StatelessWidget {
   const UpdateStudentdetails({super.key});
@@ -7,11 +9,11 @@ class UpdateStudentdetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 40),
+        title: Padding(
+          padding: EdgeInsets.only(left: 40.w),
           child: Text(
             'Update Student details',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -28,40 +30,40 @@ class UpdateStudentdetails extends StatelessWidget {
       ),
       body: Padding(
         padding:
-            const EdgeInsets.only(top: 60, left: 30, right: 30, bottom: 50),
+            EdgeInsets.only(top: 60.h, left: 30.w, right: 30.w, bottom: 50.h),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text(
+          Text(
             'Embedded Proposal',
             style: TextStyle(
                 fontWeight: FontWeight.w500,
-                fontSize: 12,
-                color: Color.fromRGBO(0, 0, 0, 0.3)),
+                fontSize: 12.sp,
+                color: const Color.fromRGBO(0, 0, 0, 0.3)),
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Container(
-            height: 250,
-            width: 500,
-            color: Color(0xffFAF8E4),
+            height: 250.h,
+            width: 500.w,
+            color: const Color(0xffFAF8E4),
             child: Center(
               child: Image.asset(
                 "Assets/updatedetails.png",
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
-          const Text(
+          Text(
             'Payment link:',
             style: TextStyle(
                 fontWeight: FontWeight.w500,
-                fontSize: 12,
-                color: Color.fromRGBO(0, 0, 0, 0.3)),
+                fontSize: 12.sp,
+                color: const Color.fromRGBO(0, 0, 0, 0.3)),
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           const TextField(
             decoration: InputDecoration(
@@ -69,29 +71,30 @@ class UpdateStudentdetails extends StatelessWidget {
               hintText: 'add payment link',
             ),
           ),
-          const SizedBox(
-            height: 47,
+          SizedBox(
+            height: 47.h,
           ),
           Container(
-              margin: const EdgeInsets.only(
-                top: 165,
+              margin: EdgeInsets.only(
+                top: 165.h,
               ),
-              height: 57,
-              width: 450,
+              height: 57.h,
+              width: 450.w,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xffbacD4C00B),
+                  backgroundColor: const Color(0xffD4C00B),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(15.r),
                   ),
                 ),
-                child: const Center(
+                child: Center(
                     child: Text(
                   'SAVE',
                   style: TextStyle(
-                      color: Color(
+                      color: const Color(
                         0xffFFFFFF,
                       ),
+                      fontSize: 18.sp,
                       fontWeight: FontWeight.w700),
                 )),
                 onPressed: () {

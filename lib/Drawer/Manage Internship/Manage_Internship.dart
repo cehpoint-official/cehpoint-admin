@@ -1,6 +1,7 @@
 import 'package:cehpoint_admin/Drawer/Manage%20job/All_Applicant.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20job/Approve_details.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Manage_Internship extends StatefulWidget {
   const Manage_Internship({super.key});
@@ -35,11 +36,11 @@ class _Manage_InternshipState extends State<Manage_Internship>
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Padding(
-            padding: EdgeInsets.only(left: 70),
+          title: Padding(
+            padding: EdgeInsets.only(left: 70.w),
             child: Text(
               'Manage Internship',
-              style: TextStyle(color: Colors.black87),
+              style: TextStyle(color: Colors.black87, fontSize: 18.sp),
             ),
           ),
           backgroundColor: Colors.transparent,
@@ -55,7 +56,7 @@ class _Manage_InternshipState extends State<Manage_Internship>
           ),
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top: 40),
+          padding: EdgeInsets.only(top: 40.h),
           child: Column(
             children: const [
               TabBar(

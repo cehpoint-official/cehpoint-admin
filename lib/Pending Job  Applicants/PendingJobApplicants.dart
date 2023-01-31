@@ -1,5 +1,8 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class Pending_Job_Applicants extends StatelessWidget {
   const Pending_Job_Applicants({super.key});
 
@@ -7,11 +10,11 @@ class Pending_Job_Applicants extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 70),
+        title: Padding(
+          padding: EdgeInsets.only(left: 70.w),
           child: Text(
             'Job Applicants',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -27,68 +30,68 @@ class Pending_Job_Applicants extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 30),
+        padding: EdgeInsets.only(top: 50.h, left: 30.w),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(children: [
             Image.asset(
               'Assets/PendingJobApplicants.png',
             ),
-            const SizedBox(
-              width: 20,
+            SizedBox(
+              width: 20.w,
             ),
-            const Text(
+            Text(
               'Bijoy Basu',
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
             ),
           ]),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 45),
+            padding: EdgeInsets.only(left: 45.w),
             child: Column(
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Applied for Company 1',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      'Web development',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      'Apply on 02/01/2023',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-                    ),
-                    const SizedBox(
-                      height: 10,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
                     ),
                     SizedBox(
-                      height: 25,
-                      width: 121,
+                      height: 10.h,
+                    ),
+                    Text(
+                      'Web development',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Text(
+                      'Apply on 02/01/2023',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    SizedBox(
+                      height: 25.h,
+                      width: 121.w,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xffD4C00B),
+                          backgroundColor: const Color(0xffD4C00B),
                         ),
                         onPressed: () {
                           Navigator.pushNamed(context, 'JobApplicantsDetails');
                         },
-                        child: const Text('Update',
+                        child: Text('Update',
                             style: TextStyle(
                                 color: Colors.black87,
-                                fontSize: 20,
+                                fontSize: 20.sp,
                                 fontWeight: FontWeight.w700)),
                       ),
                     ),
@@ -97,67 +100,67 @@ class Pending_Job_Applicants extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
-            height: 40,
+          SizedBox(
+            height: 40.h,
           ),
           Row(children: [
             Image.asset(
               'Assets/PendingJobApplicants.png',
             ),
-            const SizedBox(
-              width: 20,
+            SizedBox(
+              width: 20.w,
             ),
-            const Text(
+            Text(
               'Agni Mitro',
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
             ),
           ]),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 45),
+            padding: EdgeInsets.only(left: 45.w),
             child: Column(
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Applied for Company 1',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      'Web development',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      'Apply on 02/01/2023',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-                    ),
-                    const SizedBox(
-                      height: 10,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
                     ),
                     SizedBox(
-                      height: 25,
-                      width: 121,
+                      height: 10.h,
+                    ),
+                    Text(
+                      'Web development',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Text(
+                      'Apply on 02/01/2023',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    SizedBox(
+                      height: 25.h,
+                      width: 121.w,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xffD4C00B),
+                          backgroundColor: const Color(0xffD4C00B),
                         ),
                         onPressed: () {},
-                        child: const Text('Update',
+                        child: Text('Update',
                             style: TextStyle(
                                 color: Colors.black87,
-                                fontSize: 20,
+                                fontSize: 20.sp,
                                 fontWeight: FontWeight.w700)),
                       ),
                     ),

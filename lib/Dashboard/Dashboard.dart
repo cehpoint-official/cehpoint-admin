@@ -1,6 +1,7 @@
 // ignore: file_names
-import 'package:cehpoint_admin/Dashboard/Profile.dart';
+import 'package:cehpoint_admin/Dashboard/Profile/Profile.dart';
 import 'package:cehpoint_admin/Drawer/Drawer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'cardview.dart';
 import 'package:flutter/material.dart';
 
@@ -131,7 +132,7 @@ class MyDashborad extends StatelessWidget {
         }),
         actions: [
           Padding(
-            padding: EdgeInsets.only(right: 16),
+            padding: EdgeInsets.only(right: 16.w),
             child: InkWell(
               onTap: () {
                 Navigator.push(
@@ -141,9 +142,9 @@ class MyDashborad extends StatelessWidget {
                   ),
                 );
               },
-              child: const CircleAvatar(
-                radius: 20,
-                foregroundImage: AssetImage(
+              child: CircleAvatar(
+                radius: 20.r,
+                foregroundImage: const AssetImage(
                   'Assets/Dashboard/profile_icon.png',
                 ),
               ),
@@ -165,8 +166,8 @@ class MyDashborad extends StatelessWidget {
           // This creates two columns with two items in each column
           children: List.generate(Datas.length, (index) {
             return SizedBox(
-              height: 140,
-              width: 180,
+              height: 140.h,
+              width: 180.w,
               child: Carditem(
                 count: Datas[index].count,
                 image: Datas[index].image,

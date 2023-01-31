@@ -1,5 +1,8 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class Premium_Projects extends StatelessWidget {
   const Premium_Projects({super.key});
 
@@ -7,11 +10,11 @@ class Premium_Projects extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: 50),
+        title: Padding(
+          padding: EdgeInsets.only(left: 50.w),
           child: Text(
             'Premium Projects',
-            style: TextStyle(color: Colors.black87),
+            style: TextStyle(color: Colors.black87, fontSize: 118.sp),
           ),
         ),
         backgroundColor: Colors.transparent,
@@ -27,68 +30,68 @@ class Premium_Projects extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 20),
+        padding: EdgeInsets.only(top: 50.h, left: 20.w),
         child: Column(
           children: [
             Row(children: [
               Image.asset(
                 'Assets/Client_waiting_list.png',
               ),
-              const SizedBox(
-                width: 20,
+              SizedBox(
+                width: 20.h,
               ),
-              const Text(
+              Text(
                 'Client 1',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
               ),
-              const SizedBox(
-                width: 230,
+              SizedBox(
+                width: 230.sp,
               ),
               IconButton(
                   onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             Row(children: [
               Image.asset(
                 'Assets/Client_waiting_list.png',
               ),
-              const SizedBox(
-                width: 20,
+              SizedBox(
+                width: 20.w,
               ),
-              const Text(
+              Text(
                 'Client 2',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
               ),
-              const SizedBox(
-                width: 230,
+              SizedBox(
+                width: 230.w,
               ),
               IconButton(
                   onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             Row(children: [
               Image.asset(
                 'Assets/Client_waiting_list.png',
               ),
-              const SizedBox(
-                width: 20,
+              SizedBox(
+                width: 20.w,
               ),
-              const Text(
+              Text(
                 'Client 3',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
               ),
-              const SizedBox(
-                width: 230,
+              SizedBox(
+                width: 230.w,
               ),
               IconButton(
                   onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
             ]),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
           ],
         ),
