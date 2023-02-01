@@ -41,10 +41,10 @@ class Completed_projects extends StatelessWidget {
                   topRight: Radius.circular(8.0.r),
                 ),
               ),
-              padding: const EdgeInsets.all(15),
               itemBuilder: (BuildContext context) => [
                     PopupMenuItem(
                       child: Text(
+                        textAlign: TextAlign.left,
                         'All',
                         style: TextStyle(
                             fontWeight: FontWeight.w700, fontSize: 8.sp),
@@ -52,6 +52,7 @@ class Completed_projects extends StatelessWidget {
                     ),
                     PopupMenuItem(
                       child: Text(
+                        textAlign: TextAlign.left,
                         'This week',
                         style: TextStyle(
                             fontWeight: FontWeight.w700, fontSize: 8.sp),
@@ -66,6 +67,7 @@ class Completed_projects extends StatelessWidget {
                     ),
                     PopupMenuItem(
                       child: Text(
+                        textAlign: TextAlign.left,
                         'This year',
                         style: TextStyle(
                             fontWeight: FontWeight.w700, fontSize: 8.sp),

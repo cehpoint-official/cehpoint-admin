@@ -57,10 +57,11 @@ class _ViewallpostState extends State<Viewallpost>
                     topRight: Radius.circular(8.0),
                   ),
                 ),
-                padding: const EdgeInsets.all(15),
+                padding: const EdgeInsets.only(left: 8),
                 itemBuilder: (BuildContext context) => [
                       PopupMenuItem(
                         child: Text(
+                          textAlign: TextAlign.left,
                           'Web development',
                           style: TextStyle(
                               fontWeight: FontWeight.w700, fontSize: 8.sp),
@@ -68,6 +69,7 @@ class _ViewallpostState extends State<Viewallpost>
                       ),
                       PopupMenuItem(
                         child: Text(
+                          textAlign: TextAlign.left,
                           'App development',
                           style: TextStyle(
                               fontWeight: FontWeight.w700, fontSize: 8.sp),
@@ -75,6 +77,7 @@ class _ViewallpostState extends State<Viewallpost>
                       ),
                       PopupMenuItem(
                         child: Text(
+                          textAlign: TextAlign.left,
                           'Marketing Specialist',
                           style: TextStyle(
                               fontWeight: FontWeight.w700, fontSize: 8.sp),
@@ -82,6 +85,7 @@ class _ViewallpostState extends State<Viewallpost>
                       ),
                       PopupMenuItem(
                         child: Text(
+                          textAlign: TextAlign.left,
                           ''' Cyber security
                               Specialist''',
                           style: TextStyle(
@@ -90,6 +94,7 @@ class _ViewallpostState extends State<Viewallpost>
                       ),
                       PopupMenuItem(
                         child: Text(
+                          textAlign: TextAlign.left,
                           'DevSecOps',
                           style: TextStyle(
                               fontWeight: FontWeight.w700, fontSize: 8.sp),
@@ -97,6 +102,7 @@ class _ViewallpostState extends State<Viewallpost>
                       ),
                       PopupMenuItem(
                         child: Text(
+                          textAlign: TextAlign.left,
                           '''Cyber security
                            mentor''',
                           style: TextStyle(

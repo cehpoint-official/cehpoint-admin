@@ -52,7 +52,7 @@ class Upload_Demo_classes extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  height: 16.7.h,
+                  height: 167.h,
                   color: const Color.fromRGBO(212, 192, 11, 0.11),
                   child: Center(child: Image.asset('Assets/updatedetails.png')),
                 ),

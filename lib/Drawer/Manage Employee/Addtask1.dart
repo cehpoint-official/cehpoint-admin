@@ -27,6 +27,28 @@ class Addtask1 extends StatelessWidget {
             Navigator.pushNamed(context, 'AllEmployee');
           },
         ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(top: 14.h, right: 14.w, bottom: 14.h),
+            child: SizedBox(
+              height: 26.h,
+              width: 75.w,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xffD4C00B),
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, 'Alltask');
+                },
+                child: Text('All Task',
+                    style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 12.sp,
+                        fontWeight: FontWeight.w500)),
+              ),
+            ),
+          ),
+        ],
       ),
       body: Padding(
         padding: EdgeInsets.only(left: 30.w, top: 48.h, right: 15.w),
