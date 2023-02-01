@@ -136,7 +136,7 @@ class All_Post extends StatelessWidget {
                       ),
                       SizedBox(
                         height: 20.h,
-                        width: 90.w,
+                        width: 100.w,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xffD4C00B),
@@ -200,7 +200,7 @@ class All_Post extends StatelessWidget {
                       ),
                       SizedBox(
                         height: 20.h,
-                        width: 90.w,
+                        width: 100.w,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xffD4C00B),
