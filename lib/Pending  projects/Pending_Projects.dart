@@ -52,7 +52,7 @@ class Pending_Projects extends StatelessWidget {
                   width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color(0xffD4C00B),
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, 'Pending_Projects_details');
@@ -92,7 +92,7 @@ class Pending_Projects extends StatelessWidget {
                   width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color(0xffD4C00B),
                     ),
                     onPressed: () {},
                     child: Text('View details',
@@ -130,7 +130,7 @@ class Pending_Projects extends StatelessWidget {
                   width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color(0xffD4C00B),
                     ),
                     onPressed: () {},
                     child: Text('View details',

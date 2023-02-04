@@ -9,9 +9,9 @@ class total_employees extends StatefulWidget {
 
 class _total_employeesState extends State<total_employees> {
   Color _color = Colors.transparent;
-  Color _color1 = Colors.transparent;
-  Color _color2 = Colors.transparent;
-  Color _color3 = Colors.transparent;
+  // Color _color1 = Colors.transparent;
+  // Color _color2 = Colors.transparent;
+  // Color _color3 = Colors.transparent;
 
   @override
   Widget build(BuildContext context) {
@@ -199,11 +199,11 @@ class _total_employeesState extends State<total_employees> {
             InkWell(
               onTap: () {
                 setState(() {
-                  _color1 = const Color.fromRGBO(212, 192, 11, 0.16);
+                  _color = const Color.fromRGBO(212, 192, 11, 0.16);
                 });
               },
               child: Container(
-                color: _color1,
+                color: _color,
                 child: Padding(
                   padding: EdgeInsets.only(left: 30.w),
                   child: Column(
@@ -277,11 +277,11 @@ class _total_employeesState extends State<total_employees> {
             InkWell(
               onTap: () {
                 setState(() {
-                  _color2 = const Color.fromRGBO(212, 192, 11, 0.16);
+                  _color = const Color.fromRGBO(212, 192, 11, 0.16);
                 });
               },
               child: Container(
-                color: _color2,
+                color: _color,
                 child: Padding(
                   padding: EdgeInsets.only(left: 30.w),
                   child: Column(
@@ -355,11 +355,11 @@ class _total_employeesState extends State<total_employees> {
             InkWell(
               onTap: () {
                 setState(() {
-                  _color3 = const Color.fromRGBO(212, 192, 11, 0.16);
+                  _color = const Color.fromRGBO(212, 192, 11, 0.16);
                 });
               },
               child: Container(
-                color: _color3,
+                color: _color,
                 child: Padding(
                   padding: EdgeInsets.only(left: 30.w),
                   child: Column(

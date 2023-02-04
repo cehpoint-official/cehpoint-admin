@@ -1,9 +1,21 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 
-class Updateapprovedetails2 extends StatelessWidget {
-  const Updateapprovedetails2({super.key});
+class Updateapprovedetails2 extends StatefulWidget {
+  @override
+  State<Updateapprovedetails2> createState() => _Updateapprovedetails2State();
+}
+
+class _Updateapprovedetails2State extends State<Updateapprovedetails2> {
+  TextEditingController dateController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    dateController.text = "";
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +37,7 @@ class Updateapprovedetails2 extends StatelessWidget {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, 'JobApplicantsDetails');
+            Navigator.pushNamed(context, 'InternshipApplicantsDetails');
           },
         ),
       ),
@@ -49,17 +61,30 @@ class Updateapprovedetails2 extends StatelessWidget {
               height: 30.h,
             ),
             TextField(
-              onTap: () {
-                showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now(),
-                    firstDate: DateTime(1970),
-                    lastDate: DateTime(2030));
-              },
+              controller: dateController,
               decoration: InputDecoration(
                   border: const OutlineInputBorder(),
                   hintText: 'Add date',
                   suffixIcon: Image.asset('Assets/calender.png')),
+              readOnly: true,
+              onTap: () async {
+                DateTime? pickedDate = await showDatePicker(
+                  context: context,
+                  initialDate: DateTime.now(),
+                  firstDate: DateTime(1970),
+                  lastDate: DateTime(2101),
+                );
+                if (pickedDate != null) {
+                  String formattedDate =
+                      DateFormat("yyyy-MM-dd").format(pickedDate);
+
+                  setState(() {
+                    dateController.text = formattedDate.toString();
+                  });
+                } else {
+                  print("Not selected");
+                }
+              },
             ),
             SizedBox(
               height: 20.h,

@@ -334,7 +334,7 @@ class Client_details extends StatelessWidget {
                                     ),
                                     onPressed: () {
                                       Navigator.pushNamed(
-                                          context, 'Student_details');
+                                          context, 'Clientdetails');
                                     },
                                     child: Text('Update',
                                         style: TextStyle(
@@ -353,7 +353,7 @@ class Client_details extends StatelessWidget {
                                     ),
                                     onPressed: () {
                                       Navigator.pushNamed(
-                                          context, 'Student_details');
+                                          context, 'Clientdetails');
                                     },
                                     child: Text('Send',
                                         style: TextStyle(
