@@ -47,72 +47,68 @@ class _ViewallpostState extends State<Viewallpost>
           backgroundColor: Colors.transparent,
           elevation: 0,
           actions: [
-            PopupMenuButton(
-                offset: Offset(0.0, appBarHeight),
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(8.0),
-                    bottomRight: Radius.circular(8.0),
-                    topLeft: Radius.circular(8.0),
-                    topRight: Radius.circular(8.0),
+            Flexible(
+              child: PopupMenuButton(
+                  offset: Offset(0.0, appBarHeight),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(8.0),
+                      bottomRight: Radius.circular(8.0),
+                      topLeft: Radius.circular(8.0),
+                      topRight: Radius.circular(8.0),
+                    ),
                   ),
-                ),
-                padding: const EdgeInsets.only(left: 8),
-                itemBuilder: (BuildContext context) => [
-                      PopupMenuItem(
-                        child: Text(
-                          textAlign: TextAlign.left,
-                          'Web development',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 8.sp),
+                  padding: const EdgeInsets.only(left: 8),
+                  itemBuilder: (BuildContext context) => [
+                        const PopupMenuItem(
+                          child: Text(
+                            textAlign: TextAlign.left,
+                            'Web development',
+                            style: TextStyle(fontSize: 8),
+                          ),
                         ),
-                      ),
-                      PopupMenuItem(
-                        child: Text(
-                          textAlign: TextAlign.left,
-                          'App development',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 8.sp),
+                        const PopupMenuItem(
+                          child: Text(
+                            textAlign: TextAlign.left,
+                            'App development',
+                            style: TextStyle(fontSize: 8),
+                          ),
                         ),
-                      ),
-                      PopupMenuItem(
-                        child: Text(
-                          textAlign: TextAlign.left,
-                          'Marketing Specialist',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 8.sp),
+                        const PopupMenuItem(
+                          child: Text(
+                            textAlign: TextAlign.left,
+                            'Marketing Specialist',
+                            style: TextStyle(fontSize: 8),
+                          ),
                         ),
-                      ),
-                      PopupMenuItem(
-                        child: Text(
-                          textAlign: TextAlign.left,
-                          ''' Cyber security
-                              Specialist''',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 8.sp),
+                        const PopupMenuItem(
+                          child: Text(
+                            textAlign: TextAlign.left,
+                            ''' Cyber security
+                                  Specialist''',
+                            style: TextStyle(fontSize: 8),
+                          ),
                         ),
-                      ),
-                      PopupMenuItem(
-                        child: Text(
-                          textAlign: TextAlign.left,
-                          'DevSecOps',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 8.sp),
+                        const PopupMenuItem(
+                          child: Text(
+                            textAlign: TextAlign.left,
+                            'DevSecOps',
+                            style: TextStyle(fontSize: 8),
+                          ),
                         ),
-                      ),
-                      PopupMenuItem(
-                        child: Text(
-                          textAlign: TextAlign.left,
-                          '''Cyber security
-                           mentor''',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 8.sp),
+                        const PopupMenuItem(
+                          child: Text(
+                            textAlign: TextAlign.left,
+                            '''Cyber security
+                                 mentor''',
+                            style: TextStyle(fontSize: 8),
+                          ),
                         ),
-                      ),
-                    ],
-                child: Image.asset(
-                  'Assets/Completed_projects.png',
-                )),
+                      ],
+                  child: Image.asset(
+                    'Assets/Completed_projects.png',
+                  )),
+            ),
           ],
           leading: IconButton(
             icon: const Icon(

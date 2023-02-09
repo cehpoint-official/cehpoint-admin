@@ -1,5 +1,7 @@
 // ignore: file_names
+import 'package:cehpoint_admin/All%20Client/All_clients.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20posts/Viewallpost.dart';
+import 'package:cehpoint_admin/Drawer/PaymentDrewer/paymentdrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../Completed projects/Completed_projects.dart';
@@ -11,6 +13,7 @@ import 'Manage Internship/Manage_Internship.dart';
 import 'Manage job/Manage_job.dart';
 import 'Manage posts/Uploadpost.dart';
 import 'Manage reports/Clientsweeklyreport.dart';
+import 'PremiumClient/PremiumClient.dart';
 import 'Update approve details/UpdateStudentdetails.dart';
 import 'Update approve details/Updateclientdetails.dart';
 import 'Upload videos/Upload_videos.dart';
@@ -148,8 +151,8 @@ class MyDrawer extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            contentPadding: EdgeInsets.only(left: 25.w),
+          ExpansionTile(
+            tilePadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
               "Assets/Drawer/Manage_Clients.png",
             ),
@@ -157,15 +160,68 @@ class MyDrawer extends StatelessWidget {
               'Manage Clients',
               style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
             ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => MyDashborad(),
+            children: [
+              ListTile(
+                horizontalTitleGap: 0,
+                contentPadding: EdgeInsets.only(left: 50.w),
+                leading: Image.asset(
+                  "Assets/Drawer/Update_Approve_details.png",
                 ),
-              );
-            },
+                title: Text(
+                  'All clients',
+                  style:
+                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => All_clients(),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                horizontalTitleGap: 0,
+                contentPadding: EdgeInsets.only(left: 50.w),
+                leading: Image.asset(
+                  "Assets/Drawer/Update_Approve_details.png",
+                ),
+                title: Text(
+                  'Premium clients',
+                  style:
+                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PremiumClient(),
+                    ),
+                  );
+                },
+              ),
+            ],
           ),
+
+          //  ExpansionTile(
+          //   contentPadding: EdgeInsets.only(left: 25.w),
+          //   leading: Image.asset(
+          //     "Assets/Drawer/Manage_Clients.png",
+          //   ),
+          //   title: Text(
+          //     'Manage Clients',
+          //     style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
+          //   ),
+          //   onTap: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: (context) => MyDashborad(),
+          //       ),
+          //     );
+          //   },
+          // ),
           ListTile(
             contentPadding: EdgeInsets.only(left: 25.w),
             leading: Image.asset(
@@ -339,7 +395,7 @@ class MyDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MyDashborad(),
+                  builder: (context) => Paymentdrawer(),
                 ),
               );
             },

@@ -31,7 +31,7 @@ class Completed_projects extends StatelessWidget {
           },
         ),
         actions: [
-          PopupMenuButton(
+          PopupMenuButton<String>(
               offset: Offset(0.0, appBarHeight),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
@@ -41,39 +41,37 @@ class Completed_projects extends StatelessWidget {
                   topRight: Radius.circular(8.0.r),
                 ),
               ),
-              itemBuilder: (BuildContext context) => [
-                    PopupMenuItem(
-                      child: Text(
-                        textAlign: TextAlign.left,
-                        'All',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 8.sp),
-                      ),
+              itemBuilder: (BuildContext context) {
+                return const [
+                  PopupMenuItem(
+                    value: "All",
+                    child: Text(
+                      textAlign: TextAlign.left,
+                      "All",
                     ),
-                    PopupMenuItem(
-                      child: Text(
-                        textAlign: TextAlign.left,
-                        'This week',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 8.sp),
-                      ),
+                  ),
+                  PopupMenuItem(
+                    value: "This week",
+                    child: Text(
+                      textAlign: TextAlign.left,
+                      "This week",
                     ),
-                    PopupMenuItem(
-                      child: Text(
-                        'This month',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 8.sp),
-                      ),
+                  ),
+                  PopupMenuItem(
+                    value: "This month",
+                    child: Text(
+                      "This month",
                     ),
-                    PopupMenuItem(
-                      child: Text(
-                        textAlign: TextAlign.left,
-                        'This year',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 8.sp),
-                      ),
+                  ),
+                  PopupMenuItem(
+                    value: "This year",
+                    child: Text(
+                      textAlign: TextAlign.left,
+                      "This year",
                     ),
-                  ],
+                  ),
+                ];
+              },
               child: Image.asset(
                 'Assets/Completed_projects.png',
               )),
@@ -110,7 +108,7 @@ class Completed_projects extends StatelessWidget {
                   width: 129.w,
                 ),
                 SizedBox(
-                    height: 20.h,
+                    height: 27.h,
                     width: 110.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
@@ -124,7 +122,7 @@ class Completed_projects extends StatelessWidget {
                           child: Text(
                         'View details',
                         style: TextStyle(
-                            fontSize: 10.sp,
+                            fontSize: 11.sp,
                             color: const Color(
                               0xffFFFFFF,
                             ),
@@ -163,18 +161,21 @@ class Completed_projects extends StatelessWidget {
                   width: 129.w,
                 ),
                 SizedBox(
-                    height: 20.h,
+                    height: 27.h,
                     width: 110.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xffD4C00B),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(
+                            context, 'Completedprojectsdetails');
+                      },
                       child: Center(
                           child: Text(
                         'View details',
                         style: TextStyle(
-                            fontSize: 10.sp,
+                            fontSize: 11.sp,
                             color: const Color(
                               0xffFFFFFF,
                             ),

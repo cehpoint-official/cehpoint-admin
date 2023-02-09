@@ -25,6 +25,7 @@ class On_going_Projects extends StatelessWidget {
             color: Colors.black87,
           ),
           onPressed: () {
+            Navigator.pushNamed(context, 'On_going_Projects_details');
             Navigator.pushNamed(context, 'Dashboard');
           },
         ),
@@ -52,7 +53,7 @@ class On_going_Projects extends StatelessWidget {
                   width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color(0xffD4C00B),
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, 'On_going_Projects_details');
@@ -92,9 +93,11 @@ class On_going_Projects extends StatelessWidget {
                   width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color(0xffD4C00B),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'On_going_Projects_details');
+                    },
                     child: Text('View details',
                         style: TextStyle(
                             color: Colors.black87,
@@ -130,9 +133,11 @@ class On_going_Projects extends StatelessWidget {
                   width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color(0xffD4C00B),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'On_going_Projects_details');
+                    },
                     child: Text('View details',
                         style: TextStyle(
                             color: Colors.black87,

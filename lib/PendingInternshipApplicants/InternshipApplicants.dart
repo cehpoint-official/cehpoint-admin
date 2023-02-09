@@ -157,7 +157,10 @@ class Internship_Applicants extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xffD4C00B),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(
+                              context, 'InternshipApplicantsDetails');
+                        },
                         child: Text('Update',
                             style: TextStyle(
                                 color: Colors.black87,

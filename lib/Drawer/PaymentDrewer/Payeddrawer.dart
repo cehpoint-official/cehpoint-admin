@@ -1,9 +1,10 @@
-import 'package:cehpoint_admin/Dashboard/Profile/Payment/Payed1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Payed extends StatelessWidget {
-  const Payed({super.key});
+import 'Payeddrawer1.dart';
+
+class Payeddrawer extends StatelessWidget {
+  const Payeddrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class Payed extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Payed1(),
+                    builder: (context) => const Payeddrawer1(),
                   ),
                 );
               },
@@ -50,7 +51,7 @@ class Payed extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Payed1(),
+                    builder: (context) => const Payeddrawer1(),
                   ),
                 );
               },
@@ -80,7 +81,7 @@ class Payed extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Payed1(),
+                    builder: (context) => const Payeddrawer1(),
                   ),
                 );
               },
@@ -110,7 +111,7 @@ class Payed extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Payed1(),
+                    builder: (context) => const Payeddrawer1(),
                   ),
                 );
               },
@@ -140,7 +141,7 @@ class Payed extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Payed1(),
+                    builder: (context) => const Payeddrawer1(),
                   ),
                 );
               },
@@ -170,7 +171,7 @@ class Payed extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Payed1(),
+                    builder: (context) => const Payeddrawer1(),
                   ),
                 );
               },

@@ -1,10 +1,15 @@
+import 'package:cehpoint_admin/All%20Client/All_Clientdetails.dart';
 import 'package:cehpoint_admin/All%20Students/All_Students.dart';
 import 'package:cehpoint_admin/All%20Client/All_clients.dart';
+import 'package:cehpoint_admin/All%20Students/student1details.dart';
+import 'package:cehpoint_admin/Client%20waiting%20list/Updateclientdetails.dart';
+import 'package:cehpoint_admin/Client%20waiting%20list/Updateclientdetails2.dart';
 import 'package:cehpoint_admin/Completed%20projects/Completed_projects.dart';
 import 'package:cehpoint_admin/Completed%20projects/Completedprojectsdetails.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Add%20gift/Addgift.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Add%20gift/Addgiftforclient.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Add%20gift/Addgiftforstudent.dart';
+import 'package:cehpoint_admin/Dashboard/Profile/Case%20studies/Casestudies.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Help/Help.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Payment/Denied1.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Payment/EmployeePaymentDetails.dart';
@@ -12,6 +17,7 @@ import 'package:cehpoint_admin/Dashboard/Profile/Payment/Payed.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Payment/Payed1.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Payment/Payment.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Profile.dart';
+import 'package:cehpoint_admin/Dashboard/Profile/free%20service/Addfreeservice.dart';
 import 'package:cehpoint_admin/Drawer/Demo%20classes/UploadDemoclasses.dart';
 import 'package:cehpoint_admin/Drawer/Drawer.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20Classes/UpdateClassdetails.dart';
@@ -21,8 +27,12 @@ import 'package:cehpoint_admin/Drawer/Manage%20Employee/Addtask12.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20Employee/Addtaskdetails.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20Employee/AllEmployee.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20Employee/Alltask.dart';
+import 'package:cehpoint_admin/Drawer/Manage%20Internship/Manage_Internship.dart';
+import 'package:cehpoint_admin/Drawer/Manage%20Internship/Updatedetails.dart';
+import 'package:cehpoint_admin/Drawer/Manage%20job/Manage_job.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20reports/Addreport.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20reports/Clientsweeklyreport.dart';
+import 'package:cehpoint_admin/Drawer/PaymentDrewer/paymentdrawer.dart';
 import 'package:cehpoint_admin/Drawer/Update%20approve%20details/UpdateStudentdetails.dart';
 import 'package:cehpoint_admin/Drawer/Update%20approve%20details/UpdateStudentdetails2.dart';
 import 'package:cehpoint_admin/Drawer/Upload%20videos/Upload_videos.dart';
@@ -37,6 +47,8 @@ import 'package:cehpoint_admin/SplashScreen.dart';
 import 'package:cehpoint_admin/Student%20waiting%20list/Student_details.dart';
 import 'package:cehpoint_admin/Pending%20Job%20%20Applicants/Updateapprovedetails.dart';
 import 'package:cehpoint_admin/PendingInternshipApplicants/Updateapprovedetails2.dart';
+import 'package:cehpoint_admin/Student%20waiting%20list/Updatestudentdeatils11.dart';
+import 'package:cehpoint_admin/Student%20waiting%20list/Updatestudentdetails12.dart';
 import 'package:cehpoint_admin/Total%20%20ongoing%20Projects/On_going_Projects.dart';
 import 'package:cehpoint_admin/Total%20%20ongoing%20Projects/On_going_Projects_details.dart';
 import 'package:cehpoint_admin/Total%20Pending%20Posts/All_Post.dart';
@@ -115,13 +127,24 @@ class MyApp extends StatelessWidget {
           'Profile': ((context) => Profile()),
           'EmployeePaymentDetails': ((context) => EmployeePaymentDetails()),
           'Payment': ((context) => Payment()),
-          'Payed1': ((context) => Payed1()),
           'Denied1': ((context) => Denied1()),
           'Addgiftforstudent': ((context) => Addgiftforstudent()),
           'Addgiftforclient': ((context) => Addgiftforclient()),
           'Addgift': ((context) => Addgift()),
           'Help': ((context) => Help()),
-          'total_employees': ((context) => total_employees())
+          'total_employees': ((context) => total_employees()),
+          'paymentdrawer': ((context) => Paymentdrawer()),
+          'student1details': ((context) => student1details()),
+          'Updateclientdetails': ((context) => Updateclientdetails()),
+          'Updateclientdetails2': ((context) => Updateclientdetails2()),
+          'Addfreeservice': ((context) => Addfreeservice()),
+          'Casestudies': ((context) => Casestudies()),
+          'Manage_Internship': ((context) => Manage_Internship()),
+          'Manage_job': ((context) => Manage_job()),
+          'Updatestudentdetails11': ((context) => Updatestudentdetails11()),
+          'Student_details': ((context) => Student_details()),
+          'Updatestudentdetails12': ((context) => Updatestudentdetails12()),
+          'Updatedetails': ((context) => Updatedetails())
         },
       ),
       designSize: const Size(411, 843),

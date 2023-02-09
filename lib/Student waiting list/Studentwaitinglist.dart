@@ -1,4 +1,5 @@
 // ignore: file_names
+import 'package:cehpoint_admin/Student%20waiting%20list/Student_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,96 +31,105 @@ class Student_waiting_list extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.only(top: 50.h, left: 20.w),
+        padding: EdgeInsets.only(top: 50.h, left: 20.w, right: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 10.w),
-                    child: Image.asset(
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Student_details(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(children: [
+                    Image.asset(
                       'Assets/Student_waiting_list.png',
                     ),
-                  ),
-                  SizedBox(
-                    width: 20.w,
-                  ),
-                  Text(
-                    'Asit Jana',
-                    style:
-                        TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
-                  ),
-                ]),
-                IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'Student_details');
-                    },
-                    icon: const Icon(Icons.arrow_forward_ios))
-              ],
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    Text(
+                      'Asit Jana',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                  ]),
+                  Image.asset('Assets/payment1.png')
+                ],
+              ),
             ),
             SizedBox(
               height: 20.h,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 10.w),
-                    child: Image.asset(
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Student_details(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(children: [
+                    Image.asset(
                       'Assets/Student_waiting_list.png',
                     ),
-                  ),
-                  SizedBox(
-                    width: 20.w,
-                  ),
-                  Text(
-                    'Nigar Sultana',
-                    style:
-                        TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
-                  ),
-                ]),
-                IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'Student_details');
-                    },
-                    icon: const Icon(Icons.arrow_forward_ios))
-              ],
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    Text(
+                      'Nigar Sultana',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                  ]),
+                  Image.asset('Assets/payment1.png')
+                ],
+              ),
             ),
             SizedBox(
               height: 20.h,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 10.w),
-                    child: Image.asset(
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Student_details(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(children: [
+                    Image.asset(
                       'Assets/Student_waiting_list.png',
                     ),
-                  ),
-                  SizedBox(
-                    width: 20.w,
-                  ),
-                  Text(
-                    'Dibiyajoti Pal',
-                    style:
-                        TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
-                  ),
-                  SizedBox(
-                    width: 174.w,
-                  ),
-                ]),
-                IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'Student_details');
-                    },
-                    icon: const Icon(Icons.arrow_forward_ios))
-              ],
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    Text(
+                      'Dibiyajoti Pal',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                    SizedBox(
+                      width: 174.w,
+                    ),
+                  ]),
+                  Image.asset('Assets/payment1.png')
+                ],
+              ),
             ),
             SizedBox(
               height: 20.h,

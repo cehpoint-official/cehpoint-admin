@@ -1,4 +1,5 @@
 // ignore: file_names
+import 'package:cehpoint_admin/All%20Client/All_Clientdetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,126 +31,198 @@ class All_clients extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.only(top: 50.h, left: 20.w),
+        padding: EdgeInsets.only(top: 50.h, left: 20.w, right: 20.w),
         child: Column(
           children: [
-            Row(children: [
-              Image.asset(
-                'Assets/Client_waiting_list.png',
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const All_Clientdetails(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(children: [
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    Text(
+                      'Client 1',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                  ]),
+                  Image.asset('Assets/payment1.png')
+                ],
               ),
-              SizedBox(
-                width: 20.w,
-              ),
-              Text(
-                'Client 1',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
-              ),
-              SizedBox(
-                width: 230.w,
-              ),
-              IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
-            ]),
+            ),
             SizedBox(
               height: 20.w,
             ),
-            Row(children: [
-              Image.asset(
-                'Assets/Client_waiting_list.png',
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const All_Clientdetails(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(children: [
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    Text(
+                      'Client 2',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                  ]),
+                  Image.asset('Assets/payment1.png')
+                ],
               ),
-              SizedBox(
-                width: 20.w,
-              ),
-              Text(
-                'Client 2',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
-              ),
-              SizedBox(
-                width: 230.w,
-              ),
-              IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
-            ]),
+            ),
             SizedBox(
               height: 20.w,
             ),
-            Row(children: [
-              Image.asset(
-                'Assets/Client_waiting_list.png',
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const All_Clientdetails(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(children: [
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    Text(
+                      'Client 3',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                  ]),
+                  Image.asset('Assets/payment1.png')
+                ],
               ),
-              SizedBox(
-                width: 20.w,
-              ),
-              Text(
-                'Client 3',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
-              ),
-              SizedBox(
-                width: 230.w,
-              ),
-              IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
-            ]),
+            ),
             SizedBox(
               height: 20.h,
             ),
-            Row(children: [
-              Image.asset(
-                'Assets/Client_waiting_list.png',
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const All_Clientdetails(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(children: [
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    Text(
+                      'Client 4',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                  ]),
+                  Image.asset('Assets/payment1.png')
+                ],
               ),
-              SizedBox(
-                width: 20.w,
-              ),
-              Text(
-                'Client 4',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
-              ),
-              SizedBox(
-                width: 230.w,
-              ),
-              IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
-            ]),
+            ),
             SizedBox(
               height: 20.h,
             ),
-            Row(children: [
-              Image.asset(
-                'Assets/Client_waiting_list.png',
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const All_Clientdetails(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(children: [
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    Text(
+                      'Client 5',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                  ]),
+                  Image.asset('Assets/payment1.png')
+                ],
               ),
-              SizedBox(
-                width: 20.h,
-              ),
-              Text(
-                'Client 5',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
-              ),
-              SizedBox(
-                width: 230.w,
-              ),
-              IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
-            ]),
+            ),
             SizedBox(
               height: 20.h,
             ),
-            Row(children: [
-              Image.asset(
-                'Assets/Client_waiting_list.png',
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const All_Clientdetails(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(children: [
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
+                    SizedBox(
+                      width: 20.w,
+                    ),
+                    Text(
+                      'Client 6',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16.sp),
+                    ),
+                  ]),
+                  Image.asset('Assets/payment1.png')
+                ],
               ),
-              SizedBox(
-                width: 20.w,
-              ),
-              Text(
-                'Client 6',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
-              ),
-              SizedBox(
-                width: 230.w,
-              ),
-              IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.arrow_forward_ios))
-            ]),
+            ),
           ],
         ),
       ),

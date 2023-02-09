@@ -291,7 +291,7 @@ class Student_details extends StatelessWidget {
                                       ),
                                       onPressed: () {
                                         Navigator.pushNamed(
-                                            context, 'Student_details');
+                                            context, 'Updatestudentdetails11');
                                       },
                                       child: Text('Update',
                                           style: TextStyle(

@@ -54,6 +54,92 @@ class _Manage_InternshipState extends State<Manage_Internship>
               Navigator.pushNamed(context, 'Dashboard');
             },
           ),
+          actions: [
+            InkWell(
+              child: Image.asset('Assets/totalemployees.png'),
+              onTap: () {
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text(
+                          'Delete Employee',
+                          style: TextStyle(
+                              fontSize: 18.sp,
+                              fontWeight: FontWeight.w700,
+                              color: const Color(0xffE43131)),
+                        ),
+                        content: Text(
+                          """Are you sure you want to delete “Applicant 1 “""",
+                          style: TextStyle(
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w600,
+                              color: const Color(0xff000000)),
+                        ),
+                        actions: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              SizedBox(
+                                height: 47.h,
+                                width: 139.w,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      backgroundColor: const Color(0xffF92222),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(10.0.r),
+                                          bottomRight: Radius.circular(10.0.r),
+                                          bottomLeft: Radius.circular(10.0.r),
+                                          topLeft: Radius.circular(10.0.r),
+                                        ),
+                                      )),
+                                  onPressed: () {
+                                    Navigator.pushNamed(
+                                        context, 'Manage_Internship');
+                                  },
+                                  child: Text(
+                                    'DELETE',
+                                    style: TextStyle(
+                                        fontSize: 13.sp,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 47.h,
+                                width: 139.w,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      backgroundColor: const Color(0xff2A55C3),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(10.0.r),
+                                          bottomRight: Radius.circular(10.0.r),
+                                          bottomLeft: Radius.circular(10.0.r),
+                                          topLeft: Radius.circular(10.0.r),
+                                        ),
+                                      )),
+                                  onPressed: () {
+                                    Navigator.pushNamed(
+                                        context, 'Manage_Internship');
+                                  },
+                                  child: Text(
+                                    'CANCEL',
+                                    style: TextStyle(
+                                        fontSize: 13.sp,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      );
+                    });
+              },
+            )
+          ],
         ),
         body: Padding(
           padding: EdgeInsets.only(top: 40.h),

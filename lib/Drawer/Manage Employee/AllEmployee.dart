@@ -54,8 +54,7 @@ class AllEmployee extends StatelessWidget {
                     width: 100.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color.fromRGBO(212, 192, 11, 0.28),
+                        backgroundColor: const Color(0xffD4C00B),
                       ),
                       onPressed: () {
                         Navigator.pushNamed(context, 'Addtask1');
@@ -100,10 +99,11 @@ class AllEmployee extends StatelessWidget {
                     width: 100.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color.fromRGBO(212, 192, 11, 0.28),
+                        backgroundColor: const Color(0xffD4C00B),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'Addtask1');
+                      },
                       child: Text(
                         'Add Task',
                         style: TextStyle(
@@ -144,10 +144,11 @@ class AllEmployee extends StatelessWidget {
                     width: 100.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color.fromRGBO(212, 192, 11, 0.28),
+                        backgroundColor: const Color(0xffD4C00B),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'Addtask1');
+                      },
                       child: Text(
                         'Add Task',
                         style: TextStyle(
@@ -188,10 +189,11 @@ class AllEmployee extends StatelessWidget {
                     width: 100.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color.fromRGBO(212, 192, 11, 0.28),
+                        backgroundColor: const Color(0xffD4C00B),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'Addtask1');
+                      },
                       child: Text(
                         'Add Task',
                         style: TextStyle(
@@ -232,10 +234,11 @@ class AllEmployee extends StatelessWidget {
                     width: 100.w,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color.fromRGBO(212, 192, 11, 0.28),
+                        backgroundColor: const Color(0xffD4C00B),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'Addtask1');
+                      },
                       child: Text(
                         'Add Task',
                         style: TextStyle(

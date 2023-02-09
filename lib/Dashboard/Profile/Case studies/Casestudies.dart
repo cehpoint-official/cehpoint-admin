@@ -1,3 +1,4 @@
+import 'package:cehpoint_admin/Dashboard/Profile/Case%20studies/casestudiesedit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,7 +12,7 @@ class Casestudies extends StatelessWidget {
         title: Padding(
           padding: EdgeInsets.only(left: 60.w),
           child: Text(
-            'Add free service',
+            'Case studies',
             style: TextStyle(
               color: Colors.black87,
               fontSize: 18.sp,
@@ -43,7 +44,16 @@ class Casestudies extends StatelessWidget {
                   style:
                       TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
                 ),
-                Image.asset('Assets/pencil.png')
+                InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => casestudiesedit(),
+                        ),
+                      );
+                    },
+                    child: Image.asset('Assets/pencil.png'))
               ],
             ),
             SizedBox(

@@ -77,17 +77,24 @@ class Approve_details extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
+              SizedBox(
                 width: 400.w,
-                color: Color(0xffD4C00B),
                 height: 49,
-                child: Center(
-                  child: Text(
-                    'Update',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18.sp,
-                        color: const Color(0xffffffff)),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xffD4C00B),
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'Updatedetails');
+                  },
+                  child: Center(
+                    child: Text(
+                      'Update',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18.sp,
+                          color: const Color(0xffffffff)),
+                    ),
                   ),
                 ),
               )

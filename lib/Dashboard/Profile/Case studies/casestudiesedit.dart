@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'Addfreeservice1.dart';
-
-class Addfreeservice extends StatelessWidget {
-  const Addfreeservice({super.key});
+class casestudiesedit extends StatelessWidget {
+  const casestudiesedit({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +11,7 @@ class Addfreeservice extends StatelessWidget {
         title: Padding(
           padding: EdgeInsets.only(left: 60.w),
           child: Text(
-            'Add free service',
+            'Case studies',
             style: TextStyle(
               color: Colors.black87,
               fontSize: 18.sp,
@@ -28,7 +26,7 @@ class Addfreeservice extends StatelessWidget {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, 'Profile');
+            Navigator.pushNamed(context, 'Casestudies');
           },
         ),
       ),
@@ -45,28 +43,18 @@ class Addfreeservice extends StatelessWidget {
                   style:
                       TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
                 ),
-                InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Addfreeservice1(),
-                        ),
-                      );
-                    },
-                    child: Image.asset('Assets/pencil.png'))
+                Image.asset('Assets/pencil.png')
               ],
             ),
             SizedBox(
               height: 21.h,
             ),
-            Text(
-              'https://freeservicelink.in/',
+            TextField(
               style: TextStyle(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w600,
                   color: Color(0xff2A55C3)),
-            ),
+            )
           ],
         ),
       ),

@@ -1,18 +1,18 @@
+import 'package:cehpoint_admin/Drawer/PaymentDrewer/Denieddrawer.dart';
+import 'package:cehpoint_admin/Drawer/PaymentDrewer/Payeddrawer.dart';
+import 'package:cehpoint_admin/Drawer/PaymentDrewer/Pendingdrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'Denied.dart';
-import 'Payed.dart';
-import 'Pending.dart';
-
-class Payment extends StatefulWidget {
-  const Payment({super.key});
+class Paymentdrawer extends StatefulWidget {
+  const Paymentdrawer({super.key});
 
   @override
-  State<Payment> createState() => _PaymentState();
+  State<Paymentdrawer> createState() => _PaymentdrawerState();
 }
 
-class _PaymentState extends State<Payment> with SingleTickerProviderStateMixin {
+class _PaymentdrawerState extends State<Paymentdrawer>
+    with SingleTickerProviderStateMixin {
   var appBarHeight = AppBar().preferredSize.height;
   late TabController tabController;
 
@@ -55,7 +55,7 @@ class _PaymentState extends State<Payment> with SingleTickerProviderStateMixin {
               color: Colors.black87,
             ),
             onPressed: () {
-              Navigator.pushNamed(context, 'Profile');
+              Navigator.pushNamed(context, 'Dashboard');
             },
           ),
         ),
@@ -86,7 +86,11 @@ class _PaymentState extends State<Payment> with SingleTickerProviderStateMixin {
               ),
               Expanded(
                 child: TabBarView(
-                  children: <Widget>[Pending(), Payed(), Denied()],
+                  children: <Widget>[
+                    Pendingdrawer(),
+                    Payeddrawer(),
+                    Denieddrwer()
+                  ],
                 ),
               ),
             ],

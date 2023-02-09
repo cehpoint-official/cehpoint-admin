@@ -1,19 +1,16 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// ignore: camel_case_types
-class Pending_Projects_details extends StatelessWidget {
-  const Pending_Projects_details({super.key});
+class PremiumProjectsdetails extends StatelessWidget {
+  const PremiumProjectsdetails({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 40.w),
+        title: Center(
           child: Text(
-            'Pending Projects details',
+            'Premium Projects details',
             style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
@@ -25,17 +22,24 @@ class Pending_Projects_details extends StatelessWidget {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, 'Pending_Projects');
+            Navigator.pushNamed(context, 'Premium_Projects');
           },
         ),
       ),
       body: Padding(
         padding:
-            EdgeInsets.only(left: 30.w, top: 40.h, right: 30.w, bottom: 24.h),
+            EdgeInsets.only(left: 30.w, top: 16.h, right: 30.w, bottom: 24.h),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(children: [
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(
+                'Client 1',
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18.sp),
+              ),
+              SizedBox(
+                height: 36.h,
+              ),
               Row(
                 children: [
                   Column(
@@ -136,7 +140,7 @@ class Pending_Projects_details extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 65.h,
+                height: 32.h,
               ),
               Row(
                 children: [
@@ -261,6 +265,9 @@ class Pending_Projects_details extends StatelessWidget {
                 ],
               ),
             ]),
+            SizedBox(
+              height: 250.h,
+            ),
             SizedBox(
                 height: 57.h,
                 width: 400.w,

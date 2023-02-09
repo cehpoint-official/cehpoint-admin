@@ -1,44 +1,65 @@
-import 'package:cehpoint_admin/Dashboard/Profile/Payment/Payed1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Payed extends StatelessWidget {
-  const Payed({super.key});
+class PremiumClient extends StatelessWidget {
+  const PremiumClient({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Padding(
+          padding: EdgeInsets.only(left: 50.w),
+          child: Text(
+            'Premium Client',
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
+          ),
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.black87,
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, 'Dashboard');
+          },
+        ),
+      ),
       body: Padding(
-        padding: EdgeInsets.only(left: 20.w, right: 20.w),
+        padding: EdgeInsets.only(
+          top: 50.h,
+          left: 20.w,
+          right: 20.w,
+        ),
         child: Column(
           children: [
-            SizedBox(
-              height: 10.h,
-            ),
             InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Payed1(),
-                  ),
-                );
-              },
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => PremiumProjectsdetails()),
+              //   );
+              // },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(children: [
-                    Image.asset('Assets/total_employees.png'),
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
                     SizedBox(
-                      width: 20.w,
+                      width: 20.h,
                     ),
                     Text(
-                      'Employee 1',
+                      'Client 1',
                       style: TextStyle(
                           fontWeight: FontWeight.w500, fontSize: 16.sp),
                     ),
                   ]),
-                  Image.asset('Assets/payment1.png')
+                  const Icon(Icons.arrow_forward_ios)
                 ],
               ),
             ),
@@ -46,29 +67,30 @@ class Payed extends StatelessWidget {
               height: 20.h,
             ),
             InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Payed1(),
-                  ),
-                );
-              },
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => PremiumProjectsdetails()),
+              //   );
+              // },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(children: [
-                    Image.asset('Assets/total_employees.png'),
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
                     SizedBox(
                       width: 20.w,
                     ),
                     Text(
-                      'Employee 2',
+                      'Client 2',
                       style: TextStyle(
                           fontWeight: FontWeight.w500, fontSize: 16.sp),
                     ),
                   ]),
-                  Image.asset('Assets/payment1.png')
+                  const Icon(Icons.arrow_forward_ios)
                 ],
               ),
             ),
@@ -76,29 +98,30 @@ class Payed extends StatelessWidget {
               height: 20.h,
             ),
             InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Payed1(),
-                  ),
-                );
-              },
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => PremiumProjectsdetails()),
+              //   );
+              // },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(children: [
-                    Image.asset('Assets/total_employees.png'),
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
                     SizedBox(
                       width: 20.w,
                     ),
                     Text(
-                      'Employee 3',
+                      'Client 3',
                       style: TextStyle(
                           fontWeight: FontWeight.w500, fontSize: 16.sp),
                     ),
                   ]),
-                  Image.asset('Assets/payment1.png')
+                  const Icon(Icons.arrow_forward_ios)
                 ],
               ),
             ),
@@ -106,29 +129,30 @@ class Payed extends StatelessWidget {
               height: 20.h,
             ),
             InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Payed1(),
-                  ),
-                );
-              },
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => PremiumProjectsdetails()),
+              //   );
+              // },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(children: [
-                    Image.asset('Assets/total_employees.png'),
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
                     SizedBox(
                       width: 20.w,
                     ),
                     Text(
-                      'Employee 4',
+                      'Client 4',
                       style: TextStyle(
                           fontWeight: FontWeight.w500, fontSize: 16.sp),
                     ),
                   ]),
-                  Image.asset('Assets/payment1.png')
+                  const Icon(Icons.arrow_forward_ios)
                 ],
               ),
             ),
@@ -136,29 +160,30 @@ class Payed extends StatelessWidget {
               height: 20.h,
             ),
             InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Payed1(),
-                  ),
-                );
-              },
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => PremiumProjectsdetails()),
+              //   );
+              // },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(children: [
-                    Image.asset('Assets/total_employees.png'),
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
                     SizedBox(
                       width: 20.w,
                     ),
                     Text(
-                      'Employee 5',
+                      'Client 5',
                       style: TextStyle(
                           fontWeight: FontWeight.w500, fontSize: 16.sp),
                     ),
                   ]),
-                  Image.asset('Assets/payment1.png')
+                  const Icon(Icons.arrow_forward_ios)
                 ],
               ),
             ),
@@ -166,29 +191,30 @@ class Payed extends StatelessWidget {
               height: 20.h,
             ),
             InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Payed1(),
-                  ),
-                );
-              },
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => PremiumProjectsdetails()),
+              //   );
+              // },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(children: [
-                    Image.asset('Assets/total_employees.png'),
+                    Image.asset(
+                      'Assets/Client_waiting_list.png',
+                    ),
                     SizedBox(
                       width: 20.w,
                     ),
                     Text(
-                      'Employee 6',
+                      'Client 6',
                       style: TextStyle(
                           fontWeight: FontWeight.w500, fontSize: 16.sp),
                     ),
                   ]),
-                  Image.asset('Assets/payment1.png')
+                  const Icon(Icons.arrow_forward_ios)
                 ],
               ),
             ),

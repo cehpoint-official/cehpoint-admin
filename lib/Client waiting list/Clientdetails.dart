@@ -29,217 +29,220 @@ class Client_details extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.only(top: 50.h, left: 30.w, right: 30.w),
+        padding:
+            EdgeInsets.only(top: 50.h, left: 30.w, right: 30.w, bottom: 40.h),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              'Name',
-              style: TextStyle(
-                color: const Color.fromRGBO(0, 0, 0, 0.3),
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Name',
+                  style: TextStyle(
+                    color: const Color.fromRGBO(0, 0, 0, 0.3),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'abcd mondal',
+                  style: TextStyle(
+                    color: const Color(0xff000000),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'Company Name',
+                  style: TextStyle(
+                    color: const Color.fromRGBO(0, 0, 0, 0.3),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'xyz company',
+                  style: TextStyle(
+                    color: const Color(0xff000000),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'Phone Number',
+                  style: TextStyle(
+                    color: const Color.fromRGBO(0, 0, 0, 0.3),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  '7028361855',
+                  style: TextStyle(
+                    color: const Color(0xff000000),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'Email ID',
+                  style: TextStyle(
+                    color: const Color.fromRGBO(0, 0, 0, 0.3),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'abcd@gmail.com',
+                  style: TextStyle(
+                    color: const Color(0xff000000),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'Address',
+                  style: TextStyle(
+                    color: const Color.fromRGBO(0, 0, 0, 0.3),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'Murshidabad',
+                  style: TextStyle(
+                    color: const Color(0xff000000),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'Explain your Requirement',
+                  style: TextStyle(
+                    color: const Color.fromRGBO(0, 0, 0, 0.3),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'App development',
+                  style: TextStyle(
+                    color: const Color(0xff000000),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'What will be the project finishing deadline if we start working on your project next Monday ?',
+                  maxLines: 2,
+                  style: TextStyle(
+                    color: const Color.fromRGBO(0, 0, 0, 0.3),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  '30th February',
+                  style: TextStyle(
+                    color: const Color(0xff000000),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  "What's your budget for this project ? (optional)",
+                  style: TextStyle(
+                    color: const Color.fromRGBO(0, 0, 0, 0.3),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  '30,000',
+                  style: TextStyle(
+                    color: const Color(0xff000000),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'How did you hear about us',
+                  style: TextStyle(
+                    color: const Color.fromRGBO(0, 0, 0, 0.3),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                Text(
+                  'Google',
+                  style: TextStyle(
+                    color: const Color(0xff000000),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
             ),
             SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'abcd mondal',
-              style: TextStyle(
-                color: const Color(0xff000000),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'Company Name',
-              style: TextStyle(
-                color: const Color.fromRGBO(0, 0, 0, 0.3),
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'xyz company',
-              style: TextStyle(
-                color: const Color(0xff000000),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'Phone Number',
-              style: TextStyle(
-                color: const Color.fromRGBO(0, 0, 0, 0.3),
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              '7028361855',
-              style: TextStyle(
-                color: const Color(0xff000000),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'Email ID',
-              style: TextStyle(
-                color: const Color.fromRGBO(0, 0, 0, 0.3),
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'abcd@gmail.com',
-              style: TextStyle(
-                color: const Color(0xff000000),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'Address',
-              style: TextStyle(
-                color: const Color.fromRGBO(0, 0, 0, 0.3),
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'Murshidabad',
-              style: TextStyle(
-                color: const Color(0xff000000),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'Explain your Requirement',
-              style: TextStyle(
-                color: const Color.fromRGBO(0, 0, 0, 0.3),
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'App development',
-              style: TextStyle(
-                color: const Color(0xff000000),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'What will be the project finishing deadline if we start working on your project next Monday ?',
-              maxLines: 2,
-              style: TextStyle(
-                color: const Color.fromRGBO(0, 0, 0, 0.3),
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              '30th February',
-              style: TextStyle(
-                color: const Color(0xff000000),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              "What's your budget for this project ? (optional)",
-              style: TextStyle(
-                color: const Color.fromRGBO(0, 0, 0, 0.3),
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              '30,000',
-              style: TextStyle(
-                color: const Color(0xff000000),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'How did you hear about us',
-              style: TextStyle(
-                color: const Color.fromRGBO(0, 0, 0, 0.3),
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              'Google',
-              style: TextStyle(
-                color: const Color(0xff000000),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                top: 155.h,
-              ),
-              height: 47.h,
+              height: 52.h,
               width: 334,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xffD4C00B),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
                 child: Center(
@@ -294,7 +297,7 @@ class Client_details extends StatelessWidget {
                                                 width: 10.w,
                                               ),
                                               Text(
-                                                'Embedded Course brochure.pdf',
+                                                'Embedded Proposal.pdf',
                                                 style: TextStyle(
                                                     fontSize: 14.sp,
                                                     fontWeight:
@@ -334,7 +337,7 @@ class Client_details extends StatelessWidget {
                                     ),
                                     onPressed: () {
                                       Navigator.pushNamed(
-                                          context, 'Clientdetails');
+                                          context, 'Updateclientdetails');
                                     },
                                     child: Text('Update',
                                         style: TextStyle(

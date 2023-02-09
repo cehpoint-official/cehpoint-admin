@@ -1,9 +1,10 @@
-import 'package:cehpoint_admin/Dashboard/Profile/Payment/Denied1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Denied extends StatelessWidget {
-  const Denied({super.key});
+import 'Denieddrawer1.dart';
+
+class Denieddrwer extends StatelessWidget {
+  const Denieddrwer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class Denied extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Denied1(),
+                    builder: (context) => const Denieddrawer1(),
                   ),
                 );
               },
@@ -50,7 +51,7 @@ class Denied extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Denied1(),
+                    builder: (context) => const Denieddrawer1(),
                   ),
                 );
               },

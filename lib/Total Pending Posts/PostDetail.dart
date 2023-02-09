@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quickalert/models/quickalert_type.dart';
+import 'package:quickalert/widgets/quickalert_dialog.dart';
 
 class PostDetail extends StatelessWidget {
   const PostDetail({super.key});
@@ -36,7 +38,7 @@ class PostDetail extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(
               top: 60.h,
-              left: 30.w,
+              left: 16.w,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,7 +147,13 @@ class PostDetail extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xffD4C00B),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      QuickAlert.show(
+                        context: context,
+                        type: QuickAlertType.success,
+                        text: 'Form Submitted Successfully!',
+                      );
+                    },
                     child: Text('Approve',
                         style: TextStyle(
                             color: Colors.white70,
