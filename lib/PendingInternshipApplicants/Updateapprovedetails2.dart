@@ -117,7 +117,7 @@ class _Updateapprovedetails2State extends State<Updateapprovedetails2> {
                       onPressed: () {
                         // Navigator.pushNamed(context, 'Updateapprovedetails');
                       },
-                      child: Text('Approve',
+                      child: Text('Save',
                           style: TextStyle(
                               color: Colors.white70,
                               fontSize: 20.sp,

@@ -40,7 +40,7 @@ class Addreport extends StatelessWidget {
             width: 334.w,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromRGBO(212, 192, 11, 0.33),
+                backgroundColor: const Color(0xffD4C00B),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.r),
                 ),
@@ -155,19 +155,82 @@ class Addreport extends StatelessWidget {
           SizedBox(
             height: 20.h,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Week 1 report',
-                style: TextStyle(
-                    color: Colors.black87,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 20.sp),
-              ),
-              Image.asset('Assets/pencil.png')
-            ],
+          InkWell(
+            onTap: () {
+              showModalBottomSheet(
+                shape: RoundedRectangleBorder(
+                  borderRadius:
+                      BorderRadius.vertical(top: Radius.circular(30.r)),
+                ),
+                context: context,
+                builder: (BuildContext context) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding:
+                            EdgeInsets.only(left: 16.w, right: 16.w, top: 89.h),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const TextField(
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: 'Add week',
+                                ),
+                              ),
+                              SizedBox(
+                                height: 15.h,
+                              ),
+                              const TextField(
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: 'Add report link',
+                                ),
+                              ),
+                            ]),
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: SizedBox(
+                              height: 55.h,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xffD4C00B),
+                                ),
+                                onPressed: () {
+                                  Navigator.pushNamed(context, 'Addreport');
+                                },
+                                child: Text('Save',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20.sp,
+                                        fontWeight: FontWeight.w700)),
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  );
+                },
+              );
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Week 1 report',
+                  style: TextStyle(
+                      color: Colors.black87,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20.sp),
+                ),
+                Image.asset('Assets/pencil.png')
+              ],
+            ),
           ),
           SizedBox(
             height: 10.h,

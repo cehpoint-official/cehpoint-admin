@@ -11,7 +11,7 @@ class Payed1 extends StatelessWidget {
         title: Padding(
           padding: EdgeInsets.only(left: 100.w),
           child: Text(
-            'Payed',
+            'Paid',
             style: TextStyle(
               color: Colors.black87,
               fontSize: 18.sp,

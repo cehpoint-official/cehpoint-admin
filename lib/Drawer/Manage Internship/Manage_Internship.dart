@@ -1,5 +1,6 @@
-import 'package:cehpoint_admin/Drawer/Manage%20job/All_Applicant.dart';
-import 'package:cehpoint_admin/Drawer/Manage%20job/Approve_details.dart';
+import 'package:cehpoint_admin/Drawer/Manage%20Internship/All_Applicant2.dart';
+import 'package:cehpoint_admin/Drawer/Manage%20Internship/Approve_details2.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -163,7 +164,7 @@ class _Manage_InternshipState extends State<Manage_Internship>
               ),
               Expanded(
                 child: TabBarView(
-                  children: <Widget>[Approve_details(), All_Applicant()],
+                  children: <Widget>[Approve_details2(), All_Applicant2()],
                 ),
               ),
             ],

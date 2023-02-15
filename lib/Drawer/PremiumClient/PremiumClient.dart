@@ -1,3 +1,4 @@
+import 'package:cehpoint_admin/Drawer/PremiumClient/premiumclientdetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -36,13 +37,13 @@ class PremiumClient extends StatelessWidget {
         child: Column(
           children: [
             InkWell(
-              // onTap: () {
-              //   Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //         builder: (context) => PremiumProjectsdetails()),
-              //   );
-              // },
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => premiumclientdetails()),
+                );
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -67,13 +68,13 @@ class PremiumClient extends StatelessWidget {
               height: 20.h,
             ),
             InkWell(
-              // onTap: () {
-              //   Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //         builder: (context) => PremiumProjectsdetails()),
-              //   );
-              // },
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => premiumclientdetails()),
+                );
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -98,13 +99,13 @@ class PremiumClient extends StatelessWidget {
               height: 20.h,
             ),
             InkWell(
-              // onTap: () {
-              //   Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //         builder: (context) => PremiumProjectsdetails()),
-              //   );
-              // },
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => premiumclientdetails()),
+                );
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -129,13 +130,13 @@ class PremiumClient extends StatelessWidget {
               height: 20.h,
             ),
             InkWell(
-              // onTap: () {
-              //   Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //         builder: (context) => PremiumProjectsdetails()),
-              //   );
-              // },
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => premiumclientdetails()),
+                );
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -160,13 +161,13 @@ class PremiumClient extends StatelessWidget {
               height: 20.h,
             ),
             InkWell(
-              // onTap: () {
-              //   Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //         builder: (context) => PremiumProjectsdetails()),
-              //   );
-              // },
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => premiumclientdetails()),
+                );
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -191,13 +192,13 @@ class PremiumClient extends StatelessWidget {
               height: 20.h,
             ),
             InkWell(
-              // onTap: () {
-              //   Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //         builder: (context) => PremiumProjectsdetails()),
-              //   );
-              // },
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => premiumclientdetails()),
+                );
+              },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

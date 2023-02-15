@@ -119,10 +119,8 @@ class _UpdateapprovedetailsState extends State<Updateapprovedetails> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xffD4C00B),
                       ),
-                      onPressed: () {
-                        // Navigator.pushNamed(context, 'Updateapprovedetails');
-                      },
-                      child: Text('Approve',
+                      onPressed: () {},
+                      child: Text('Send',
                           style: TextStyle(
                               color: Colors.white70,
                               fontSize: 20.sp,

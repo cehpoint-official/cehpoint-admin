@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class Completed_projects extends StatelessWidget {
   var appBarHeight = AppBar().preferredSize.height;
 
-  Completed_projects({super.key});
+  final data = ['All', 'This week', 'This month', 'DevSecOps', 'This year'];
 
   @override
   Widget build(BuildContext context) {
@@ -31,47 +31,34 @@ class Completed_projects extends StatelessWidget {
           },
         ),
         actions: [
-          PopupMenuButton<String>(
+          PopupMenuButton(
               offset: Offset(0.0, appBarHeight),
-              shape: RoundedRectangleBorder(
+              constraints: BoxConstraints.tightFor(
+                width: 80.w,
+              ),
+              shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(8.0.r),
-                  bottomRight: Radius.circular(8.0.r),
-                  topLeft: Radius.circular(8.0.r),
-                  topRight: Radius.circular(8.0.r),
+                  bottomLeft: Radius.circular(8.0),
+                  bottomRight: Radius.circular(8.0),
+                  topLeft: Radius.circular(8.0),
+                  topRight: Radius.circular(8.0),
                 ),
               ),
-              itemBuilder: (BuildContext context) {
-                return const [
-                  PopupMenuItem(
-                    value: "All",
-                    child: Text(
-                      textAlign: TextAlign.left,
-                      "All",
-                    ),
-                  ),
-                  PopupMenuItem(
-                    value: "This week",
-                    child: Text(
-                      textAlign: TextAlign.left,
-                      "This week",
-                    ),
-                  ),
-                  PopupMenuItem(
-                    value: "This month",
-                    child: Text(
-                      "This month",
-                    ),
-                  ),
-                  PopupMenuItem(
-                    value: "This year",
-                    child: Text(
-                      textAlign: TextAlign.left,
-                      "This year",
-                    ),
-                  ),
-                ];
-              },
+              padding: EdgeInsets.only(left: 8.w),
+              itemBuilder: (BuildContext context) => [
+                    for (var item in data)
+                      PopupMenuItem(
+                        height: 0.h,
+                        padding: EdgeInsets.symmetric(
+                            vertical: 8.h, horizontal: 8.w),
+                        child: Text(
+                          textAlign: TextAlign.left,
+                          item,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700, fontSize: 12.sp),
+                        ),
+                      ),
+                  ],
               child: Image.asset(
                 'Assets/Completed_projects.png',
               )),

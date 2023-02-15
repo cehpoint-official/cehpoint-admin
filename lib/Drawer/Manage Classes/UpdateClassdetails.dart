@@ -24,7 +24,7 @@ class UpdateClassdetails extends StatelessWidget {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, 'Dashboard');
+            Navigator.pushNamed(context, 'UpdateClassdetails2');
           },
         ),
       ),
@@ -103,7 +103,7 @@ class UpdateClassdetails extends StatelessWidget {
                           fontWeight: FontWeight.w700),
                     )),
                     onPressed: () {
-                      Navigator.pushNamed(context, 'UpdateClassdetails2');
+                      // Navigator.pushNamed(context, 'UpdateClassdetails2');
                     }))
           ],
         ),

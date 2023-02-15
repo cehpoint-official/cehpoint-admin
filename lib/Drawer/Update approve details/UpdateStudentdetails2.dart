@@ -24,7 +24,7 @@ class UpdateStudentdetails2 extends StatelessWidget {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, 'UpdateStudentdetails');
+            Navigator.pushNamed(context, 'Dashboard');
           },
         ),
       ),
@@ -95,7 +95,6 @@ class UpdateStudentdetails2 extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     fontSize: 14.sp),
               ),
-              Image.asset('Assets/pencil.png')
             ],
           ),
           SizedBox(
@@ -125,7 +124,7 @@ class UpdateStudentdetails2 extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 )),
                 onPressed: () {
-                  // Navigator.pushNamed(context, 'UpdateStudentdetails2');
+                  Navigator.pushNamed(context, 'UpdateStudentdetails22');
                 },
               ))
         ]),

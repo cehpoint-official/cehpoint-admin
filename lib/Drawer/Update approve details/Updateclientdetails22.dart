@@ -1,9 +1,11 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quickalert/models/quickalert_type.dart';
+import 'package:quickalert/widgets/quickalert_dialog.dart';
 
-class Updateclientdetails extends StatelessWidget {
-  const Updateclientdetails({super.key});
+class Updateclientdetails22 extends StatelessWidget {
+  const Updateclientdetails22({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class Updateclientdetails extends StatelessWidget {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, 'Dashboard');
+            Navigator.pushNamed(context, 'Updateclientdetails21');
           },
         ),
       ),
@@ -97,7 +99,13 @@ class Updateclientdetails extends StatelessWidget {
                         fontSize: 18.sp,
                         fontWeight: FontWeight.w700),
                   )),
-                  onPressed: () {}))
+                  onPressed: () {
+                    QuickAlert.show(
+                      context: context,
+                      type: QuickAlertType.success,
+                      text: 'Form Submitted Successfully!',
+                    );
+                  }))
         ]),
       ),
     );

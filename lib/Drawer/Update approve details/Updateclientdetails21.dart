@@ -1,9 +1,8 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class UpdateStudentdetails extends StatelessWidget {
-  const UpdateStudentdetails({super.key});
+class Updateclientdetails21 extends StatelessWidget {
+  const Updateclientdetails21({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +11,7 @@ class UpdateStudentdetails extends StatelessWidget {
         title: Padding(
           padding: EdgeInsets.only(left: 40.w),
           child: Text(
-            'Update Student details',
+            'Update Client details',
             style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
         ),
@@ -46,9 +45,28 @@ class UpdateStudentdetails extends StatelessWidget {
             height: 250.h,
             width: 500.w,
             color: const Color(0xffFAF8E4),
-            child: Center(
-              child: Image.asset(
-                "Assets/updatedetails.png",
+            child: Padding(
+              padding: EdgeInsets.only(top: 52.h, bottom: 24.h),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset('Assets/bttomsheet.png'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset('Assets/bottomsheet2.png'),
+                      SizedBox(
+                        width: 10.w,
+                      ),
+                      Text(
+                        'Embedded Proposal.pdf',
+                        style: TextStyle(
+                            fontSize: 14.sp, fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  )
+                ],
               ),
             ),
           ),
@@ -65,18 +83,25 @@ class UpdateStudentdetails extends StatelessWidget {
           SizedBox(
             height: 10.h,
           ),
-          const TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'add payment link',
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'https://paymentlink.com',
+                style: TextStyle(
+                    color: Color(0xff2A55C3),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14.sp),
+              ),
+            ],
           ),
           SizedBox(
-            height: 47.h,
+            height: 57.h,
           ),
           Container(
               margin: EdgeInsets.only(
-                top: 165.h,
+                top: 195.h,
               ),
               height: 57.h,
               width: 450.w,
@@ -89,7 +114,7 @@ class UpdateStudentdetails extends StatelessWidget {
                 ),
                 child: Center(
                     child: Text(
-                  'SAVE',
+                  'Update',
                   style: TextStyle(
                       color: const Color(
                         0xffFFFFFF,
@@ -98,11 +123,12 @@ class UpdateStudentdetails extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 )),
                 onPressed: () {
-                  Navigator.pushNamed(context, 'UpdateStudentdetails2');
+                  Navigator.pushNamed(context, 'Updateclientdetails22');
                 },
               ))
         ]),
       ),
     );
+    ;
   }
 }

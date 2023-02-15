@@ -74,7 +74,7 @@ class _PaymentdrawerState extends State<Paymentdrawer>
                   ),
                   Tab(
                     child: Text(
-                      'Payed',
+                      'Paid',
                     ),
                   ),
                   Tab(

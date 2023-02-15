@@ -74,7 +74,7 @@ class _PaymentState extends State<Payment> with SingleTickerProviderStateMixin {
                   ),
                   Tab(
                     child: Text(
-                      'Payed',
+                      'Paid',
                     ),
                   ),
                   Tab(

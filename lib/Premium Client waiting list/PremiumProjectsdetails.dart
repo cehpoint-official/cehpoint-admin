@@ -288,7 +288,128 @@ class PremiumProjectsdetails extends StatelessWidget {
                           fontSize: 20.sp,
                           fontWeight: FontWeight.w700),
                     )),
-                    onPressed: () {}))
+                    onPressed: () {
+                      showModalBottomSheet(
+                        shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.vertical(top: Radius.circular(30.r)),
+                        ),
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    left: 16.w, right: 16.w, top: 24.h),
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 175.h,
+                                        width: double.infinity,
+                                        color: const Color(0xffD4C00B)
+                                            .withOpacity(0.25),
+                                        child: Padding(
+                                          padding: EdgeInsets.only(
+                                              top: 24.h, bottom: 16.h),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Image.asset(
+                                                  'Assets/bttomsheet.png'),
+                                              Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Image.asset(
+                                                      'Assets/bottomsheet2.png'),
+                                                  SizedBox(
+                                                    width: 10.w,
+                                                  ),
+                                                  Text(
+                                                    'Embedded Proposal.pdf',
+                                                    style: TextStyle(
+                                                        fontSize: 14.sp,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 16.h,
+                                      ),
+                                      Text('Payment link:',
+                                          style: TextStyle(
+                                              fontSize: 14.sp,
+                                              fontWeight: FontWeight.w500)),
+                                      SizedBox(
+                                        height: 16.h,
+                                      ),
+                                      Text('https://paymentlink.com',
+                                          style: TextStyle(
+                                              color: const Color(0xff2A55C3),
+                                              fontSize: 14.sp,
+                                              fontWeight: FontWeight.w500)),
+                                    ]),
+                              ),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: SizedBox(
+                                      height: 55.h,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor:
+                                              const Color(0xffFFFFFF),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.pushNamed(context,
+                                              'PremiumProjectsdetails');
+                                        },
+                                        child: Text('Update',
+                                            style: TextStyle(
+                                                color: Colors.black87,
+                                                fontSize: 20.sp,
+                                                fontWeight: FontWeight.w700)),
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: SizedBox(
+                                      height: 55.h,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor:
+                                              const Color(0xffD4C00B),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.pushNamed(context,
+                                              'PremiumProjectsdetails');
+                                        },
+                                        child: Text('Send',
+                                            style: TextStyle(
+                                                color: Colors.black87,
+                                                fontSize: 20.sp,
+                                                fontWeight: FontWeight.w700)),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
+                          );
+                        },
+                      );
+                    }))
           ],
         ),
       ),

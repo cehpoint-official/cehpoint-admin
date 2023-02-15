@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'JobApplicantsDetail01.dart';
+
 // ignore: camel_case_types
 class All_Applicant extends StatefulWidget {
   const All_Applicant({super.key});
@@ -39,22 +41,45 @@ class _All_ApplicantState extends State<All_Applicant> {
         date: " 02/01/2023",
         isSelected: false),
   ];
+  bool canSelect = false;
+  int count = -1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(left: 18.w, top: 31.w, right: 24.w),
+        padding: EdgeInsets.only(
+          top: 31.w,
+        ),
         child: ListView.builder(
           itemCount: app.length,
           itemBuilder: (context, position) {
             return InkWell(
+              onLongPress: () {
+                if (!canSelect) {
+                  canSelect = true;
+                  setState(() {
+                    app[position].isSelected = !app[position].isSelected;
+                  });
+                  app[position].isSelected ? count++ : count--;
+                }
+              },
               onTap: () {
-                setState(() {
-                  app[position].isSelected = !app[position].isSelected;
-                });
+                if (canSelect) {
+                  setState(() {
+                    app[position].isSelected = !app[position].isSelected;
+                  });
+                  app[position].isSelected ? count++ : count--;
+                  if (count == -1) canSelect = false;
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => JobApplicantsDetails01(),
+                    ),
+                  );
+                }
               },
               child: Container(
-                margin: const EdgeInsets.only(top: 10, bottom: 10),
                 color: app[position].isSelected
                     ? const Color.fromRGBO(212, 192, 11, 0.16)
                     : Colors.transparent,
@@ -66,9 +91,10 @@ class _All_ApplicantState extends State<All_Applicant> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                            margin: const EdgeInsets.only(right: 16),
-                            child: Image.asset('Assets/All_Applicant1.png')),
+                        Padding(
+                          padding: EdgeInsets.only(left: 18.w, right: 24.w),
+                          child: Image.asset('Assets/All_Applicant1.png'),
+                        ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -110,8 +136,11 @@ class _All_ApplicantState extends State<All_Applicant> {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
+                            SizedBox(
+                              height: 10.h,
+                            )
                           ],
-                        )
+                        ),
                       ],
                     ),
                   ],

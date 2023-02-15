@@ -1,7 +1,9 @@
 // ignore: file_names
 import 'package:cehpoint_admin/All%20Client/All_clients.dart';
+import 'package:cehpoint_admin/Drawer/Manage%20Classes/UpdateClassdetails2.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20posts/Viewallpost.dart';
 import 'package:cehpoint_admin/Drawer/PaymentDrewer/paymentdrawer.dart';
+import 'package:cehpoint_admin/Drawer/Update%20approve%20details/UpdateStudentdetails2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../Completed projects/Completed_projects.dart';
@@ -14,8 +16,9 @@ import 'Manage job/Manage_job.dart';
 import 'Manage posts/Uploadpost.dart';
 import 'Manage reports/Clientsweeklyreport.dart';
 import 'PremiumClient/PremiumClient.dart';
-import 'Update approve details/UpdateStudentdetails.dart';
-import 'Update approve details/Updateclientdetails.dart';
+import 'Update approve details/UpdateStudentdetails22.dart';
+import 'Update approve details/Updateclientdetails22.dart';
+import 'Update approve details/Updateclientdetails21.dart';
 import 'Upload videos/Upload_videos.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -88,7 +91,7 @@ class MyDrawer extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Updateclientdetails(),
+                      builder: (context) => Updateclientdetails21(),
                     ),
                   );
                 },
@@ -108,7 +111,7 @@ class MyDrawer extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => UpdateStudentdetails(),
+                      builder: (context) => UpdateStudentdetails2(),
                     ),
                   );
                 },
@@ -128,7 +131,7 @@ class MyDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => UpdateClassdetails(),
+                  builder: (context) => UpdateClassdetails2(),
                 ),
               );
             },

@@ -23,7 +23,7 @@ class UpdateClassdetails2 extends StatelessWidget {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, 'UpdateClassdetails');
+            Navigator.pushNamed(context, 'Dashboard');
           },
         ),
       ),
@@ -45,16 +45,6 @@ class UpdateClassdetails2 extends StatelessWidget {
                         fontSize: 12.sp,
                         color: const Color.fromRGBO(0, 0, 0, 0.3)),
                   ),
-                  Row(
-                    children: [
-                      Image.asset('Assets/UpdateClassdetails2.png'),
-                      Text(
-                        'Edit',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 14.sp),
-                      )
-                    ],
-                  )
                 ],
               ),
               SizedBox(
@@ -113,7 +103,6 @@ class UpdateClassdetails2 extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         fontSize: 14.sp),
                   ),
-                  Image.asset('Assets/pencil.png')
                 ],
               ),
               SizedBox(
@@ -140,7 +129,6 @@ class UpdateClassdetails2 extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         fontSize: 14.sp),
                   ),
-                  Image.asset('Assets/pencil.png')
                 ],
               ),
               SizedBox(
@@ -167,7 +155,6 @@ class UpdateClassdetails2 extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         fontSize: 14.sp),
                   ),
-                  Image.asset('Assets/pencil.png')
                 ],
               ),
             ]),
@@ -189,7 +176,7 @@ class UpdateClassdetails2 extends StatelessWidget {
                         fontWeight: FontWeight.w700),
                   )),
                   onPressed: () {
-                    // Navigator.pushNamed(context, 'UpdateStudentdetails2');
+                    Navigator.pushNamed(context, 'UpdateClassdetails');
                   },
                 ))
           ],

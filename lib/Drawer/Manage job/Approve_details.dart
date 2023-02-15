@@ -85,7 +85,7 @@ class Approve_details extends StatelessWidget {
                     backgroundColor: const Color(0xffD4C00B),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, 'Updatedetails');
+                    Navigator.pushNamed(context, 'Updatedetails02');
                   },
                   child: Center(
                     child: Text(

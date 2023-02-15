@@ -1,13 +1,20 @@
 // ignore: file_names
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:zefyrka/zefyrka.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class Uploadpost extends StatelessWidget {
-  final ZefyrController _controller = ZefyrController();
-
   Uploadpost({super.key});
+
+  final ZefyrController _controller = ZefyrController();
+  final dropValue = ValueNotifier('');
+
+  final dropOpcoes = [
+    '   Job',
+    '   Internship',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -49,23 +56,44 @@ class Uploadpost extends StatelessWidget {
               SizedBox(
                 height: 46.h,
               ),
-              Container(
-                height: 49.h,
-                decoration: BoxDecoration(border: Border.all()),
-                child: Padding(
-                  padding: EdgeInsets.only(left: 10.w, right: 19.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Job',
-                        style: TextStyle(
-                            fontSize: 18.sp, fontWeight: FontWeight.w600),
-                      ),
-                      const Icon(Icons.arrow_drop_down)
-                    ],
-                  ),
-                ),
+              Row(
+                children: [
+                  ValueListenableBuilder(
+                    valueListenable: dropValue,
+                    builder: (context, value, child) {
+                      return Container(
+                        decoration: BoxDecoration(border: Border.all()),
+                        width: 380.w,
+                        child: DropdownButton2<String>(
+                          dropdownWidth: 120,
+                          dropdownDirection: DropdownDirection.left,
+                          isExpanded: true,
+                          icon: const Icon(Icons.arrow_drop_down),
+                          hint: const Text(
+                            '   Job',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w600),
+                          ),
+                          underline: Container(),
+                          value: (value.isEmpty) ? null : value,
+                          onChanged: (escolha) =>
+                              dropValue.value = escolha.toString(),
+                          items: dropOpcoes
+                              .map((op) => DropdownMenuItem(
+                                    value: op,
+                                    child: Text(
+                                      op,
+                                      style: TextStyle(
+                                          fontSize: 18.sp,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ))
+                              .toList(),
+                        ),
+                      );
+                    },
+                  )
+                ],
               ),
               SizedBox(
                 height: 13.h,

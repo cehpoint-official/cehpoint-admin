@@ -1,6 +1,8 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quickalert/models/quickalert_type.dart';
+import 'package:quickalert/widgets/quickalert_dialog.dart';
 
 // ignore: camel_case_types
 class Pending_Projects_details extends StatelessWidget {
@@ -281,7 +283,13 @@ class Pending_Projects_details extends StatelessWidget {
                           fontSize: 20.sp,
                           fontWeight: FontWeight.w700),
                     )),
-                    onPressed: () {}))
+                    onPressed: () {
+                      QuickAlert.show(
+                        context: context,
+                        type: QuickAlertType.success,
+                        text: 'Form Submitted Successfully!',
+                      );
+                    }))
           ],
         ),
       ),

@@ -94,7 +94,9 @@ class Pending_Projects extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xffD4C00B),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'Pending_Projects_details');
+                    },
                     child: Text('View details',
                         style: TextStyle(
                             color: Colors.black87,
@@ -132,7 +134,9 @@ class Pending_Projects extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xffD4C00B),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'Pending_Projects_details');
+                    },
                     child: Text('View details',
                         style: TextStyle(
                             color: Colors.black87,

@@ -57,7 +57,9 @@ class MyInternship extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10.r),
                         ),
                       ),
-                      onPressed: (() {}),
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'PostDetails0');
+                      },
                       child: Text(
                         'View details',
                         style: TextStyle(
@@ -119,7 +121,9 @@ class MyInternship extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10.r),
                         ),
                       ),
-                      onPressed: (() {}),
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'PostDetails0');
+                      },
                       child: Text(
                         'View details',
                         style: TextStyle(

@@ -17,6 +17,7 @@ import 'package:cehpoint_admin/Dashboard/Profile/Payment/Payed.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Payment/Payed1.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Payment/Payment.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/Profile.dart';
+import 'package:cehpoint_admin/Dashboard/Profile/edit.dart';
 import 'package:cehpoint_admin/Dashboard/Profile/free%20service/Addfreeservice.dart';
 import 'package:cehpoint_admin/Drawer/Demo%20classes/UploadDemoclasses.dart';
 import 'package:cehpoint_admin/Drawer/Drawer.dart';
@@ -30,11 +31,15 @@ import 'package:cehpoint_admin/Drawer/Manage%20Employee/Alltask.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20Internship/Manage_Internship.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20Internship/Updatedetails.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20job/Manage_job.dart';
+import 'package:cehpoint_admin/Drawer/Manage%20job/Updatedetails02.dart';
+import 'package:cehpoint_admin/Drawer/Manage%20job/Updatedetails021.dart';
+import 'package:cehpoint_admin/Drawer/Manage%20posts/TabBar/PostDetails0.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20reports/Addreport.dart';
 import 'package:cehpoint_admin/Drawer/Manage%20reports/Clientsweeklyreport.dart';
 import 'package:cehpoint_admin/Drawer/PaymentDrewer/paymentdrawer.dart';
-import 'package:cehpoint_admin/Drawer/Update%20approve%20details/UpdateStudentdetails.dart';
+import 'package:cehpoint_admin/Drawer/Update%20approve%20details/UpdateStudentdetails22.dart';
 import 'package:cehpoint_admin/Drawer/Update%20approve%20details/UpdateStudentdetails2.dart';
+import 'package:cehpoint_admin/Drawer/Update%20approve%20details/Updateclientdetails21.dart';
 import 'package:cehpoint_admin/Drawer/Upload%20videos/Upload_videos.dart';
 import 'package:cehpoint_admin/Pending%20%20projects/Pending_Projects.dart';
 import 'package:cehpoint_admin/Pending%20%20projects/Pending_Projects_details.dart';
@@ -62,6 +67,20 @@ import 'package:flutter/material.dart';
 import 'Client waiting list/Clientdetails.dart';
 import 'Client waiting list/Clientwaitinglist.dart';
 import 'Dashboard/Dashboard.dart';
+
+import 'Drawer/Manage Employee/Addtaskdeatils4.dart';
+import 'Drawer/Manage Employee/Addtaskdetails2.dart';
+import 'Drawer/Manage Employee/Addtaskdetails3.dart';
+import 'Drawer/Manage Employee/Addtaskdetails5.dart';
+import 'Drawer/Manage Employee/Addtaskdetails6.dart';
+import 'Drawer/Manage Employee/All_Task2.dart';
+import 'Drawer/Manage Internship/InternshipApplicantsDetails1.dart';
+import 'Drawer/Manage Internship/Updatedetails022.dart';
+import 'Drawer/Manage job/JobApplicantsDetail01.dart';
+import 'Drawer/Manage posts/Viewallpost.dart';
+import 'Drawer/PremiumClient/PremiumClient.dart';
+import 'Drawer/Update approve details/Updateclientdetails22.dart';
+import 'Premium Client waiting list/PremiumProjectsdetails.dart';
 import 'Student waiting list/Studentwaitinglist.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -109,7 +128,7 @@ class MyApp extends StatelessWidget {
           'Pending_Projects_details': ((context) => Pending_Projects_details()),
           'Completed_projects': ((context) => Completed_projects()),
           'Completedprojectsdetails': ((context) => Completedprojectsdetails()),
-          'UpdateStudentdetails': ((context) => UpdateStudentdetails()),
+          'UpdateStudentdetails22': ((context) => UpdateStudentdetails22()),
           'UpdateStudentdetails2': ((context) => UpdateStudentdetails2()),
           'UpdateClassdetails2': ((context) => UpdateClassdetails2()),
           'UpdateClassdetails': ((context) => UpdateClassdetails()),
@@ -144,7 +163,29 @@ class MyApp extends StatelessWidget {
           'Updatestudentdetails11': ((context) => Updatestudentdetails11()),
           'Student_details': ((context) => Student_details()),
           'Updatestudentdetails12': ((context) => Updatestudentdetails12()),
-          'Updatedetails': ((context) => Updatedetails())
+          'Updatedetails': ((context) => Updatedetails()),
+          'edit': ((context) => edit()),
+          'UpdateClassdetails': ((context) => UpdateClassdetails()),
+          'Addtaskdetails2': ((context) => Addtaskdetails2()),
+          'All_Task2': ((context) => All_Task2()),
+          'Alltask': ((context) => All_Task()),
+          'PremiumProjectsdetails': ((context) => PremiumProjectsdetails()),
+          'PremiumClient': ((context) => PremiumClient()),
+          'Updateclientdetails21': ((context) => Updateclientdetails21()),
+          'Updateclientdetails22': ((context) => Updateclientdetails22()),
+          'Updatedetails02': ((context) => Updatedetails02()),
+          'Updatedetails021': ((context) => Updatedetails021()),
+          'JobApplicantsDetails01': ((context) => JobApplicantsDetails01()),
+          'Updatedetails022': ((context) => Updatedetails022()),
+          'InternshipApplicantsDetails1': ((context) =>
+              InternshipApplicantsDetails1()),
+          'PostDetails0': ((context) => PostDetails0()),
+          'Viewallpost': ((context) => Viewallpost()),
+          'total_employees': ((context) => total_employees()),
+          'Addtaskdetails3': ((context) => Addtaskdetails3()),
+          'Addtaskdetails4': ((context) => Addtaskdetails4()),
+          'Addtaskdetails5': ((context) => Addtaskdetails5()),
+          'Addtaskdetails6': ((context) => Addtaskdetails6())
         },
       ),
       designSize: const Size(411, 843),

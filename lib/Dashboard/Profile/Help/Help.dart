@@ -51,15 +51,23 @@ class Help extends StatelessWidget {
             SizedBox(
               height: 27.h,
             ),
+            Text(
+              'Whats app Number(client help)',
+              style: TextStyle(
+                  color: const Color.fromRGBO(0, 0, 0, 0.6),
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.w600),
+            ),
+            SizedBox(
+              height: 15.h,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Whats app Number(client help)',
-                  style: TextStyle(
-                      color: const Color.fromRGBO(0, 0, 0, 0.6),
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w600),
+                  '+91 955566677',
+                  style:
+                      TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w600),
                 ),
                 InkWell(
                   onTap: () {
@@ -71,28 +79,29 @@ class Help extends StatelessWidget {
                     );
                   },
                   child: Image.asset('Assets/pencil.png'),
-                )
+                ),
               ],
             ),
             SizedBox(
-              height: 15.h,
+              height: 22.h,
             ),
             Text(
-              '+91 955566677',
-              style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
+              'CEO Call Number',
+              style: TextStyle(
+                  color: const Color.fromRGBO(0, 0, 0, 0.6),
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.w600),
             ),
             SizedBox(
-              height: 22.h,
+              height: 12.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'CEO Call Number',
-                  style: TextStyle(
-                      color: const Color.fromRGBO(0, 0, 0, 0.6),
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w600),
+                  '+91 955566677',
+                  style:
+                      TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w600),
                 ),
                 InkWell(
                   onTap: () {
@@ -104,28 +113,29 @@ class Help extends StatelessWidget {
                     );
                   },
                   child: Image.asset('Assets/pencil.png'),
-                )
+                ),
               ],
             ),
             SizedBox(
-              height: 12.h,
+              height: 27.h,
             ),
             Text(
-              '+91 955566677',
-              style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
+              'Negotiation Number',
+              style: TextStyle(
+                  color: const Color.fromRGBO(0, 0, 0, 0.6),
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.w600),
             ),
             SizedBox(
-              height: 27.h,
+              height: 10.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Negotiation Number',
-                  style: TextStyle(
-                      color: const Color.fromRGBO(0, 0, 0, 0.6),
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w600),
+                  '+91 955566677',
+                  style:
+                      TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w600),
                 ),
                 InkWell(
                   onTap: () {
@@ -137,15 +147,8 @@ class Help extends StatelessWidget {
                     );
                   },
                   child: Image.asset('Assets/pencil.png'),
-                )
+                ),
               ],
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Text(
-              '+91 955566677',
-              style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
             ),
           ],
         ),

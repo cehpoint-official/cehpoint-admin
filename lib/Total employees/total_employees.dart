@@ -1,3 +1,4 @@
+import 'package:cehpoint_admin/Total%20employees/Employeedetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -49,6 +50,8 @@ class _total_employeesState extends State<total_employees> {
         email: "suraj@gmail.com",
         isSelected: false),
   ];
+  bool canSelect = false;
+  int count = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +70,7 @@ class _total_employeesState extends State<total_employees> {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pushNamed(context, 'Dashboard');
           },
         ),
         actions: [
@@ -101,6 +104,32 @@ class _total_employeesState extends State<total_employees> {
                               width: 139.w,
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
+                                    backgroundColor: const Color(0xff2A55C3),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.only(
+                                        topRight: Radius.circular(10.0.r),
+                                        bottomRight: Radius.circular(10.0.r),
+                                        bottomLeft: Radius.circular(10.0.r),
+                                        topLeft: Radius.circular(10.0.r),
+                                      ),
+                                    )),
+                                onPressed: () {
+                                  Navigator.pushNamed(
+                                      context, 'total_employees');
+                                },
+                                child: Text(
+                                  'CANCEL',
+                                  style: TextStyle(
+                                      fontSize: 13.sp,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 47.h,
+                              width: 139.w,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
                                     backgroundColor: const Color(0xffF92222),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
@@ -122,32 +151,6 @@ class _total_employeesState extends State<total_employees> {
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              height: 47.h,
-                              width: 139.w,
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                    backgroundColor: const Color(0xff2A55C3),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.only(
-                                        topRight: Radius.circular(10.0.r),
-                                        bottomRight: Radius.circular(10.0.r),
-                                        bottomLeft: Radius.circular(10.0.r),
-                                        topLeft: Radius.circular(10.0.r),
-                                      ),
-                                    )),
-                                onPressed: () {
-                                  Navigator.pushNamed(
-                                      context, 'total_employees');
-                                },
-                                child: Text(
-                                  'CANCEL',
-                                  style: TextStyle(
-                                      fontSize: 13.sp,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                            )
                           ],
                         ),
                       ],
@@ -163,13 +166,32 @@ class _total_employeesState extends State<total_employees> {
           itemCount: emp.length,
           itemBuilder: (context, position) {
             return InkWell(
+              onLongPress: () {
+                if (!canSelect) {
+                  canSelect = true;
+                  setState(() {
+                    emp[position].isSelected = !emp[position].isSelected;
+                  });
+                  emp[position].isSelected ? count++ : count--;
+                }
+              },
               onTap: () {
-                setState(() {
-                  emp[position].isSelected = !emp[position].isSelected;
-                });
+                if (canSelect) {
+                  setState(() {
+                    emp[position].isSelected = !emp[position].isSelected;
+                  });
+                  emp[position].isSelected ? count++ : count--;
+                  if (count == -1) canSelect = false;
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Employeedetails(),
+                    ),
+                  );
+                }
               },
               child: Container(
-                margin: const EdgeInsets.only(top: 10, bottom: 10),
                 color: emp[position].isSelected
                     ? const Color.fromRGBO(212, 192, 11, 0.16)
                     : Colors.transparent,

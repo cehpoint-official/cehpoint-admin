@@ -51,7 +51,7 @@ class Clientsweeklyreport extends StatelessWidget {
                   width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color(0xffD4C00B),
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, 'Addreport');
@@ -93,9 +93,11 @@ class Clientsweeklyreport extends StatelessWidget {
                   width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
+                      backgroundColor: const Color(0xffD4C00B),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'Addreport');
+                    },
                     child: Text('Add report',
                         style: TextStyle(
                             color: Colors.black87,
@@ -131,9 +133,10 @@ class Clientsweeklyreport extends StatelessWidget {
                   width: 110.w,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(212, 192, 11, 0.28),
-                    ),
-                    onPressed: () {},
+                        backgroundColor: const Color(0xffD4C00B)),
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'Addreport');
+                    },
                     child: Text('Add report',
                         style: TextStyle(
                             color: Colors.black87,

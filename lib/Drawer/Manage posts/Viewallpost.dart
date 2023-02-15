@@ -31,84 +31,62 @@ class _ViewallpostState extends State<Viewallpost>
     super.dispose();
   }
 
+  final data = [
+    'Web development',
+    'App development',
+    'Marketing Specialist',
+    '''Cyber security
+Specialist''',
+    'DevSecOps',
+    '''Cyber security
+mentor'''
+  ];
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Padding(
-            padding: EdgeInsets.only(left: 80.w),
-            child: Text(
-              'View all post',
-              style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-            ),
+          centerTitle: true,
+          title: Text(
+            'View all post',
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
           backgroundColor: Colors.transparent,
           elevation: 0,
           actions: [
-            Flexible(
-              child: PopupMenuButton(
-                  offset: Offset(0.0, appBarHeight),
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(8.0),
-                      bottomRight: Radius.circular(8.0),
-                      topLeft: Radius.circular(8.0),
-                      topRight: Radius.circular(8.0),
-                    ),
+            PopupMenuButton(
+                offset: Offset(0.0, appBarHeight),
+                constraints: BoxConstraints.tightFor(
+                  width: 156.w,
+                ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(8.0),
+                    bottomRight: Radius.circular(8.0),
+                    topLeft: Radius.circular(8.0),
+                    topRight: Radius.circular(8.0),
                   ),
-                  padding: const EdgeInsets.only(left: 8),
-                  itemBuilder: (BuildContext context) => [
-                        const PopupMenuItem(
+                ),
+                padding: EdgeInsets.only(left: 8.w),
+                itemBuilder: (BuildContext context) => [
+                      for (var item in data)
+                        PopupMenuItem(
+                          height: 0.h,
+                          padding: EdgeInsets.symmetric(
+                              vertical: 8.h, horizontal: 8.w),
                           child: Text(
                             textAlign: TextAlign.left,
-                            'Web development',
-                            style: TextStyle(fontSize: 8),
+                            item,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w700, fontSize: 12.sp),
                           ),
                         ),
-                        const PopupMenuItem(
-                          child: Text(
-                            textAlign: TextAlign.left,
-                            'App development',
-                            style: TextStyle(fontSize: 8),
-                          ),
-                        ),
-                        const PopupMenuItem(
-                          child: Text(
-                            textAlign: TextAlign.left,
-                            'Marketing Specialist',
-                            style: TextStyle(fontSize: 8),
-                          ),
-                        ),
-                        const PopupMenuItem(
-                          child: Text(
-                            textAlign: TextAlign.left,
-                            ''' Cyber security
-                                  Specialist''',
-                            style: TextStyle(fontSize: 8),
-                          ),
-                        ),
-                        const PopupMenuItem(
-                          child: Text(
-                            textAlign: TextAlign.left,
-                            'DevSecOps',
-                            style: TextStyle(fontSize: 8),
-                          ),
-                        ),
-                        const PopupMenuItem(
-                          child: Text(
-                            textAlign: TextAlign.left,
-                            '''Cyber security
-                                 mentor''',
-                            style: TextStyle(fontSize: 8),
-                          ),
-                        ),
-                      ],
-                  child: Image.asset(
-                    'Assets/Completed_projects.png',
-                  )),
-            ),
+                    ],
+                child: Image.asset(
+                  'Assets/Completed_projects.png',
+                )),
           ],
           leading: IconButton(
             icon: const Icon(
