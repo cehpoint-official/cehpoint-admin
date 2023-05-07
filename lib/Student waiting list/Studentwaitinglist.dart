@@ -5,7 +5,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: camel_case_types
 class Student_waiting_list extends StatelessWidget {
-  const Student_waiting_list({super.key});
+  final List<String> items = [
+    "Asit Jana",
+    "Nigar Sultana",
+    "Dibiyajoti pal",
+  ];
+  Student_waiting_list({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,113 +35,137 @@ class Student_waiting_list extends StatelessWidget {
           },
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.only(top: 50.h, left: 20.w, right: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Student_details(),
-                  ),
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(children: [
-                    Image.asset(
-                      'Assets/Student_waiting_list.png',
-                    ),
-                    SizedBox(
-                      width: 20.w,
-                    ),
-                    Text(
-                      'Asit Jana',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500, fontSize: 16.sp),
-                    ),
-                  ]),
-                  Image.asset('Assets/payment1.png')
-                ],
-              ),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Student_details(),
+                ),
+              );
+            },
+            title: Text(
+              items[index],
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
             ),
-            SizedBox(
-              height: 20.h,
+            trailing: Image.asset('Assets/payment1.png'),
+            leading: Image.asset(
+              'Assets/Student_waiting_list.png',
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Student_details(),
-                  ),
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(children: [
-                    Image.asset(
-                      'Assets/Student_waiting_list.png',
-                    ),
-                    SizedBox(
-                      width: 20.w,
-                    ),
-                    Text(
-                      'Nigar Sultana',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500, fontSize: 16.sp),
-                    ),
-                  ]),
-                  Image.asset('Assets/payment1.png')
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Student_details(),
-                  ),
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(children: [
-                    Image.asset(
-                      'Assets/Student_waiting_list.png',
-                    ),
-                    SizedBox(
-                      width: 20.w,
-                    ),
-                    Text(
-                      'Dibiyajoti Pal',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500, fontSize: 16.sp),
-                    ),
-                    SizedBox(
-                      width: 174.w,
-                    ),
-                  ]),
-                  Image.asset('Assets/payment1.png')
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }
 }
+
+//  Padding(
+//         padding: EdgeInsets.only(top: 50.h, left: 20.w, right: 20),
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: [
+//             InkWell(
+//               onTap: () {
+//                 Navigator.push(
+//                   context,
+//                   MaterialPageRoute(
+//                     builder: (context) => Student_details(),
+//                   ),
+//                 );
+//               },
+//               child: Row(
+//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                 children: [
+//                   Row(children: [
+//                     Image.asset(
+//                       'Assets/Student_waiting_list.png',
+//                     ),
+//                     SizedBox(
+//                       width: 20.w,
+//                     ),
+//                     Text(
+//                       'Asit Jana',
+//                       style: TextStyle(
+//                           fontWeight: FontWeight.w500, fontSize: 16.sp),
+//                     ),
+//                   ]),
+//                   Image.asset('Assets/payment1.png')
+//                 ],
+//               ),
+//             ),
+//             SizedBox(
+//               height: 20.h,
+//             ),
+//             InkWell(
+//               onTap: () {
+//                 Navigator.push(
+//                   context,
+//                   MaterialPageRoute(
+//                     builder: (context) => Student_details(),
+//                   ),
+//                 );
+//               },
+//               child: Row(
+//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                 children: [
+//                   Row(children: [
+//                     Image.asset(
+//                       'Assets/Student_waiting_list.png',
+//                     ),
+//                     SizedBox(
+//                       width: 20.w,
+//                     ),
+//                     Text(
+//                       'Nigar Sultana',
+//                       style: TextStyle(
+//                           fontWeight: FontWeight.w500, fontSize: 16.sp),
+//                     ),
+//                   ]),
+//                   Image.asset('Assets/payment1.png')
+//                 ],
+//               ),
+//             ),
+//             SizedBox(
+//               height: 20.h,
+//             ),
+//             InkWell(
+//               onTap: () {
+//                 Navigator.push(
+//                   context,
+//                   MaterialPageRoute(
+//                     builder: (context) => Student_details(),
+//                   ),
+//                 );
+//               },
+//               child: Row(
+//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                 children: [
+//                   Row(children: [
+//                     Image.asset(
+//                       'Assets/Student_waiting_list.png',
+//                     ),
+//                     SizedBox(
+//                       width: 20.w,
+//                     ),
+//                     Text(
+//                       'Dibiyajoti Pal',
+//                       style: TextStyle(
+//                           fontWeight: FontWeight.w500, fontSize: 16.sp),
+//                     ),
+//                     SizedBox(
+//                       width: 174.w,
+//                     ),
+//                   ]),
+//                   Image.asset('Assets/payment1.png')
+//                 ],
+//               ),
+//             ),
+//             SizedBox(
+//               height: 20.h,
+//             ),
+//           ],
+//         ),
+//       ),

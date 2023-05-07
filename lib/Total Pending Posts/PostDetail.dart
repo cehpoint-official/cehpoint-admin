@@ -151,7 +151,7 @@ class PostDetail extends StatelessWidget {
                       QuickAlert.show(
                         context: context,
                         type: QuickAlertType.success,
-                        text: 'Form Submitted Successfully!',
+                        text: 'Application approved successfully',
                       );
                     },
                     child: Text('Approve',

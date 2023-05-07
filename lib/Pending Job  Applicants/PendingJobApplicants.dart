@@ -156,7 +156,9 @@ class Pending_Job_Applicants extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xffD4C00B),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'JobApplicantsDetails');
+                        },
                         child: Text('Update',
                             style: TextStyle(
                                 color: Colors.black87,

@@ -31,178 +31,205 @@ class Client_waiting_list extends StatelessWidget {
           },
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.only(top: 50.h, left: 20.w, right: 20.w),
-        child: Column(
-          children: [
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Client_details(),
-                  ),
-                );
-              },
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image.asset(
-                          'Assets/Client_waiting_list.png',
-                        ),
-                        SizedBox(
-                          width: 20.w,
-                        ),
-                        Text(
-                          'Client 1',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500, fontSize: 16.sp),
-                        ),
-                      ],
-                    ),
-                    Image.asset('Assets/payment1.png')
-                  ]),
+      body: ListView.builder(
+        itemCount: 5,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Client_details(),
+                ),
+              );
+            },
+            title: Text(
+             "Client ${index + 1}",
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
             ),
-            SizedBox(
-              height: 20.h,
+            trailing: Image.asset('Assets/payment1.png'),
+            leading: Image.asset(
+              'Assets/Client_waiting_list.png',
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Client_details(),
-                  ),
-                );
-              },
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image.asset(
-                          'Assets/Client_waiting_list.png',
-                        ),
-                        SizedBox(
-                          width: 20.w,
-                        ),
-                        Text(
-                          'Client 2',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500, fontSize: 16.sp),
-                        ),
-                      ],
-                    ),
-                    Image.asset('Assets/payment1.png')
-                  ]),
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Client_details(),
-                  ),
-                );
-              },
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image.asset(
-                          'Assets/Client_waiting_list.png',
-                        ),
-                        SizedBox(
-                          width: 20.w,
-                        ),
-                        Text(
-                          'Client 3',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500, fontSize: 16.sp),
-                        ),
-                      ],
-                    ),
-                    Image.asset('Assets/payment1.png')
-                  ]),
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Client_details(),
-                  ),
-                );
-              },
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image.asset(
-                          'Assets/Client_waiting_list.png',
-                        ),
-                        SizedBox(
-                          width: 20.w,
-                        ),
-                        Text(
-                          'Client 4',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500, fontSize: 16.sp),
-                        ),
-                      ],
-                    ),
-                    Image.asset('Assets/payment1.png')
-                  ]),
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Client_details(),
-                  ),
-                );
-              },
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Image.asset(
-                          'Assets/Client_waiting_list.png',
-                        ),
-                        SizedBox(
-                          width: 20.w,
-                        ),
-                        Text(
-                          'Client 5',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500, fontSize: 16.sp),
-                        ),
-                      ],
-                    ),
-                    Image.asset('Assets/payment1.png')
-                  ]),
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }
 }
+
+
+
+
+//  Padding(
+//         padding: EdgeInsets.only(top: 50.h, left: 20.w, right: 20.w),
+//         child: Column(
+//           children: [
+//             InkWell(
+//               onTap: () {
+//                 Navigator.push(
+//                   context,
+//                   MaterialPageRoute(
+//                     builder: (context) => Client_details(),
+//                   ),
+//                 );
+//               },
+//               child: Row(
+//                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                   children: [
+//                     Row(
+//                       children: [
+//                         Image.asset(
+//                           'Assets/Client_waiting_list.png',
+//                         ),
+//                         SizedBox(
+//                           width: 20.w,
+//                         ),
+//                         Text(
+//                           'Client 1',
+//                           style: TextStyle(
+//                               fontWeight: FontWeight.w500, fontSize: 16.sp),
+//                         ),
+//                       ],
+//                     ),
+//                     Image.asset('Assets/payment1.png')
+//                   ]),
+//             ),
+//             SizedBox(
+//               height: 20.h,
+//             ),
+//             InkWell(
+//               onTap: () {
+//                 Navigator.push(
+//                   context,
+//                   MaterialPageRoute(
+//                     builder: (context) => Client_details(),
+//                   ),
+//                 );
+//               },
+//               child: Row(
+//                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                   children: [
+//                     Row(
+//                       children: [
+//                         Image.asset(
+//                           'Assets/Client_waiting_list.png',
+//                         ),
+//                         SizedBox(
+//                           width: 20.w,
+//                         ),
+//                         Text(
+//                           'Client 2',
+//                           style: TextStyle(
+//                               fontWeight: FontWeight.w500, fontSize: 16.sp),
+//                         ),
+//                       ],
+//                     ),
+//                     Image.asset('Assets/payment1.png')
+//                   ]),
+//             ),
+//             SizedBox(
+//               height: 20.h,
+//             ),
+//             InkWell(
+//               onTap: () {
+//                 Navigator.push(
+//                   context,
+//                   MaterialPageRoute(
+//                     builder: (context) => Client_details(),
+//                   ),
+//                 );
+//               },
+//               child: Row(
+//                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                   children: [
+//                     Row(
+//                       children: [
+//                         Image.asset(
+//                           'Assets/Client_waiting_list.png',
+//                         ),
+//                         SizedBox(
+//                           width: 20.w,
+//                         ),
+//                         Text(
+//                           'Client 3',
+//                           style: TextStyle(
+//                               fontWeight: FontWeight.w500, fontSize: 16.sp),
+//                         ),
+//                       ],
+//                     ),
+//                     Image.asset('Assets/payment1.png')
+//                   ]),
+//             ),
+//             SizedBox(
+//               height: 20.h,
+//             ),
+//             InkWell(
+//               onTap: () {
+//                 Navigator.push(
+//                   context,
+//                   MaterialPageRoute(
+//                     builder: (context) => Client_details(),
+//                   ),
+//                 );
+//               },
+//               child: Row(
+//                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                   children: [
+//                     Row(
+//                       children: [
+//                         Image.asset(
+//                           'Assets/Client_waiting_list.png',
+//                         ),
+//                         SizedBox(
+//                           width: 20.w,
+//                         ),
+//                         Text(
+//                           'Client 4',
+//                           style: TextStyle(
+//                               fontWeight: FontWeight.w500, fontSize: 16.sp),
+//                         ),
+//                       ],
+//                     ),
+//                     Image.asset('Assets/payment1.png')
+//                   ]),
+//             ),
+//             SizedBox(
+//               height: 20.h,
+//             ),
+//             InkWell(
+//               onTap: () {
+//                 Navigator.push(
+//                   context,
+//                   MaterialPageRoute(
+//                     builder: (context) => Client_details(),
+//                   ),
+//                 );
+//               },
+//               child: Row(
+//                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                   children: [
+//                     Row(
+//                       children: [
+//                         Image.asset(
+//                           'Assets/Client_waiting_list.png',
+//                         ),
+//                         SizedBox(
+//                           width: 20.w,
+//                         ),
+//                         Text(
+//                           'Client 5',
+//                           style: TextStyle(
+//                               fontWeight: FontWeight.w500, fontSize: 16.sp),
+//                         ),
+//                       ],
+//                     ),
+//                     Image.asset('Assets/payment1.png')
+//                   ]),
+//             ),
+//             SizedBox(
+//               height: 20.h,
+//             ),
+//           ],
+//         ),
+//       ),

@@ -15,7 +15,7 @@ class _MySplash_ScreenState extends State<MySplash_Screen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 1), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => MyDashborad()));
     });
@@ -24,6 +24,7 @@ class _MySplash_ScreenState extends State<MySplash_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.only(left: 150.w, top: 250.h),
         child: Column(
@@ -34,7 +35,8 @@ class _MySplash_ScreenState extends State<MySplash_Screen> {
             SizedBox(
               height: 72.h,
             ),
-            Image.asset('Assets/splashScreen2.png'),
+            const CircularProgressIndicator(color: Color(0xff000000)),
+            // Image.asset('Assets/splashScreen2.png'),
           ],
         ),
       ),

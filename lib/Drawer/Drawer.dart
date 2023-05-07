@@ -10,7 +10,7 @@ import '../Completed projects/Completed_projects.dart';
 import '../Dashboard/Dashboard.dart';
 import 'Demo classes/UploadDemoclasses.dart';
 import 'Manage Classes/UpdateClassdetails.dart';
-import 'Manage Employee/AllEmployee.dart';
+import 'Manage reports/Manage Employee/AllEmployee.dart';
 import 'Manage Internship/Manage_Internship.dart';
 import 'Manage job/Manage_job.dart';
 import 'Manage posts/Uploadpost.dart';
