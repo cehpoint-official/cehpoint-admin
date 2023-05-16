@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:dio/dio.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,14 +22,10 @@ class Updatestudentdetails11 extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.black87,
-          ),
-          onPressed: () {
-            Navigator.pushNamed(context, 'Student_details');
-          },
-        ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back_ios, color: Color(0xff000000))),
       ),
       body: Padding(
         padding:
@@ -49,13 +49,18 @@ class Updatestudentdetails11 extends StatelessWidget {
                     SizedBox(
                       height: 10.h,
                     ),
-                    Container(
-                      height: 200.h,
-                      width: 500.w,
-                      color: const Color(0xffFAF8E4),
-                      child: Center(
-                        child: Image.asset(
-                          "Assets/updatedetails.png",
+                    InkWell(
+                      onTap: () {
+                        uploadPdf();
+                      },
+                      child: Container(
+                        height: 200.h,
+                        width: 500.w,
+                        color: const Color(0xffFAF8E4),
+                        child: Center(
+                          child: Image.asset(
+                            "Assets/updatedetails.png",
+                          ),
                         ),
                       ),
                     ),
@@ -101,12 +106,49 @@ class Updatestudentdetails11 extends StatelessWidget {
                         fontWeight: FontWeight.w700),
                   )),
                   onPressed: () {
-                    Navigator.pushNamed(context, 'Updatestudentdetails12');
+                    Navigator.pop(context);
                   },
                 ))
           ],
         ),
       ),
     );
+  }
+
+  Future<void> uploadPdf() async {
+    var dio = Dio();
+
+    FilePickerResult? result = await FilePicker.platform.pickFiles();
+
+    if (result != null) {
+      File file = File(result.files.single.path ?? "");
+      String fileName = file.path.split('/').last;
+
+      FormData data = FormData.fromMap({
+        'x-api-key': 'apikey',
+        'file': await MultipartFile.fromFile(file.path, filename: fileName),
+      });
+
+      try {
+        Response response = await dio.post(
+          'https://api.pdf.co/v1/file/upload',
+          data: data,
+          onSendProgress: (sent, total) {
+            print('Progress: ${sent / total * 100}%');
+          },
+        );
+
+        if (response.statusCode == 200) {
+          print('File uploaded successfully!');
+          print('Response: ${response.data}');
+        } else {
+          print('File upload failed. Status code: ${response.statusCode}');
+        }
+      } catch (error) {
+        print('Error uploading file: $error');
+      }
+    } else {
+      print("No file selected");
+    }
   }
 }

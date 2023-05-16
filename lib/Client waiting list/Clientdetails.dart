@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // ignore: camel_case_types
 class Client_details extends StatelessWidget {
-  const Client_details({super.key});
+  const Client_details({super.key, required this.ClientDetails});
+  String getYesNoValue(bool value) {
+    return value ? 'Yes' : 'No';
+  }
 
+  final Map ClientDetails;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 60.w),
-          child: Text(
-            'Client details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Client details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -49,7 +52,7 @@ class Client_details extends StatelessWidget {
                   height: 10.h,
                 ),
                 Text(
-                  'abcd mondal',
+                  ClientDetails['name'],
                   style: TextStyle(
                     color: const Color(0xff000000),
                     fontSize: 14.sp,
@@ -71,7 +74,7 @@ class Client_details extends StatelessWidget {
                   height: 10.h,
                 ),
                 Text(
-                  'xyz company',
+                  ClientDetails['companyName'],
                   style: TextStyle(
                     color: const Color(0xff000000),
                     fontSize: 14.sp,
@@ -93,7 +96,7 @@ class Client_details extends StatelessWidget {
                   height: 10.h,
                 ),
                 Text(
-                  '7028361855',
+                  ClientDetails['phoneNumber'],
                   style: TextStyle(
                     color: const Color(0xff000000),
                     fontSize: 14.sp,
@@ -115,7 +118,7 @@ class Client_details extends StatelessWidget {
                   height: 10.h,
                 ),
                 Text(
-                  'abcd@gmail.com',
+                  ClientDetails['email'],
                   style: TextStyle(
                     color: const Color(0xff000000),
                     fontSize: 14.sp,
@@ -137,7 +140,7 @@ class Client_details extends StatelessWidget {
                   height: 10.h,
                 ),
                 Text(
-                  'Murshidabad',
+                  ClientDetails['address'],
                   style: TextStyle(
                     color: const Color(0xff000000),
                     fontSize: 14.sp,
@@ -159,7 +162,7 @@ class Client_details extends StatelessWidget {
                   height: 10.h,
                 ),
                 Text(
-                  'App development',
+                  ClientDetails['requirement'],
                   style: TextStyle(
                     color: const Color(0xff000000),
                     fontSize: 14.sp,
@@ -182,7 +185,7 @@ class Client_details extends StatelessWidget {
                   height: 10.h,
                 ),
                 Text(
-                  '30th February',
+                  '${getYesNoValue(ClientDetails['approvalStatus'])}',
                   style: TextStyle(
                     color: const Color(0xff000000),
                     fontSize: 14.sp,
@@ -204,7 +207,7 @@ class Client_details extends StatelessWidget {
                   height: 10.h,
                 ),
                 Text(
-                  '30,000',
+                  "\₹${ClientDetails["budget"]}",
                   style: TextStyle(
                     color: const Color(0xff000000),
                     fontSize: 14.sp,
@@ -226,7 +229,7 @@ class Client_details extends StatelessWidget {
                   height: 10.h,
                 ),
                 Text(
-                  'Google',
+                  ClientDetails["source"],
                   style: TextStyle(
                     color: const Color(0xff000000),
                     fontSize: 14.sp,
@@ -316,14 +319,24 @@ class Client_details extends StatelessWidget {
                                       style: TextStyle(
                                           fontSize: 14.sp,
                                           fontWeight: FontWeight.w500)),
-                                  SizedBox(
-                                    height: 16.h,
-                                  ),
-                                  Text('https://paymentlink.com',
-                                      style: TextStyle(
-                                          color: const Color(0xff2A55C3),
-                                          fontSize: 14.sp,
-                                          fontWeight: FontWeight.w500)),
+                                  TextButton(
+                                    onPressed: () async {
+                                      final url = 'https://www.youtube.com';
+                                      // ignore: deprecated_member_use
+                                      if (await canLaunch(url)) {
+                                        // ignore: deprecated_member_use
+                                        await launch(url,
+                                            forceSafariVC: true,
+                                            forceWebView: true,
+                                            enableJavaScript: true);
+                                      }
+                                    },
+                                    child: Text('https://www.youtube.com',
+                                        style: TextStyle(
+                                            color: const Color(0xff2A55C3),
+                                            fontSize: 14.sp,
+                                            fontWeight: FontWeight.w500)),
+                                  )
                                 ]),
                           ),
                           Row(
@@ -355,8 +368,7 @@ class Client_details extends StatelessWidget {
                                       backgroundColor: const Color(0xffD4C00B),
                                     ),
                                     onPressed: () {
-                                      Navigator.pushNamed(
-                                          context, 'Clientdetails');
+                                      Navigator.pop(context);
                                     },
                                     child: Text('Send',
                                         style: TextStyle(

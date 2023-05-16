@@ -103,9 +103,13 @@ class MyApp extends StatelessWidget {
           'Dashboard': ((context) => MyDashborad()),
           'Drawer': ((context) => MyDrawer()),
           'Studentwaitinglist': ((context) => Student_waiting_list()),
-          'Student_details': ((context) => Student_details()),
+          'Student_details': ((context) => Student_details(
+                studentDetails: {},
+              )),
           'Clientwaitinglist': ((context) => Client_waiting_list()),
-          'Clientdetails': ((context) => Client_details()),
+          'Clientdetails': ((context) => Client_details(
+                ClientDetails: {},
+              )),
           'All_Students': ((context) => All_Students()),
           'All_clients': ((context) => All_clients()),
           'Premium_Projects': ((context) => Premium_Projects()),
@@ -161,7 +165,9 @@ class MyApp extends StatelessWidget {
           'Manage_Internship': ((context) => Manage_Internship()),
           'Manage_job': ((context) => Manage_job()),
           'Updatestudentdetails11': ((context) => Updatestudentdetails11()),
-          'Student_details': ((context) => Student_details()),
+          'Student_details': ((context) => Student_details(
+                studentDetails: {},
+              )),
           'Updatestudentdetails12': ((context) => Updatestudentdetails12()),
           'Updatedetails': ((context) => Updatedetails()),
           'edit': ((context) => edit()),

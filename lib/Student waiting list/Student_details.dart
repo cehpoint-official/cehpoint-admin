@@ -1,21 +1,24 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // ignore: camel_case_types
 class Student_details extends StatelessWidget {
-  const Student_details({super.key});
+  const Student_details({super.key, required this.studentDetails});
+  String getYesNoValue(bool value) {
+    return value ? 'Yes' : 'No';
+  }
 
+  final Map studentDetails;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 60.w),
-          child: Text(
-            'Student details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Student details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -57,7 +60,7 @@ class Student_details extends StatelessWidget {
                       children: [
                         Image.asset('Assets/answer_arrow.png'),
                         Text(
-                          'Yes',
+                          '${getYesNoValue(studentDetails['courseInterested'])}',
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         )
@@ -83,7 +86,7 @@ class Student_details extends StatelessWidget {
                       children: [
                         Image.asset('Assets/answer_arrow.png'),
                         Text(
-                          'Yes',
+                          '${getYesNoValue(studentDetails['parentSupport'])}',
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         )
@@ -109,7 +112,7 @@ class Student_details extends StatelessWidget {
                       children: [
                         Image.asset('Assets/answer_arrow.png'),
                         Text(
-                          'Yes',
+                          '${getYesNoValue(studentDetails['onlineComfortable'])}',
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         )
@@ -122,7 +125,7 @@ class Student_details extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Name - Asit Jana',
+                          "Name - " + studentDetails['name'],
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
@@ -130,7 +133,7 @@ class Student_details extends StatelessWidget {
                           height: 20.h,
                         ),
                         Text(
-                          'Guardian Name  - Papa Jana',
+                          "guardianName - " + studentDetails['guardianName'],
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
@@ -138,7 +141,7 @@ class Student_details extends StatelessWidget {
                           height: 20.h,
                         ),
                         Text(
-                          'Phone Number - 9155965403',
+                          "phoneNumber - " + studentDetails['phoneNumber'],
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
@@ -146,7 +149,7 @@ class Student_details extends StatelessWidget {
                           height: 20.h,
                         ),
                         Text(
-                          'Email ID - asit@gmail.com',
+                          "email - " + studentDetails['email'],
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
@@ -154,7 +157,7 @@ class Student_details extends StatelessWidget {
                           height: 20.h,
                         ),
                         Text(
-                          ' Address - Jautia ,South 24 pargona',
+                          "address - " + studentDetails['address'],
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
@@ -162,7 +165,7 @@ class Student_details extends StatelessWidget {
                           height: 20.h,
                         ),
                         Text(
-                          'Your Learning Interest - Cyber Security ',
+                          "interest - " + studentDetails['interest'],
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
@@ -170,7 +173,7 @@ class Student_details extends StatelessWidget {
                           height: 20.h,
                         ),
                         Text(
-                          'Your Future Goals - Get a good job',
+                          "goals - " + studentDetails['goals'],
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
@@ -178,7 +181,7 @@ class Student_details extends StatelessWidget {
                           height: 20.h,
                         ),
                         Text(
-                          'How did you hear about us - Friend',
+                          "source - " + studentDetails['source'],
                           style: TextStyle(
                               fontSize: 14.sp, fontWeight: FontWeight.w500),
                         ),
@@ -269,14 +272,37 @@ class Student_details extends StatelessWidget {
                                         style: TextStyle(
                                             fontSize: 14.sp,
                                             fontWeight: FontWeight.w500)),
-                                    SizedBox(
-                                      height: 16.h,
-                                    ),
-                                    Text('https://paymentlink.com',
-                                        style: TextStyle(
-                                            color: const Color(0xff2A55C3),
-                                            fontSize: 14.sp,
-                                            fontWeight: FontWeight.w500)),
+                                    TextButton(
+                                      onPressed: () async {
+                                        final url = 'https://www.youtube.com';
+                                        // ignore: deprecated_member_use
+                                        if (await canLaunch(url)) {
+                                          // ignore: deprecated_member_use
+                                          await launch(url,
+                                              forceSafariVC: true,
+                                              forceWebView: true,
+                                              enableJavaScript: true);
+                                        }
+                                      },
+                                      child: Text('https://www.youtube.com',
+                                          style: TextStyle(
+                                              color: const Color(0xff2A55C3),
+                                              fontSize: 14.sp,
+                                              fontWeight: FontWeight.w500)),
+                                    )
+
+                                    // Text('Payment link:',
+                                    //     style: TextStyle(
+                                    //         fontSize: 14.sp,
+                                    //         fontWeight: FontWeight.w500)),
+                                    // SizedBox(
+                                    //   height: 16.h,
+                                    // ),
+                                    // Text('https://paymentlink.com',
+                                    //     style: TextStyle(
+                                    //         color: const Color(0xff2A55C3),
+                                    //         fontSize: 14.sp,
+                                    //         fontWeight: FontWeight.w500)),
                                   ]),
                             ),
                             Row(
@@ -310,8 +336,7 @@ class Student_details extends StatelessWidget {
                                             const Color(0xffD4C00B),
                                       ),
                                       onPressed: () {
-                                        Navigator.pushNamed(
-                                            context, 'Student_details');
+                                        Navigator.pop(context);
                                       },
                                       child: Text('Send',
                                           style: TextStyle(
@@ -335,5 +360,15 @@ class Student_details extends StatelessWidget {
         ),
       ),
     );
+
+    // Future openBrowserURL({
+    //   required String url,
+    //   bool inApp = false,
+    // }) async {
+    //   if (await canLaunchUrl(url as Uri)) {
+    //     await launchUrl(url as Uri,
+    //         forceSafariVC: inApp, forceWebView: inApp, enableJavaScript: true);
+    //   }
+    // }
   }
 }
