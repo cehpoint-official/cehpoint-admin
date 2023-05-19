@@ -240,6 +240,9 @@ class Client_details extends StatelessWidget {
                 ],
               ),
               SizedBox(
+                height: 137.h,
+              ),
+              SizedBox(
                 height: 52.h,
                 width: 334,
                 child: ElevatedButton(
