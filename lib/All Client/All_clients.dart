@@ -89,11 +89,7 @@ class _All_clientsState extends State<All_clients> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => Client_details(
-                    ClientDetails: ApiData[index],
-                  ),
-                ),
+                MaterialPageRoute(builder: (context) => All_Clientdetails(allclientDetails:  ApiData[index],)),
               );
             },
             title: Text(

@@ -26,7 +26,8 @@ class Carditem extends StatelessWidget {
       child: Container(
           // ignore: sort_child_properties_last
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.only(
+                left: 16.0, right: 16.0, top: 10.0, bottom: 10.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

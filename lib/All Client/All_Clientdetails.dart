@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class All_Clientdetails extends StatelessWidget {
-  const All_Clientdetails({super.key});
+  const All_Clientdetails({super.key, required this.allclientDetails});
+
+  final Map allclientDetails;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class All_Clientdetails extends StatelessWidget {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, 'All_clients');
+            Navigator.pop(context);
           },
         ),
       ),
@@ -31,7 +33,7 @@ class All_Clientdetails extends StatelessWidget {
         padding: EdgeInsets.only(left: 30.w, top: 16.h, right: 30.w),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
-            'Client 1',
+            allclientDetails['name'],
             style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18.sp),
           ),
           SizedBox(
@@ -103,7 +105,7 @@ class All_Clientdetails extends StatelessWidget {
                     height: 20.h,
                   ),
                   Text(
-                    '40,000',
+                    allclientDetails['budget'].toString(),
                     style: TextStyle(
                       color: Colors.black87,
                       fontSize: 15.sp,
@@ -205,7 +207,7 @@ class All_Clientdetails extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Xyz company',
+                    allclientDetails['companyName'],
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,
@@ -238,7 +240,7 @@ class All_Clientdetails extends StatelessWidget {
                     height: 18.h,
                   ),
                   Text(
-                    'xyz@gmail.com',
+                    allclientDetails['email'],
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                       fontSize: 16.sp,
@@ -250,7 +252,7 @@ class All_Clientdetails extends StatelessWidget {
                     height: 18.h,
                   ),
                   Text(
-                    '+91 2345667767',
+                    allclientDetails['phoneNumber'],
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,
@@ -266,31 +268,3 @@ class All_Clientdetails extends StatelessWidget {
     );
   }
 }
-
-
-
-
- // SizedBox(
-          //   height: 250.h,
-          // ),
-          // SizedBox(
-          //     height: 57.h,
-          //     width: 400.w,
-          //     child: ElevatedButton(
-          //         style: ElevatedButton.styleFrom(
-          //           backgroundColor: const Color(0xffD4C00B),
-          //           shape: RoundedRectangleBorder(
-          //             borderRadius: BorderRadius.circular(15.r),
-          //           ),
-          //         ),
-          //         child: Center(
-          //             child: Text(
-          //           'Approve',
-          //           style: TextStyle(
-          //               color: const Color(
-          //                 0xffFFFFFF,
-          //               ),
-          //               fontSize: 20.sp,
-          //               fontWeight: FontWeight.w700),
-          //         )),
-          //         onPressed: () {}))

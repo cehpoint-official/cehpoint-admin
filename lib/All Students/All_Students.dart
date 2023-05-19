@@ -1,9 +1,9 @@
 // ignore: file_names
-import 'package:cehpoint_admin/All%20Students/student1details.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../Student waiting list/Student_details.dart';
+import 'All_studentdetails.dart';
 
 // ignore: camel_case_types
 class All_Students extends StatefulWidget {
@@ -81,7 +81,7 @@ class _All_StudentsState extends State<All_Students> {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, 'Dashboard');
+            Navigator.pop(context);
           },
         ),
       ),
@@ -93,7 +93,7 @@ class _All_StudentsState extends State<All_Students> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Student_details(
+                  builder: (context) => All_Studentdetails(
                     studentDetails: ApiData[index],
                   ),
                 ),

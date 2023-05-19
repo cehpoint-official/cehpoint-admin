@@ -1,7 +1,7 @@
 import 'package:cehpoint_admin/All%20Client/All_Clientdetails.dart';
 import 'package:cehpoint_admin/All%20Students/All_Students.dart';
 import 'package:cehpoint_admin/All%20Client/All_clients.dart';
-import 'package:cehpoint_admin/All%20Students/student1details.dart';
+import 'package:cehpoint_admin/All%20Students/All_studentdetails.dart';
 import 'package:cehpoint_admin/Client%20waiting%20list/Updateclientdetails.dart';
 import 'package:cehpoint_admin/Client%20waiting%20list/Updateclientdetails2.dart';
 import 'package:cehpoint_admin/Completed%20projects/Completed_projects.dart';
@@ -157,7 +157,9 @@ class MyApp extends StatelessWidget {
           'Help': ((context) => Help()),
           'total_employees': ((context) => total_employees()),
           'paymentdrawer': ((context) => Paymentdrawer()),
-          'student1details': ((context) => student1details()),
+          'student1details': ((context) => All_Studentdetails(
+                studentDetails: {},
+              )),
           'Updateclientdetails': ((context) => Updateclientdetails()),
           'Updateclientdetails2': ((context) => Updateclientdetails2()),
           'Addfreeservice': ((context) => Addfreeservice()),
