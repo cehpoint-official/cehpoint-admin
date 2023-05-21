@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cehpoint_admin/main.dart';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -125,25 +126,14 @@ class Updatestudentdetails11 extends StatelessWidget {
       String fileName = file.path.split('/').last;
 
       FormData data = FormData.fromMap({
-        'x-api-key': 'apikey',
-        'file': await MultipartFile.fromFile(file.path, filename: fileName),
+        'id': 'CS0c08a60dd5937e',
+        'link': 'link',
+        'proposal': await MultipartFile.fromFile(file.path, filename: fileName),
       });
 
       try {
-        Response response = await dio.post(
-          'https://api.pdf.co/v1/file/upload',
-          data: data,
-          onSendProgress: (sent, total) {
-            print('Progress: ${sent / total * 100}%');
-          },
-        );
-
-        if (response.statusCode == 200) {
-          print('File uploaded successfully!');
-          print('Response: ${response.data}');
-        } else {
-          print('File upload failed. Status code: ${response.statusCode}');
-        }
+        Response response =
+            await dio.post('${MyApp.API_URL}/approvestudent', data: data);
       } catch (error) {
         print('Error uploading file: $error');
       }

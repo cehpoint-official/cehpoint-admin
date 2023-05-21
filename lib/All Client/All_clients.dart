@@ -1,8 +1,10 @@
 // ignore: file_names
+import 'dart:convert';
+
 import 'package:cehpoint_admin/All%20Client/All_Clientdetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:http/http.dart' as http;
 import '../Client waiting list/Clientdetails.dart';
 
 // ignore: camel_case_types
@@ -25,44 +27,19 @@ class _All_clientsState extends State<All_clients> {
   List ApiData = [];
 
   GetData() async {
-    // // return;
-    // http.Response res;
-    // res = await http
-    //     .get(Uri.parse("http://localhost:5000/getallunapprovedstudent"));
-    // if (res.statusCode == 200) {
-    //   ApiData = jsonDecode(res.body);
-    // }
+    http.Response res;
+    res = await http.get(Uri.parse("http://localhost:5000/getclientdata"));
+    if (res.statusCode == 200) {
+      var jsonData = jsonDecode(res.body);
+      if (jsonData['ok']) {
+        ApiData = jsonData['data'];
+      }
+    }
     setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    ApiData = [
-      {
-        "name": "client1",
-        "companyName": "comp1",
-        "phoneNumber": "12345",
-        "email": "client1@xyz.com",
-        "address": "china",
-        "requirement": "i want to join you organization for money",
-        "goals": "fullstack developer",
-        "source": "google",
-        "budget": 10000,
-        "approvalStatus": false
-      },
-      {
-        "name": "client2",
-        "companyName": "comp2",
-        "phoneNumber": "67890",
-        "email": "client2@mm.com",
-        "address": "india",
-        "requirement": "no interest",
-        "goals": "become rich",
-        "source": "twitter",
-        "budget": 20000,
-        "approvalStatus": true
-      }
-    ];
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -89,7 +66,10 @@ class _All_clientsState extends State<All_clients> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => All_Clientdetails(allclientDetails:  ApiData[index],)),
+                MaterialPageRoute(
+                    builder: (context) => All_Clientdetails(
+                          allclientDetails: ApiData[index],
+                        )),
               );
             },
             title: Text(
