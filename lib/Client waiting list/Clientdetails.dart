@@ -36,7 +36,6 @@ class Client_details extends StatelessWidget {
           padding:
               EdgeInsets.only(top: 50.h, left: 30.w, right: 30.w, bottom: 40.h),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -238,6 +237,9 @@ class Client_details extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 137.h,
               ),
               SizedBox(
                 height: 52.h,
