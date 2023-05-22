@@ -7,13 +7,12 @@ class InternshipApplicantsDetails1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 20.w),
-          child: Text(
-            'Internship Applicants Details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Internship Applicants Details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,

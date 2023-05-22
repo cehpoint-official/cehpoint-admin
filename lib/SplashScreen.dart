@@ -24,6 +24,7 @@ class _MySplash_ScreenState extends State<MySplash_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.only(left: 150.w, top: 250.h),

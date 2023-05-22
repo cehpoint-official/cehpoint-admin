@@ -37,13 +37,12 @@ class _Manage_jobState extends State<Manage_job>
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Padding(
-            padding: EdgeInsets.only(left: 90.w),
-            child: Text(
-              'Manage job',
-              style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-            ),
+          centerTitle: true,
+          title: Text(
+            'Manage job',
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
           backgroundColor: Colors.transparent,
           elevation: 0,

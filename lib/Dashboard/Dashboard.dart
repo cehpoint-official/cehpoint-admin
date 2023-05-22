@@ -44,16 +44,16 @@ class _MyDashboradState extends State<MyDashborad> {
 
   Map ApiData = {};
   GetData() async {
-    http.Response res;
-    res = await http.get(Uri.parse("${MyApp.API_URL}/getcounts"));
-    if (res.statusCode == 200) {
-      var jsonData = jsonDecode(res.body);
-      if (jsonData['ok']) {
-        setState(() {
-          ApiData = jsonData['data'];
-        });
-      }
-    }
+    // http.Response res;
+    // res = await http.get(Uri.parse("${MyApp.API_URL}/getcounts"));
+    // if (res.statusCode == 200) {
+    //   var jsonData = jsonDecode(res.body);
+    //   if (jsonData['ok']) {
+    //     setState(() {
+    //       ApiData = jsonData['data'];
+    //     });
+    //   }
+    // }
   }
 
   // ignore: non_constant_identifier_names
@@ -147,9 +147,7 @@ class _MyDashboradState extends State<MyDashborad> {
       ),
     ];
     return Scaffold(
-      // drawer: Drawer(
-      //   child: Carditem(),
-      // ),
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -185,7 +183,6 @@ class _MyDashboradState extends State<MyDashborad> {
         ],
       ),
       drawer: MyDrawer(),
-
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: GridView.count(

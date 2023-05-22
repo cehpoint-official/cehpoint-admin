@@ -13,6 +13,7 @@ class Client_details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -52,7 +53,7 @@ class Client_details extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    ClientDetails['name'],
+                    ClientDetails['representative_name'].toString(),
                     style: TextStyle(
                       color: const Color(0xff000000),
                       fontSize: 14.sp,
@@ -74,7 +75,7 @@ class Client_details extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    ClientDetails['companyName'],
+                    ClientDetails['company_name'].toString(),
                     style: TextStyle(
                       color: const Color(0xff000000),
                       fontSize: 14.sp,
@@ -96,7 +97,7 @@ class Client_details extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    ClientDetails['phoneNumber'],
+                    ClientDetails['phone_number'].toString(),
                     style: TextStyle(
                       color: const Color(0xff000000),
                       fontSize: 14.sp,
@@ -118,7 +119,7 @@ class Client_details extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    ClientDetails['email'],
+                    ClientDetails['email'].toString(),
                     style: TextStyle(
                       color: const Color(0xff000000),
                       fontSize: 14.sp,
@@ -140,7 +141,7 @@ class Client_details extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    ClientDetails['address'],
+                    ClientDetails['address'].toString(),
                     style: TextStyle(
                       color: const Color(0xff000000),
                       fontSize: 14.sp,
@@ -162,7 +163,7 @@ class Client_details extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    ClientDetails['requirement'],
+                    ClientDetails['requirement'].toString(),
                     style: TextStyle(
                       color: const Color(0xff000000),
                       fontSize: 14.sp,
@@ -185,7 +186,7 @@ class Client_details extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    '${getYesNoValue(ClientDetails['approvalStatus'])}',
+                    ClientDetails['deadline'].toString(),
                     style: TextStyle(
                       color: const Color(0xff000000),
                       fontSize: 14.sp,

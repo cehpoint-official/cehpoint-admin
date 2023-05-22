@@ -23,13 +23,12 @@ class _UpdatedetailsState extends State<Updatedetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 70.w),
-          child: Text(
-            'Update details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Update details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,

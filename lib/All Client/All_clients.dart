@@ -1,10 +1,8 @@
 // ignore: file_names
-import 'dart:convert';
-
 import 'package:cehpoint_admin/All%20Client/All_Clientdetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:http/http.dart' as http;
+
 import '../Client waiting list/Clientdetails.dart';
 
 // ignore: camel_case_types
@@ -27,20 +25,48 @@ class _All_clientsState extends State<All_clients> {
   List ApiData = [];
 
   GetData() async {
-    http.Response res;
-    res = await http.get(Uri.parse("http://localhost:5000/getclientdata"));
-    if (res.statusCode == 200) {
-      var jsonData = jsonDecode(res.body);
-      if (jsonData['ok']) {
-        ApiData = jsonData['data'];
-      }
-    }
+    // // return;
+    // http.Response res;
+    // res = await http
+    //     .get(Uri.parse("http://localhost:5000/getallunapprovedstudent"));
+    // if (res.statusCode == 200) {
+    //   ApiData = jsonDecode(res.body);
+    // }
     setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
+    ApiData = [
+      {
+        "representative_name": "jai",
+        "company_name": "hanuman",
+        "phone_number": "1234567890",
+        "email": "hello@world.com",
+        "address": "something",
+        "requirement": "web developement",
+        "deadline": "30 days",
+        "source": "Cehpoint stuff",
+        "budget": "50000",
+        "id": "CC9740e52524d577",
+        "project_name": "boat"
+      },
+      {
+        "representative_name": "hello",
+        "company_name": "world",
+        "phone_number": "1234567890",
+        "email": "hello@world.com",
+        "address": "something",
+        "requirement": "web developement",
+        "deadline": "30 days",
+        "source": "Cehpoint stuff",
+        "budget": "20000",
+        "id": "CC122iu3ifieruji",
+        "project_name": "hammer"
+      }
+    ];
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -73,7 +99,7 @@ class _All_clientsState extends State<All_clients> {
               );
             },
             title: Text(
-              ApiData[index]["name"],
+              ApiData[index]["representative_name"],
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
             ),
             trailing: Image.asset('Assets/payment1.png'),

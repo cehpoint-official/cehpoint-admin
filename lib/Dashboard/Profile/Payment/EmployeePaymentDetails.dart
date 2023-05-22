@@ -7,15 +7,13 @@ class EmployeePaymentDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 30.w),
-          child: Text(
-            'Employee Payment Details',
-            style: TextStyle(
-              color: Colors.black87,
-              fontSize: 18.sp,
-            ),
+        resizeToAvoidBottomInset: false,
+      appBar: AppBar( centerTitle: true,
+        title: Text(
+          'Employee Payment Details',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 18.sp,
           ),
         ),
         backgroundColor: Colors.transparent,

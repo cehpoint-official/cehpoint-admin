@@ -9,6 +9,7 @@ class My_post extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       resizeToAvoidBottomInset: false,
       body: Other_posts(),
     );
   }

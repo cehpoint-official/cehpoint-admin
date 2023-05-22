@@ -5,19 +5,34 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Updateclientdetails extends StatelessWidget {
-  const Updateclientdetails({super.key});
+import 'Updateclientdetails2.dart';
+
+class Updateclientdetails extends StatefulWidget {
+  Updateclientdetails({super.key});
+
+  @override
+  State<Updateclientdetails> createState() => _UpdateclientdetailsState();
+}
+
+class _UpdateclientdetailsState extends State<Updateclientdetails> {
+  TextEditingController _textEditingController = TextEditingController();
+  String pdffilename = "";
+  updatefilename(String name) {
+    setState(() {
+      pdffilename = name;
+    });
+    ;
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 70.w),
-          child: Text(
-            'Update Client details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Update Client details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -25,7 +40,7 @@ class Updateclientdetails extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: const Icon(Icons.arrow_back_ios, color: Color(0xff000000))),
+            icon: const Icon(Icons.arrow_back, color: Color(0xff000000))),
       ),
       body: Padding(
         padding:
@@ -51,7 +66,7 @@ class Updateclientdetails extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        uploadPdf();
+                        uploadPdf(updatefilename);
                       },
                       child: Container(
                         height: 200.h,
@@ -77,12 +92,13 @@ class Updateclientdetails extends StatelessWidget {
                     SizedBox(
                       height: 10.h,
                     ),
-                    const TextField(
+                    TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'add payment link',
+                        hintText: 'Add payment link',
                       ),
-                    ),
+                      controller: _textEditingController,
+                    )
                   ]),
             ),
             SizedBox(
@@ -106,7 +122,14 @@ class Updateclientdetails extends StatelessWidget {
                         fontWeight: FontWeight.w700),
                   )),
                   onPressed: () {
-                    Navigator.pop(context);
+                    String textValue = _textEditingController.text;
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Updateclientdetails2(
+                            text: textValue, pdffilename: pdffilename),
+                      ),
+                    );
                   },
                 ))
           ],
@@ -115,7 +138,7 @@ class Updateclientdetails extends StatelessWidget {
     );
   }
 
-  Future<void> uploadPdf() async {
+  Future<void> uploadPdf(updatefilename) async {
     var dio = Dio();
 
     FilePickerResult? result = await FilePicker.platform.pickFiles();
@@ -124,6 +147,7 @@ class Updateclientdetails extends StatelessWidget {
       File file = File(result.files.single.path ?? "");
       String fileName = file.path.split('/').last;
 
+      updatefilename(fileName);
       FormData data = FormData.fromMap({
         'x-api-key': 'apikey',
         'file': await MultipartFile.fromFile(file.path, filename: fileName),
@@ -152,6 +176,7 @@ class Updateclientdetails extends StatelessWidget {
     }
   }
 }
+
 
 
 //  Future uploadPdf() async {

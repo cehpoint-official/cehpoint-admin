@@ -42,6 +42,7 @@ class _All_StudentsState extends State<All_Students> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: Text(

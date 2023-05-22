@@ -9,15 +9,14 @@ class PostDetails0 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 60.w),
-          child: Text(
-            'Post Details',
-            style: TextStyle(
-              color: Colors.black87,
-              fontSize: 18.sp,
-            ),
+        centerTitle: true,
+        title: Text(
+          'Post Details',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 18.sp,
           ),
         ),
         backgroundColor: Colors.transparent,

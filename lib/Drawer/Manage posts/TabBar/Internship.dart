@@ -8,6 +8,7 @@ class MyInternship extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       resizeToAvoidBottomInset: false,
       body: Padding(
         padding: EdgeInsets.only(
           top: 36.h,

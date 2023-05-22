@@ -36,15 +36,13 @@ class _PaymentState extends State<Payment> with SingleTickerProviderStateMixin {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        appBar: AppBar(
-          title: Padding(
-            padding: EdgeInsets.only(left: 90.w),
-            child: Text(
-              'Payment',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 18.sp,
-              ),
+        resizeToAvoidBottomInset: false,
+        appBar: AppBar( centerTitle: true,
+          title: Text(
+            'Payment',
+            style: TextStyle(
+              color: Colors.black87,
+              fontSize: 18.sp,
             ),
           ),
           backgroundColor: Colors.transparent,

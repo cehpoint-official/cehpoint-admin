@@ -23,13 +23,10 @@ class _UpdateapprovedetailsState extends State<Updateapprovedetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 35.w),
-          child: Text(
-            'Update approve details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+      appBar: AppBar( centerTitle: true,
+        title: Text(
+          'Update approve details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,

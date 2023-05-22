@@ -13,6 +13,7 @@ class Other_posts extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+         resizeToAvoidBottomInset: false,
         body: Padding(
           padding: EdgeInsets.only(left: 42.w, right: 42.w, top: 16.h),
           child: Column(children: [

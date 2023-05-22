@@ -10,6 +10,7 @@ class Pending extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: EdgeInsets.only(left: 10.w, right: 10.w),
         child: Column(

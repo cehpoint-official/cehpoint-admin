@@ -14,13 +14,11 @@ class All_Studentdetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 60.w),
-          child: Text(
-            'Student details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar( centerTitle: true,
+        title: Text(
+          'Student details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -35,7 +33,7 @@ class All_Studentdetails extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.only(top: 15.h, bottom: 36.h, left: 20.w),
+        padding: EdgeInsets.only(top: 15.h, bottom: 36.h),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
             studentDetails['name'],

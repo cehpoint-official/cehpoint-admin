@@ -7,15 +7,13 @@ class Payed1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 100.w),
-          child: Text(
-            'Paid',
-            style: TextStyle(
-              color: Colors.black87,
-              fontSize: 18.sp,
-            ),
+        resizeToAvoidBottomInset: false,
+      appBar: AppBar( centerTitle: true,
+        title: Text(
+          'Paid',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 18.sp,
           ),
         ),
         backgroundColor: Colors.transparent,

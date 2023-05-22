@@ -8,7 +8,7 @@ class Payeddrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( resizeToAvoidBottomInset: false,
       body: Padding(
         padding: EdgeInsets.only(left: 20.w, right: 20.w),
         child: Column(

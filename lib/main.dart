@@ -162,7 +162,10 @@ class MyApp extends StatelessWidget {
                 studentDetails: {},
               )),
           'Updateclientdetails': ((context) => Updateclientdetails()),
-          'Updateclientdetails2': ((context) => Updateclientdetails2()),
+          'Updateclientdetails2': ((context) => Updateclientdetails2(
+                text: '',
+                pdffilename: '',
+              )),
           'Addfreeservice': ((context) => Addfreeservice()),
           'Casestudies': ((context) => Casestudies()),
           'Manage_Internship': ((context) => Manage_Internship()),
@@ -171,7 +174,10 @@ class MyApp extends StatelessWidget {
           'Student_details': ((context) => Student_details(
                 studentDetails: {},
               )),
-          'Updatestudentdetails12': ((context) => Updatestudentdetails12()),
+          'Updatestudentdetails12': ((context) => Updatestudentdetails12(
+                pdffilename: '',
+                text: '',
+              )),
           'Updatedetails': ((context) => Updatedetails()),
           'edit': ((context) => edit()),
           'UpdateClassdetails': ((context) => UpdateClassdetails()),

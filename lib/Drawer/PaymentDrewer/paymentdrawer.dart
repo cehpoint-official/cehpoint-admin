@@ -36,15 +36,14 @@ class _PaymentdrawerState extends State<Paymentdrawer>
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Padding(
-            padding: EdgeInsets.only(left: 90.w),
-            child: Text(
-              'Payment',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 18.sp,
-              ),
+          centerTitle: true,
+          title: Text(
+            'Payment',
+            style: TextStyle(
+              color: Colors.black87,
+              fontSize: 18.sp,
             ),
           ),
           backgroundColor: Colors.transparent,

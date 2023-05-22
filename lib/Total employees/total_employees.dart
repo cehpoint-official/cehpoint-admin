@@ -55,7 +55,7 @@ class _total_employeesState extends State<total_employees> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: Text(

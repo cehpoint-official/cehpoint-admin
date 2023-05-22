@@ -45,6 +45,7 @@ class _All_Applicant2State extends State<All_Applicant2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
       body: Padding(
         padding: EdgeInsets.only(
           top: 31.w,

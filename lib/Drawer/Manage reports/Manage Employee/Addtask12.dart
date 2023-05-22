@@ -7,13 +7,11 @@ class Addtask12 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 90.w),
-          child: Text(
-            'Add task',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+       resizeToAvoidBottomInset: false,
+      appBar: AppBar( centerTitle: true,
+        title: Text(
+          'Add task',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,

@@ -9,13 +9,12 @@ class On_going_Projects_details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 40.w),
-          child: Text(
-            'On going Projects details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+        centerTitle: true,
+        title: Text(
+          'On going Projects details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,

@@ -9,13 +9,12 @@ class All_Clientdetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 90.h),
-          child: Text(
-            'Client details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Client details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -33,7 +32,7 @@ class All_Clientdetails extends StatelessWidget {
         padding: EdgeInsets.only(left: 30.w, top: 16.h, right: 30.w),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
-            allclientDetails['name'],
+            allclientDetails['representative_name'].toString(),
             style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18.sp),
           ),
           SizedBox(
@@ -94,7 +93,7 @@ class All_Clientdetails extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Coursera project',
+                    allclientDetails['project_name'].toString(),
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,
@@ -116,7 +115,7 @@ class All_Clientdetails extends StatelessWidget {
                     height: 16.h,
                   ),
                   Text(
-                    '10 January',
+                    allclientDetails['deadline'].toString(),
                     style: TextStyle(
                       fontSize: 15.sp,
                       color: Colors.black87,
@@ -127,7 +126,7 @@ class All_Clientdetails extends StatelessWidget {
                     height: 18.h,
                   ),
                   Text(
-                    'App Devolopment',
+                    allclientDetails['requirement'].toString(),
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,
@@ -207,7 +206,7 @@ class All_Clientdetails extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    allclientDetails['companyName'],
+                    allclientDetails['company_name'].toString(),
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,
@@ -218,7 +217,7 @@ class All_Clientdetails extends StatelessWidget {
                     height: 20.h,
                   ),
                   Text(
-                    'abcd mondal',
+                    allclientDetails['representative_name'].toString(),
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,
@@ -229,7 +228,7 @@ class All_Clientdetails extends StatelessWidget {
                     height: 16.h,
                   ),
                   Text(
-                    'xyz.com',
+                    allclientDetails['requirement'].toString(),
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,
@@ -240,7 +239,7 @@ class All_Clientdetails extends StatelessWidget {
                     height: 18.h,
                   ),
                   Text(
-                    allclientDetails['email'],
+                    allclientDetails['email'].toString(),
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                       fontSize: 16.sp,
@@ -252,7 +251,7 @@ class All_Clientdetails extends StatelessWidget {
                     height: 18.h,
                   ),
                   Text(
-                    allclientDetails['phoneNumber'],
+                    allclientDetails['phoneNumber'].toString(),
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,

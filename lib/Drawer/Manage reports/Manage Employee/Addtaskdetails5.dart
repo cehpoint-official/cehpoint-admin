@@ -33,16 +33,13 @@ class Addtaskdetails5 extends StatelessWidget {
           onPressed: () {
             Navigator.pushNamed(context, 'Alltask');
           },
-        ),
-        title: Padding(
-          padding: EdgeInsets.only(left: 70.w),
-          child: Text(
-            'Add task details',
-            style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: const Color(0xff000000),
-                fontSize: 18.sp),
-          ),
+        ), centerTitle: true,
+        title: Text(
+          'Add task details',
+          style: TextStyle(
+              fontWeight: FontWeight.w700,
+              color: const Color(0xff000000),
+              fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,

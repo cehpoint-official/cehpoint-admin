@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Updatestudentdetails12 extends StatelessWidget {
-  const Updatestudentdetails12({super.key});
-
+  const Updatestudentdetails12(
+      {super.key, required this.text, required this.pdffilename});
+  final String text;
+  final String pdffilename;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 70.w),
-          child: Text(
-            'Update Student details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Update Student details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -23,7 +24,7 @@ class Updatestudentdetails12 extends StatelessWidget {
             color: Colors.black87,
           ),
           onPressed: () {
-            Navigator.pushNamed(context, 'Updatestudentdetails11');
+            Navigator.pop(context);
           },
         ),
       ),
@@ -61,14 +62,15 @@ class Updatestudentdetails12 extends StatelessWidget {
                         ),
                         Center(child: Image.asset('Assets/bttomsheet.png')),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Image.asset('Assets/bottomsheet2.png'),
                             SizedBox(
                               width: 10.w,
                             ),
                             Text(
-                              'Embedded Course brochure.pdf',
+                              pdffilename,
+                              // pdffilename,
                               style: TextStyle(
                                   fontSize: 14.sp, fontWeight: FontWeight.w500),
                             ),
@@ -93,7 +95,7 @@ class Updatestudentdetails12 extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Text('https://paymentlink.com',
+                    Text(text,
                         style: TextStyle(
                             color: const Color(0xff2A55C3),
                             fontSize: 14.sp,
@@ -103,29 +105,30 @@ class Updatestudentdetails12 extends StatelessWidget {
               ],
             ),
             SizedBox(
-                height: 57.h,
-                width: 450.w,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xffD4C00B),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
+              height: 57.h,
+              width: 450.w,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xffD4C00B),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
                   ),
-                  child: Center(
-                      child: Text(
-                    'Update',
-                    style: TextStyle(
-                        color: const Color(
-                          0xffFFFFFF,
-                        ),
-                        fontSize: 20.sp,
-                        fontWeight: FontWeight.w700),
-                  )),
-                  onPressed: () {
-                    // Navigator.pushNamed(context, 'Updateclientdetails2');
-                  },
-                ))
+                ),
+                child: Center(
+                    child: Text(
+                  'Update',
+                  style: TextStyle(
+                      color: const Color(
+                        0xffFFFFFF,
+                      ),
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w700),
+                )),
+                onPressed: () {
+                  Navigator.pushNamed(context, 'Updateclientdetails');
+                },
+              ),
+            )
           ],
         ),
       ),

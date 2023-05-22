@@ -19,6 +19,7 @@ class Uploadpost extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_sharp),
@@ -26,16 +27,13 @@ class Uploadpost extends StatelessWidget {
           onPressed: () {
             Navigator.pushNamed(context, 'Dashboard');
           },
-        ),
-        title: Padding(
-          padding: EdgeInsets.only(left: 70.w),
-          child: Text(
-            'Upload post',
-            style: TextStyle(
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w700,
-                color: const Color(0xff000000)),
-          ),
+        ), centerTitle: true,
+        title: Text(
+          'Upload post',
+          style: TextStyle(
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w700,
+              color: const Color(0xff000000)),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,

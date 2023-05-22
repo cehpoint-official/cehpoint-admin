@@ -7,15 +7,14 @@ class Payeddrawer1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 100.w),
-          child: Text(
-            'Paid',
-            style: TextStyle(
-              color: Colors.black87,
-              fontSize: 18.sp,
-            ),
+        centerTitle: true,
+        title: Text(
+          'Paid',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 18.sp,
           ),
         ),
         backgroundColor: Colors.transparent,

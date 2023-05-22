@@ -9,15 +9,13 @@ class Addfreeservice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 60.w),
-          child: Text(
-            'Add free service',
-            style: TextStyle(
-              color: Colors.black87,
-              fontSize: 18.sp,
-            ),
+        resizeToAvoidBottomInset: false,
+      appBar: AppBar( centerTitle: true,
+        title: Text(
+          'Add free service',
+          style: TextStyle(
+            color: Colors.black87,
+            fontSize: 18.sp,
           ),
         ),
         backgroundColor: Colors.transparent,

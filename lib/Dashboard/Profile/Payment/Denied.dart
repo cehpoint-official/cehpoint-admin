@@ -8,6 +8,7 @@ class Denied extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
       body: Padding(
         padding: EdgeInsets.only(left: 20.w, right: 20.w),
         child: Column(

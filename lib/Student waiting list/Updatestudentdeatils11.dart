@@ -6,19 +6,36 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Updatestudentdetails11 extends StatelessWidget {
+import 'Updatestudentdetails12.dart';
+
+class Updatestudentdetails11 extends StatefulWidget {
   const Updatestudentdetails11({super.key});
+
+  @override
+  State<Updatestudentdetails11> createState() => _Updatestudentdetails11State();
+}
+
+class _Updatestudentdetails11State extends State<Updatestudentdetails11> {
+  TextEditingController _textEditingController = TextEditingController();
+
+  String pdffilename = "";
+
+  updatefilename(String name) {
+    setState(() {
+      pdffilename = name;
+    });
+    ;
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsets.only(left: 70.w),
-          child: Text(
-            'Update Student details',
-            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Update Student details',
+          style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -26,7 +43,7 @@ class Updatestudentdetails11 extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: const Icon(Icons.arrow_back_ios, color: Color(0xff000000))),
+            icon: const Icon(Icons.arrow_back, color: Color(0xff000000))),
       ),
       body: Padding(
         padding:
@@ -52,7 +69,7 @@ class Updatestudentdetails11 extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        uploadPdf();
+                        uploadPdf(updatefilename);
                       },
                       child: Container(
                         height: 200.h,
@@ -78,12 +95,13 @@ class Updatestudentdetails11 extends StatelessWidget {
                     SizedBox(
                       height: 10.h,
                     ),
-                    const TextField(
+                    TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: 'add payment link',
+                        hintText: 'Add payment link',
                       ),
-                    ),
+                      controller: _textEditingController,
+                    )
                   ]),
             ),
             SizedBox(
@@ -107,7 +125,14 @@ class Updatestudentdetails11 extends StatelessWidget {
                         fontWeight: FontWeight.w700),
                   )),
                   onPressed: () {
-                    Navigator.pop(context);
+                    String textValue = _textEditingController.text;
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Updatestudentdetails12(
+                            text: textValue, pdffilename: pdffilename),
+                      ),
+                    );
                   },
                 ))
           ],
@@ -116,7 +141,7 @@ class Updatestudentdetails11 extends StatelessWidget {
     );
   }
 
-  Future<void> uploadPdf() async {
+  Future<void> uploadPdf(updatefilename) async {
     var dio = Dio();
 
     FilePickerResult? result = await FilePicker.platform.pickFiles();
@@ -125,15 +150,27 @@ class Updatestudentdetails11 extends StatelessWidget {
       File file = File(result.files.single.path ?? "");
       String fileName = file.path.split('/').last;
 
+      updatefilename(fileName);
       FormData data = FormData.fromMap({
-        'id': 'CS0c08a60dd5937e',
-        'link': 'link',
-        'proposal': await MultipartFile.fromFile(file.path, filename: fileName),
+        'x-api-key': 'apikey',
+        'file': await MultipartFile.fromFile(file.path, filename: fileName),
       });
 
       try {
-        Response response =
-            await dio.post('${MyApp.API_URL}/approvestudent', data: data);
+        Response response = await dio.post(
+          'https://api.pdf.co/v1/file/upload',
+          data: data,
+          onSendProgress: (sent, total) {
+            print('Progress: ${sent / total * 100}%');
+          },
+        );
+
+        if (response.statusCode == 200) {
+          print('File uploaded successfully!');
+          print('Response: ${response.data}');
+        } else {
+          print('File upload failed. Status code: ${response.statusCode}');
+        }
       } catch (error) {
         print('Error uploading file: $error');
       }

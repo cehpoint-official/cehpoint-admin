@@ -36,13 +36,12 @@ class _Manage_InternshipState extends State<Manage_Internship>
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Padding(
-            padding: EdgeInsets.only(left: 70.w),
-            child: Text(
-              'Manage Internship',
-              style: TextStyle(color: Colors.black87, fontSize: 18.sp),
-            ),
+          centerTitle: true,
+          title: Text(
+            'Manage Internship',
+            style: TextStyle(color: Colors.black87, fontSize: 18.sp),
           ),
           backgroundColor: Colors.transparent,
           elevation: 0,

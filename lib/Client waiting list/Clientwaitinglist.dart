@@ -40,31 +40,32 @@ class _Client_waiting_listState extends State<Client_waiting_list> {
   Widget build(BuildContext context) {
     ApiData = [
       {
-        "name": "client1",
-        "companyName": "comp1",
-        "phoneNumber": "12345",
-        "email": "client1@xyz.com",
-        "address": "china",
-        "requirement": "i want to join you organization for money",
-        "goals": "fullstack developer",
-        "source": "google",
-        "budget": 10000,
-        "approvalStatus": false
+        "representative_name": "jai",
+        "company_name": "hanuman",
+        "phone_number": "1234567890",
+        "email": "hello@world.com",
+        "address": "something",
+        "requirement": "web developement",
+        "deadline": "30 days",
+        "source": "Cehpoint stuff",
+        "budget": "50000",
+        "id": "CC9740e52524d577"
       },
       {
-        "name": "client2",
-        "companyName": "comp2",
-        "phoneNumber": "67890",
-        "email": "client2@mm.com",
-        "address": "india",
-        "requirement": "no interest",
-        "goals": "become rich",
-        "source": "twitter",
-        "budget": 20000,
-        "approvalStatus": true
+        "representative_name": "hello",
+        "company_name": "world",
+        "phone_number": "1234567890",
+        "email": "hello@world.com",
+        "address": "something",
+        "requirement": "web developement",
+        "deadline": "30 days",
+        "source": "Cehpoint stuff",
+        "budget": "20000",
+        "id": "CC122iu3ifieruji"
       }
     ];
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -98,7 +99,7 @@ class _Client_waiting_listState extends State<Client_waiting_list> {
               );
             },
             title: Text(
-              ApiData[index]["name"],
+              ApiData[index]["representative_name"],
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
             ),
             trailing: Image.asset('Assets/payment1.png'),
