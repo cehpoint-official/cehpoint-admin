@@ -125,7 +125,7 @@ class Updatestudentdetails12 extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 )),
                 onPressed: () {
-                  Navigator.pushNamed(context, 'Updateclientdetails');
+                  Navigator.pushNamed(context, 'Student_details');
                 },
               ),
             )

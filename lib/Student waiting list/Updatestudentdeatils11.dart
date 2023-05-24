@@ -24,7 +24,7 @@ class _Updatestudentdetails11State extends State<Updatestudentdetails11> {
     setState(() {
       pdffilename = name;
     });
-    ;
+   
   }
 
   @override
