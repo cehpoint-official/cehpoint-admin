@@ -1,3 +1,4 @@
+import 'package:cehpoint_admin/Student%20waiting%20list/bottomsheetbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -6,6 +7,7 @@ class Updatestudentdetails12 extends StatelessWidget {
       {super.key, required this.text, required this.pdffilename});
   final String text;
   final String pdffilename;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -125,7 +127,26 @@ class Updatestudentdetails12 extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 )),
                 onPressed: () {
-                  Navigator.pushNamed(context, 'Student_details');
+                  Navigator.pop(
+                    context,
+                  );
+
+                  Navigator.pop(
+                    context,
+                  );
+                  showModalBottomSheet(
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(30.r)),
+                    ),
+                    context: context,
+                    builder: (BuildContext context) {
+                      return bottomsheetbar(
+                          txt: text,
+                          pdfname:
+                              pdffilename);
+                    },
+                  );
                 },
               ),
             )

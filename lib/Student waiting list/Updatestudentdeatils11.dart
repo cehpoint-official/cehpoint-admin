@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cehpoint_admin/Student%20waiting%20list/bottomsheetbar.dart';
 import 'package:cehpoint_admin/main.dart';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
@@ -24,7 +25,6 @@ class _Updatestudentdetails11State extends State<Updatestudentdetails11> {
     setState(() {
       pdffilename = name;
     });
-   
   }
 
   @override
@@ -133,6 +133,10 @@ class _Updatestudentdetails11State extends State<Updatestudentdetails11> {
                             text: textValue, pdffilename: pdffilename),
                       ),
                     );
+                    // bottomsheetbar(
+                    //   txt: _textEditingController.text.toString(),
+                    //   pdfname: '' ?? 'Embedded Course brochure.pdf',
+                    // );
                   },
                 ))
           ],
