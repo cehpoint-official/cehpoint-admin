@@ -32,7 +32,7 @@ class All_Clientdetails extends StatelessWidget {
         padding: EdgeInsets.only(left: 30.w, top: 16.h, right: 30.w),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
-            allclientDetails['representative_name'].toString(),
+            allclientDetails['representativeName'].toString(),
             style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18.sp),
           ),
           SizedBox(
@@ -93,7 +93,7 @@ class All_Clientdetails extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    allclientDetails['project_name'].toString(),
+                    allclientDetails['projectName'].toString(),
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,
@@ -206,7 +206,7 @@ class All_Clientdetails extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    allclientDetails['company_name'].toString(),
+                    allclientDetails['companyName'].toString(),
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,
@@ -217,7 +217,7 @@ class All_Clientdetails extends StatelessWidget {
                     height: 20.h,
                   ),
                   Text(
-                    allclientDetails['representative_name'].toString(),
+                    allclientDetails['representativeName'].toString(),
                     style: TextStyle(
                       fontSize: 16.sp,
                       color: Colors.black87,

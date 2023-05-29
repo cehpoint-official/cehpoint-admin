@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 
+import 'package:cehpoint_admin/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:http/http.dart' as http;
@@ -27,8 +28,7 @@ class _All_StudentsState extends State<All_Students> {
   List ApiData = [];
   GetData() async {
     http.Response res;
-    res = await http
-        .get(Uri.parse("http://localhost:5000/getallunapprovedstudent"));
+    res = await http.get(Uri.parse('${MyApp.API_URL}/getstudentdata'));
     if (res.statusCode == 200) {
       var jsonData = jsonDecode(res.body);
       if (jsonData['ok']) {

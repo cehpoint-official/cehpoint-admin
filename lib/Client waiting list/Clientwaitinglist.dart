@@ -1,6 +1,7 @@
 // ignore: file_names
 import 'dart:convert';
 
+import 'package:cehpoint_admin/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:http/http.dart' as http;
@@ -26,44 +27,46 @@ class _Client_waiting_listState extends State<Client_waiting_list> {
 
   List ApiData = [];
   GetData() async {
-    // // return;
-    // http.Response res;
-    // res = await http
-    //     .get(Uri.parse("http://localhost:5000/getallunapprovedstudent"));
-    // if (res.statusCode == 200) {
-    //   ApiData = jsonDecode(res.body);
-    // }
-    setState(() {});
+    http.Response res;
+    res = await http.get(Uri.parse('${MyApp.API_URL}/getunapprovedclients'));
+    if (res.statusCode == 200) {
+      var jsonData = jsonDecode(res.body);
+      if (jsonData['ok']) {
+        setState(() {
+          ApiData = jsonData['data'];
+        });
+      }
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    ApiData = [
-      {
-        "representative_name": "jai",
-        "company_name": "hanuman",
-        "phone_number": "1234567890",
-        "email": "hello@world.com",
-        "address": "something",
-        "requirement": "web developement",
-        "deadline": "30 days",
-        "source": "Cehpoint stuff",
-        "budget": "50000",
-        "id": "CC9740e52524d577"
-      },
-      {
-        "representative_name": "hello",
-        "company_name": "world",
-        "phone_number": "1234567890",
-        "email": "hello@world.com",
-        "address": "something",
-        "requirement": "web developement",
-        "deadline": "30 days",
-        "source": "Cehpoint stuff",
-        "budget": "20000",
-        "id": "CC122iu3ifieruji"
-      }
-    ];
+    // ApiData = [
+    //   {
+    //     "representativeName": "jai",
+    //     "companyName": "hanuman",
+    //     "phoneNumber": "1234567890",
+    //     "email": "hello@world.com",
+    //     "address": "something",
+    //     "requirement": "web developement",
+    //     "deadline": "30 days",
+    //     "source": "Cehpoint stuff",
+    //     "budget": "50000",
+    //     "id": "CC9740e52524d577"
+    //   },
+    //   {
+    //     "representativeName": "hello",
+    //     "companyName": "world",
+    //     "phoneNumber": "1234567890",
+    //     "email": "hello@world.com",
+    //     "address": "something",
+    //     "requirement": "web developement",
+    //     "deadline": "30 days",
+    //     "source": "Cehpoint stuff",
+    //     "budget": "20000",
+    //     "id": "CC122iu3ifieruji"
+    //   }
+    // ];
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
@@ -99,7 +102,7 @@ class _Client_waiting_listState extends State<Client_waiting_list> {
               );
             },
             title: Text(
-              ApiData[index]["representative_name"],
+              ApiData[index]["representativeName"],
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.sp),
             ),
             trailing: Image.asset('Assets/payment1.png'),
