@@ -55,7 +55,7 @@ class Client_details extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    ClientDetails['representative_name'].toString(),
+                    ClientDetails['representativeName'].toString(),
                     style: TextStyle(
                       color: const Color(0xff000000),
                       fontSize: 14.sp,
@@ -77,7 +77,7 @@ class Client_details extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    ClientDetails['company_name'].toString(),
+                    ClientDetails['companyName'].toString(),
                     style: TextStyle(
                       color: const Color(0xff000000),
                       fontSize: 14.sp,
@@ -99,7 +99,7 @@ class Client_details extends StatelessWidget {
                     height: 10.h,
                   ),
                   Text(
-                    ClientDetails['phone_number'].toString(),
+                    ClientDetails['phoneNumber'].toString(),
                     style: TextStyle(
                       color: const Color(0xff000000),
                       fontSize: 14.sp,

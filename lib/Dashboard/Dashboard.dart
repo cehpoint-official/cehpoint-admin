@@ -44,16 +44,16 @@ class _MyDashboradState extends State<MyDashborad> {
 
   Map ApiData = {};
   GetData() async {
-    // http.Response res;
-    // res = await http.get(Uri.parse("${MyApp.API_URL}/getcounts"));
-    // if (res.statusCode == 200) {
-    //   var jsonData = jsonDecode(res.body);
-    //   if (jsonData['ok']) {
-    //     setState(() {
-    //       ApiData = jsonData['data'];
-    //     });
-    //   }
-    // }
+    http.Response res;
+    res = await http.get(Uri.parse("${MyApp.API_URL}/getcounts"));
+    if (res.statusCode == 200) {
+      var jsonData = jsonDecode(res.body);
+      if (jsonData['ok']) {
+        setState(() {
+          ApiData = jsonData['data'];
+        });
+      }
+    }
   }
 
   // ignore: non_constant_identifier_names
