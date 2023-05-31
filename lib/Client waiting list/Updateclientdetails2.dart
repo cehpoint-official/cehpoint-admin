@@ -1,11 +1,21 @@
+import 'package:cehpoint_admin/Student%20waiting%20list/bottomsheetbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Updateclientdetails2 extends StatelessWidget {
-  Updateclientdetails2(
-      {super.key, required this.text, required this.pdffilename});
+  const Updateclientdetails2(
+      {super.key,
+      required this.text,
+      required this.oldpdf,
+      required this.newpdf,
+      required this.pdfpath,
+      required this.id});
   final String text;
-  final String pdffilename;
+  final String? oldpdf;
+  final String newpdf;
+  final String pdfpath;
+  final String id;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +23,7 @@ class Updateclientdetails2 extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Update Client details',
+          'Update Student details',
           style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
@@ -69,7 +79,7 @@ class Updateclientdetails2 extends StatelessWidget {
                               width: 10.w,
                             ),
                             Text(
-                              pdffilename,
+                              newpdf,
                               // pdffilename,
                               style: TextStyle(
                                   fontSize: 14.sp, fontWeight: FontWeight.w500),
@@ -125,7 +135,29 @@ class Updateclientdetails2 extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 )),
                 onPressed: () {
-                  Navigator.pushNamed(context, 'Updateclientdetails');
+                  Navigator.pop(
+                    context,
+                  );
+
+                  Navigator.pop(
+                    context,
+                  );
+                  showModalBottomSheet(
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(30.r)),
+                    ),
+                    context: context,
+                    builder: (BuildContext context) {
+                      return bottomsheetbar(
+                        txt: text,
+                        pdfname: newpdf,
+                        oldpdf: oldpdf.toString(),
+                        id: id,
+                        pdfpath: pdfpath,
+                      );
+                    },
+                  );
                 },
               ),
             )

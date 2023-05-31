@@ -221,9 +221,12 @@ class Student_details extends StatelessWidget {
                       ),
                       context: context,
                       builder: (BuildContext context) {
-                        return const bottomsheetbar(
+                        return bottomsheetbar(
                           txt: 'www.youtube.com',
                           pdfname: 'Embedded Course brochure.pdf',
+                          oldpdf: 'Embedded Course brochure.pdf',
+                          id: studentDetails['id'],
+                          pdfpath: '',
                         );
                       },
                     );

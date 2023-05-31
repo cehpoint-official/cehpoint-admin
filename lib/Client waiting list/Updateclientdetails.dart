@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:cehpoint_admin/Student%20waiting%20list/bottomsheetbar.dart';
+import 'package:cehpoint_admin/main.dart';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -7,31 +9,37 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'Updateclientdetails2.dart';
 
-class Updateclientdetails extends StatefulWidget {
-  Updateclientdetails({super.key});
 
+
+class Updateclientdetails extends StatefulWidget {
+  const Updateclientdetails(
+      {super.key, required this.oldpdf, required this.id});
+  final String oldpdf;
+  final String id;
   @override
   State<Updateclientdetails> createState() => _UpdateclientdetailsState();
 }
 
 class _UpdateclientdetailsState extends State<Updateclientdetails> {
   TextEditingController _textEditingController = TextEditingController();
-  String pdffilename = "";
-  updatefilename(String name) {
-    setState(() {
-      pdffilename = name;
-    });
-    ;
-  }
+
+  // String pdffilename = "";
+
+  // updatefilename(String name) {
+  //   setState(() {
+  //     pdffilename = name;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
+    FilePickerResult? result;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          'Update Client details',
+          'Update Student details',
           style: TextStyle(color: Colors.black87, fontSize: 18.sp),
         ),
         backgroundColor: Colors.transparent,
@@ -65,8 +73,8 @@ class _UpdateclientdetailsState extends State<Updateclientdetails> {
                       height: 10.h,
                     ),
                     InkWell(
-                      onTap: () {
-                        uploadPdf(updatefilename);
+                      onTap: () async {
+                        result = await FilePicker.platform.pickFiles();
                       },
                       child: Container(
                         height: 200.h,
@@ -122,14 +130,25 @@ class _UpdateclientdetailsState extends State<Updateclientdetails> {
                         fontWeight: FontWeight.w700),
                   )),
                   onPressed: () {
+                    File file = File(result?.files.single.path ?? "");
+                    String fileName = file.path.split('/').last;
                     String textValue = _textEditingController.text;
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => Updateclientdetails2(
-                            text: textValue, pdffilename: pdffilename),
+                          text: textValue,
+                          oldpdf: widget.oldpdf,
+                          newpdf: fileName,
+                          pdfpath: result?.files.single.path ?? "",
+                          id: widget.id,
+                        ),
                       ),
                     );
+                    // bottomsheetbar(
+                    //   txt: _textEditingController.text.toString(),
+                    //   pdfname: '' ?? 'Embedded Course brochure.pdf',
+                    // );
                   },
                 ))
           ],
@@ -137,70 +156,4 @@ class _UpdateclientdetailsState extends State<Updateclientdetails> {
       ),
     );
   }
-
-  Future<void> uploadPdf(updatefilename) async {
-    var dio = Dio();
-
-    FilePickerResult? result = await FilePicker.platform.pickFiles();
-
-    if (result != null) {
-      File file = File(result.files.single.path ?? "");
-      String fileName = file.path.split('/').last;
-
-      updatefilename(fileName);
-      FormData data = FormData.fromMap({
-        'x-api-key': 'apikey',
-        'file': await MultipartFile.fromFile(file.path, filename: fileName),
-      });
-
-      try {
-        Response response = await dio.post(
-          'https://api.pdf.co/v1/file/upload',
-          data: data,
-          onSendProgress: (sent, total) {
-            print('Progress: ${sent / total * 100}%');
-          },
-        );
-
-        if (response.statusCode == 200) {
-          print('File uploaded successfully!');
-          print('Response: ${response.data}');
-        } else {
-          print('File upload failed. Status code: ${response.statusCode}');
-        }
-      } catch (error) {
-        print('Error uploading file: $error');
-      }
-    } else {
-      print("No file selected");
-    }
-  }
 }
-
-
-
-//  Future uploadPdf() async {
-//   var dio = Dio();
-
-//   FilePickerResult? result = await FilePicker.platform.pickFiles();
-
-//   if (result != null) {
-//     File file = File(result.files.single.path ?? "");
-
-//     String fileName = file.path.split('/').last;
-
-//     String path = file.path;
-//     FormData data = FormData.fromMap({
-//       'x-api-key': 'apikey',
-//       'file': await MultipartFile.fromFile(filePath, filename: fileName)
-//     });
-//     var response = dio.post("https://api.pdf.co/v1/file/upload", data: data,
-//         onSendProgress: (int sent, int total) {
-//       print('$sent $total');
-//     });
-//     print(response.toString());
-//   } else {
-//     print("Result is null");
-//   }
-// }
-

@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'Updatestudentdeatils11.dart';
+import 'Updateclientdetails.dart';
 
-class bottomsheetbar extends StatelessWidget {
-  const bottomsheetbar(
+class Bottomsheetbar1 extends StatelessWidget {
+  const Bottomsheetbar1(
       {super.key,
       required this.txt,
       required this.pdfname,
@@ -135,7 +135,7 @@ class bottomsheetbar extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Updatestudentdetails11(
+                        builder: (context) => Updateclientdetails(
                           oldpdf: pdfname,
                           id: id,
                         ),

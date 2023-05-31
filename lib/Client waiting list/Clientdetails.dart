@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'Bottomsheetbar1.dart';
+
 // ignore: camel_case_types
 class Client_details extends StatelessWidget {
   const Client_details({super.key, required this.ClientDetails});
@@ -270,124 +272,12 @@ class Client_details extends StatelessWidget {
                       ),
                       context: context,
                       builder: (BuildContext context) {
-                        return Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left: 16.w, right: 16.w, top: 24.h),
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      height: 175.h,
-                                      width: double.infinity,
-                                      color: const Color(0xffD4C00B)
-                                          .withOpacity(0.25),
-                                      child: Padding(
-                                        padding: EdgeInsets.only(
-                                            top: 24.h, bottom: 16.h),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            Image.asset(
-                                                'Assets/bttomsheet.png'),
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Image.asset(
-                                                    'Assets/bottomsheet2.png'),
-                                                SizedBox(
-                                                  width: 10.w,
-                                                ),
-                                                Text(
-                                                  'Embedded Proposal.pdf',
-                                                  style: TextStyle(
-                                                      fontSize: 14.sp,
-                                                      fontWeight:
-                                                          FontWeight.w500),
-                                                ),
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 16.h,
-                                    ),
-                                    Text('Payment link:',
-                                        style: TextStyle(
-                                            fontSize: 14.sp,
-                                            fontWeight: FontWeight.w500)),
-                                    TextButton(
-                                      onPressed: () async {
-                                        final url = 'https://www.youtube.com';
-                                        // ignore: deprecated_member_use
-                                        if (await canLaunch(url)) {
-                                          // ignore: deprecated_member_use
-                                          await launch(url,
-                                              forceSafariVC: true,
-                                              forceWebView: true,
-                                              enableJavaScript: true);
-                                        }
-                                      },
-                                      child: Text('https://www.youtube.com',
-                                          style: TextStyle(
-                                              color: const Color(0xff2A55C3),
-                                              fontSize: 14.sp,
-                                              fontWeight: FontWeight.w500)),
-                                    )
-                                  ]),
-                            ),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: SizedBox(
-                                    height: 55.h,
-                                    child: ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor:
-                                            const Color(0xffFFFFFF),
-                                      ),
-                                      onPressed: () {
-                                        Navigator.pushNamed(
-                                            context, 'Updateclientdetails');
-                                      },
-                                      child: Text('Update',
-                                          style: TextStyle(
-                                              color: Colors.black87,
-                                              fontSize: 20.sp,
-                                              fontWeight: FontWeight.w700)),
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: SizedBox(
-                                    height: 55.h,
-                                    child: ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor:
-                                            const Color(0xffD4C00B),
-                                      ),
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: Text('Send',
-                                          style: TextStyle(
-                                              color: Colors.black87,
-                                              fontSize: 20.sp,
-                                              fontWeight: FontWeight.w700)),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
+                        return Bottomsheetbar1(
+                          txt: 'www.youtube.com',
+                          pdfname: 'Embedded Course brochure.pdf',
+                          oldpdf: 'Embedded Course brochure.pdf',
+                          id: ClientDetails['id'],
+                          pdfpath: '',
                         );
                       },
                     );

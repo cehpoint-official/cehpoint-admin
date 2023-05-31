@@ -4,9 +4,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Updatestudentdetails12 extends StatelessWidget {
   const Updatestudentdetails12(
-      {super.key, required this.text, required this.pdffilename});
+      {super.key,
+      required this.text,
+      required this.oldpdf,
+      required this.newpdf,
+      required this.pdfpath,required this.id});
   final String text;
-  final String pdffilename;
+  final String? oldpdf;
+  final String newpdf;
+  final String pdfpath;
+  final String id;
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +78,7 @@ class Updatestudentdetails12 extends StatelessWidget {
                               width: 10.w,
                             ),
                             Text(
-                              pdffilename,
+                              newpdf,
                               // pdffilename,
                               style: TextStyle(
                                   fontSize: 14.sp, fontWeight: FontWeight.w500),
@@ -142,9 +149,12 @@ class Updatestudentdetails12 extends StatelessWidget {
                     context: context,
                     builder: (BuildContext context) {
                       return bottomsheetbar(
-                          txt: text,
-                          pdfname:
-                              pdffilename);
+                        txt: text,
+                        pdfname: newpdf,
+                        oldpdf: oldpdf.toString(),
+                        id: id,
+                        pdfpath: pdfpath,
+                      );
                     },
                   );
                 },
