@@ -89,7 +89,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  static const String API_URL = "http://localhost:5000";
+  static const String API_URL = "http://192.168.56.1:5000";
   const MyApp({super.key});
 
   // This widget is the root of your application.
